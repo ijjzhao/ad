@@ -1,0 +1,191 @@
+[ 2012-11-12T13:00:47+08:00 ] 192.168.11.16 /AD/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+
+[ 2012-11-12T13:00:47+08:00 ] 192.168.11.16 /AD/s/lgn
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000144s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000102s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000627s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000296s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000948s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.125145s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.126125s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.126284s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.126438s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.126537s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000551s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.126715s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000136s ]
+
+[ 2012-11-12T13:00:49+08:00 ] 192.168.11.16 /AD/s/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000075s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000156s ]
+SQL: alsogood.getCollection(user) [ RunTime:0.000016s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+SQL: alsogood.user.findOne({"email":"shiba@da.com","psd":"96e79218965eb72c92a549dd5a330112","state":1},["email","name"]) [ RunTime:0.000575s ]
+
+[ 2012-11-12T13:00:49+08:00 ] 192.168.11.16 /AD/index/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000066s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000618s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000156s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019549s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.020382s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.020588s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.020669s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.020719s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000454s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.020873s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000086s ]
+
+[ 2012-11-12T13:00:54+08:00 ] ERR: (ThinkException) 非法操作:ads
+[ 2012-11-12T13:00:54+08:00 ] 192.168.11.16 /AD/index/ads.html
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000107s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000169s ]
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class IndexAction could not be converted to string /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+
+[ 2012-11-12T13:40:59+08:00 ] 192.168.11.16 /ad/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000110s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.030205s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000153s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.030379s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003473s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.033882s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.034114s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.034231s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.034319s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000579s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.034497s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000112s ]
+
+[ 2012-11-12T13:41:08+08:00 ] 192.168.11.2 /ad/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000128s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000235s ]
+
+[ 2012-11-12T13:41:08+08:00 ] 192.168.11.2 /ad/s/lgn
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000096s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000187s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000092s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000619s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000106s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000760s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001608s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.002388s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.002505s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.002617s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.002699s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000433s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.002872s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000114s ]
+
+[ 2012-11-12T13:41:17+08:00 ] 192.168.11.2 /ad/s/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000108s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000201s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000173s ]
+SQL: alsogood.getCollection(user) [ RunTime:0.000027s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+SQL: alsogood.user.findOne({"email":"shiba@da.com","psd":"96e79218965eb72c92a549dd5a330112","state":1},["email","name"]) [ RunTime:0.000730s ]
+
+[ 2012-11-12T13:41:17+08:00 ] 192.168.11.2 /ad/index/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000085s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000137s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000747s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000128s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000913s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004852s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.005796s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.006025s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.006114s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.006168s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000505s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.006336s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000085s ]
+
+[ 2012-11-12T14:48:01+08:00 ] 192.168.11.16 /ad/adseat/usr
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000193s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000223s ]
+
+[ 2012-11-12T18:47:02+08:00 ] 192.168.11.16 /ad/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000135s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000210s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.025910s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000134s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.026067s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015505s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.041623s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.041949s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.042104s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.042210s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000778s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.042456s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000158s ]
+
