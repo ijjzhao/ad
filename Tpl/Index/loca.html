@@ -11,12 +11,11 @@
 			<div class="logo"><a href="#"><img src="__PUBLIC__/ad/img/logo.png" alt="Adnets 广告管理系统"></a></div>
 			<div class="navbar">
 				<a href="ads.html" class="nav">
-					<span class="ad_on_num">6</span>
 					<span class="nav_arrow"></span>
 					<img src="__PUBLIC__/ad/img/m1.png" alt="广告">
 					<p>广告</p>
 				</a>
-
+				
 				<a class="nav n_on">
 					<span class="nav_arrow"></span>
 					<img src="__PUBLIC__/ad/img/m2.png" alt="广告">
@@ -42,25 +41,26 @@
 				</a>
 
 				<a href="#" class="nav bline">
+					<span class="ad_on_num">6</span>
 					<span class="nav_arrow"></span>
 					<img src="__PUBLIC__/ad/img/m6.png" alt="广告">
-					<p>操作日志</p>
+					<p>通知中心</p>
 				</a>
 			</div>
 
 			<div class="footer">
 				<p><a href="#">admin</a></p>
-				<p><a href="#">账户设置</a></p>
+				<p><a href="#">系统设置</a></p>
 				<p><a href="#">退出</a></p>
 			</div>
 		</div>
-		<div class="main">
+		<div id="main">
 			<div class="board">
 				<div class="main_loca" id="main_loca">
 					<div class="topic_loca">
 						<h2>有<span class="topic_loca_num1">12</span>个广告位，<span class="topic_loca_num2">6</span>个正在投放</h2>
 						<a href="tita.html" class="timetable_loca">查看广告排期</a>
-						<a href="javascript:void(0)" onclick="also_slider(1,'main_loca','新增广告位')" class="addLoca_loca">新增广告位</a>
+						<a href="javascript:void(0)" onclick="also_slider(1,'main_loca','新增广告位','main')" class="addLoca_loca">新增广告位</a>
 						<div class="filter_loca">
 							<select id="sele_chan">
 								<option value="0">全部频道</option>
@@ -230,13 +230,6 @@
 				</div>
 			</div>
 		</div>
-
-		
-
-		<script type="text/javascript">
-			  var URL = "__URL__/";
-		      var APP = "__APP__/";
-		</script>
 		<script type="text/javascript" src="__PUBLIC__/ad/js/jquery.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/ad/js/also.js"></script>
 	</body>
