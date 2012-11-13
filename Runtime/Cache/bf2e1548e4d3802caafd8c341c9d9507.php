@@ -19,32 +19,32 @@
 				
 				<a class="nav n_on">
 					<span class="nav_arrow"></span>
-					<img src="../Public/img/m2.png" alt="广告">
+					<img src="../Public/img/m2.png" alt="广告位">
 					<p>广告位</p>
-				</a>
-
-				<a href="#" class="nav bline">
-					<span class="nav_arrow"></span>
-					<img src="../Public/img/m3.png" alt="广告">
-					<p>素材库</p>
 				</a>
 
 				<a href="#" class="nav">
 					<span class="nav_arrow"></span>
-					<img src="../Public/img/m4.png" alt="广告">
+					<img src="../Public/img/m3.png" alt="素材库">
+					<p>素材库</p>
+				</a>
+				<span class="bline" ></span>
+				<a href="#" class="nav">
+					<span class="nav_arrow"></span>
+					<img src="../Public/img/m4.png" alt="客户和订单">
 					<p>客户和订单</p>
 				</a>
 
-				<a href="#" class="nav bline">
+				<a href="#" class="nav">
 					<span class="nav_arrow"></span>
-					<img src="../Public/img/m5.png" alt="广告">
+					<img src="../Public/img/m5.png" alt="数据统计">
 					<p>数据统计</p>
 				</a>
-
-				<a href="#" class="nav bline">
-					<span class="ad_on_num">6</span>
+				<span class="bline" ></span>
+				<a href="#" class="nav">
+					<span class="ad_on_num">9</span>
 					<span class="nav_arrow"></span>
-					<img src="../Public/img/m6.png" alt="广告">
+					<img src="../Public/img/m6.png" alt="通知中心">
 					<p>通知中心</p>
 				</a>
 			</div>
