@@ -2988,3 +2988,1225 @@ INFO: [ view_end ] --START--
 INFO: Run ShowPageTrace Behavior [ RunTime:-0.007328s ]
 INFO: [ view_end ] --END-- [ RunTime:0.000096s ]
 
+[ 2012-11-13T17:07:54+08:00 ] 127.0.0.1 /ad/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000116s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000199s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000551s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000166s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000764s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005228s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.006037s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.006281s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.006397s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.006464s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000569s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.006657s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000115s ]
+
+[ 2012-11-13T17:08:23+08:00 ] ERR: [64] Cannot use [] for reading /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 47 行.
+[ 2012-11-13T17:08:49+08:00 ] 127.0.0.1 /ad/adseat
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000071s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000111s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000124s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.001360s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 88 行.
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000022s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 431 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 445 行.
+SQL: alsogood.adseat.find({"webSite":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","priSize","auxSize"]) [ RunTime:0.000197s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 29 行.
+
+[ 2012-11-13T17:09:02+08:00 ] 127.0.0.1 /ad/adseat/usr
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000069s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000220s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000098s ]
+
+[ 2012-11-13T17:09:18+08:00 ] 127.0.0.1 /ad/adseat
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000074s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000116s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000116s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.001448s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 88 行.
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000015s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 431 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 445 行.
+SQL: alsogood.adseat.find({"webSite":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","priSize","auxSize"]) [ RunTime:0.000164s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 29 行.
+
+[ 2012-11-13T17:09:29+08:00 ] 127.0.0.1 /ad/adseat
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000063s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000020s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000253s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 88 行.
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000012s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 431 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 445 行.
+SQL: alsogood.adseat.find({"webSite":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","priSize","auxSize"]) [ RunTime:0.000122s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 29 行.
+
+[ 2012-11-13T17:09:31+08:00 ] 127.0.0.1 /ad/adseat
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000059s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000176s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000028s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000346s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 88 行.
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000012s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 431 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 445 行.
+SQL: alsogood.adseat.find({"webSite":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","priSize","auxSize"]) [ RunTime:0.000031s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 29 行.
+
+[ 2012-11-13T17:09:33+08:00 ] 127.0.0.1 /ad/adseat
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000078s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000115s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000029s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000293s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 88 行.
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000012s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 431 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 445 行.
+SQL: alsogood.adseat.find({"webSite":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","priSize","auxSize"]) [ RunTime:0.000029s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 29 行.
+
+[ 2012-11-13T17:41:33+08:00 ] ERR: (ThinkException) 非法操作:url
+[ 2012-11-13T17:41:33+08:00 ] 127.0.0.1 /ad/adseat/url
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000063s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000211s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class AdseatAction could not be converted to string /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+
+[ 2012-11-13T17:41:39+08:00 ] 127.0.0.1 /ad/adseat/usr
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000072s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined index: url /Users/adnetsalso/Sites/ad/Lib/Action/SspAction.class.php 第 40 行.
+
+[ 2012-11-13T17:41:52+08:00 ] ERR: (ThinkException) 非法操作:q
+[ 2012-11-13T17:41:52+08:00 ] 127.0.0.1 /ad/adseat/q
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000074s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000149s ]
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class AdseatAction could not be converted to string /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+
+[ 2012-11-13T17:42:01+08:00 ] 127.0.0.1 /ad/s/q
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000107s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000199s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000251s ]
+
+[ 2012-11-13T17:42:01+08:00 ] 127.0.0.1 /ad/index/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000058s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000177s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000529s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000096s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000652s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003333s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.004017s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.004216s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.004300s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.004353s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000454s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.004510s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000085s ]
+
+[ 2012-11-13T17:42:13+08:00 ] 127.0.0.1 /ad/adseat/usr
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000065s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000213s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000111s ]
+NOTIC: [8] Undefined index: url /Users/adnetsalso/Sites/ad/Lib/Action/SspAction.class.php 第 40 行.
+
+[ 2012-11-13T17:42:26+08:00 ] 127.0.0.1 /ad/adseat/usr
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000058s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000088s ]
+
+[ 2012-11-13T17:42:58+08:00 ] 127.0.0.1 /ad/s/q
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000101s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000154s ]
+
+[ 2012-11-13T17:42:58+08:00 ] 127.0.0.1 /ad/index/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000058s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000175s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000513s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000086s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003885s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.004562s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.004766s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.004851s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.004903s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000480s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.005099s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000140s ]
+
+[ 2012-11-13T17:43:51+08:00 ] 127.0.0.1 /ad/index/q
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000110s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000216s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000179s ]
+
+[ 2012-11-13T17:43:57+08:00 ] 127.0.0.1 /ad/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000145s ]
+
+[ 2012-11-13T17:43:57+08:00 ] 127.0.0.1 /ad/s/lgn
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000096s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000124s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003572s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000158s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.003748s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001808s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.005628s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.005830s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.005994s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.006111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000693s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.006398s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000196s ]
+
+[ 2012-11-13T17:43:58+08:00 ] 127.0.0.1 /ad/s/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000090s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000141s ]
+SQL: alsogood.getCollection(user) [ RunTime:0.000113s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+SQL: alsogood.user.findOne({"email":"shiba@da.com","psd":"96e79218965eb72c92a549dd5a330112","state":1},["email","name","url"]) [ RunTime:0.001487s ]
+
+[ 2012-11-13T17:43:58+08:00 ] 127.0.0.1 /ad/index/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000085s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000139s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000779s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000135s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000960s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005480s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.006468s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.006684s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.006771s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.006825s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000483s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.006993s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000097s ]
+
+[ 2012-11-13T17:44:06+08:00 ] 127.0.0.1 /ad/adseat/usr
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000101s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000181s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000150s ]
+
+[ 2012-11-13T18:02:39+08:00 ] ERR: [4] syntax error, unexpected ']' /Users/adnetsalso/Sites/ad/Lib/Action/SspAction.class.php 第 53 行.
+[ 2012-11-13T18:02:58+08:00 ] 127.0.0.1 /ad/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000107s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003539s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000144s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.003724s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004581s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.008378s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.008589s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.008675s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.008727s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000500s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.008885s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000092s ]
+
+[ 2012-11-13T18:03:33+08:00 ] ERR: (ThinkException) 无法加载模块:Spp
+[ 2012-11-13T18:03:40+08:00 ] 127.0.0.1 /ad/ssp/q
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000069s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000103s ]
+
+[ 2012-11-13T18:03:43+08:00 ] 127.0.0.1 /ad/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000131s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000212s ]
+
+[ 2012-11-13T18:03:43+08:00 ] 127.0.0.1 /ad/s/lgn
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000064s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000098s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000531s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000114s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000679s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001899s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.002608s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.002754s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.002910s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.003025s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000616s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.003305s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000192s ]
+
+[ 2012-11-13T18:03:45+08:00 ] 127.0.0.1 /ad/s/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000073s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000151s ]
+SQL: alsogood.getCollection(user) [ RunTime:0.000017s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+SQL: alsogood.user.findOne({"email":"shiba@da.com","psd":"96e79218965eb72c92a549dd5a330112","state":1},["email","name","url"]) [ RunTime:0.000498s ]
+
+[ 2012-11-13T18:03:45+08:00 ] 127.0.0.1 /ad/index/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000059s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000173s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000511s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000088s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003541s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.004207s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.004400s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.004509s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.004562s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000472s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.004718s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000088s ]
+
+[ 2012-11-13T18:04:14+08:00 ] 127.0.0.1 /ad/adseat/add
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000085s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/SspAction.class.php 第 39 行.
+SQL: alsogood.getCollection(website) [ RunTime:0.000027s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"50a21b1ef8894e525d010000"}},["_id"]) [ RunTime:0.000309s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/SspAction.class.php 第 56 行.
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000011s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 227 行.
+SQL: alsogood.adseat.insert({"name":"\u6211\u52d2\u4e2a\u53bb","shape":"2","priSize":["760","90"],"website":{"$id":"50a21b1ef8894e525d020000"},"desc":"\u4f60\u662f\u4e00\u4e2a\u5907\u6ce8\u800c\u5df2","auxSize":0,"chnName":"\u4f53\u80b2","isPush":"off","isScroll":"off","reTime":"-1","layout":{"orientation":"left","gavity":"top","vertical":0,"horizontal":0},"time":{"sec":1352801054,"usec":0},"state":1}) [ RunTime:0.000232s ]
+
+[ 2012-11-13T18:06:19+08:00 ] 127.0.0.1 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000070s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/SspAction.class.php 第 39 行.
+SQL: alsogood.getCollection(website) [ RunTime:0.000119s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"50a21b9bf8894e6f5d000000"}}) [ RunTime:0.001133s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 83 行.
+
+[ 2012-11-13T18:06:41+08:00 ] 127.0.0.1 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000076s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/SspAction.class.php 第 39 行.
+SQL: alsogood.getCollection(website) [ RunTime:0.000019s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"50a21bb1f8894e5e5d000000"}}) [ RunTime:0.000292s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 84 行.
+
+[ 2012-11-13T18:08:04+08:00 ] 127.0.0.1 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000059s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/SspAction.class.php 第 39 行.
+SQL: alsogood.getCollection(website) [ RunTime:0.000099s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"50a21c04f8894e5b5d000000"}}) [ RunTime:0.001039s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 84 行.
+
+[ 2012-11-13T18:08:51+08:00 ] 127.0.0.1 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000088s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000181s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/SspAction.class.php 第 39 行.
+SQL: alsogood.getCollection(website) [ RunTime:0.000097s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"50a21c33f8894ee45d000000"}}) [ RunTime:0.001517s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 84 行.
+
+[ 2012-11-13T18:09:28+08:00 ] 127.0.0.1 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000072s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000117s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/SspAction.class.php 第 41 行.
+SQL: alsogood.getCollection(website) [ RunTime:0.000088s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"50a21c58f8894e5c5d000000"}}) [ RunTime:0.001088s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 84 行.
+
+[ 2012-11-13T18:10:22+08:00 ] 127.0.0.1 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000066s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000224s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000091s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/SspAction.class.php 第 41 行.
+SQL: alsogood.getCollection(website) [ RunTime:0.000112s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"50a21c8ef8894e505d000000"}}) [ RunTime:0.001122s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 84 行.
+
+[ 2012-11-13T18:11:12+08:00 ] 127.0.0.1 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000106s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000138s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/SspAction.class.php 第 41 行.
+SQL: alsogood.getCollection(website) [ RunTime:0.000142s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"50a21cc0f8894e5d5d010000"}}) [ RunTime:0.001366s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 84 行.
+
+[ 2012-11-13T18:12:13+08:00 ] 127.0.0.1 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000077s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000025s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000394s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 84 行.
+
+[ 2012-11-13T18:12:36+08:00 ] 127.0.0.1 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000066s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000212s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000027s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000336s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 84 行.
+
+[ 2012-11-13T18:14:15+08:00 ] 127.0.0.1 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000089s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000165s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000149s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000017s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000396s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 84 行.
+
+[ 2012-11-13T18:14:29+08:00 ] 127.0.0.1 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000063s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000212s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000097s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000017s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000337s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 83 行.
+
+[ 2012-11-13T18:14:50+08:00 ] 127.0.0.1 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000066s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000211s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000098s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000025s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000400s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 83 行.
+
+[ 2012-11-13T18:15:02+08:00 ] 127.0.0.1 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000104s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000023s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000409s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 83 行.
+
+[ 2012-11-13T18:15:33+08:00 ] 127.0.0.1 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000063s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000097s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000016s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000395s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 83 行.
+
+[ 2012-11-13T18:17:42+08:00 ] 127.0.0.1 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000064s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000213s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000096s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000019s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000437s ]
+
+[ 2012-11-13T18:18:16+08:00 ] ERR: (ThinkException) 非法操作:ssp
+[ 2012-11-13T18:18:16+08:00 ] 127.0.0.1 /ad/adseat/ssp/q
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000079s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000117s ]
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class AdseatAction could not be converted to string /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+
+[ 2012-11-13T18:18:26+08:00 ] 127.0.0.1 /ad/ssp/q
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000071s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000100s ]
+
+[ 2012-11-13T18:18:33+08:00 ] 127.0.0.1 /ad/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000135s ]
+
+[ 2012-11-13T18:18:33+08:00 ] 127.0.0.1 /ad/s/lgn
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000059s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000177s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000091s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000476s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000089s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000591s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016485s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.017169s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.017398s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.017583s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.017681s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000705s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.017939s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000164s ]
+
+[ 2012-11-13T18:18:39+08:00 ] 127.0.0.1 /ad/s/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000092s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000168s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000154s ]
+SQL: alsogood.getCollection(user) [ RunTime:0.000027s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+SQL: alsogood.user.findOne({"email":"shiba@da.com","psd":"96e79218965eb72c92a549dd5a330112","state":1},["email","name","url"]) [ RunTime:0.000403s ]
+
+[ 2012-11-13T18:18:39+08:00 ] 127.0.0.1 /ad/index/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000086s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000143s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.021984s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000127s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.022128s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003477s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.025637s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.025838s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.025922s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.025986s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000474s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.026159s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000087s ]
+
+[ 2012-11-13T18:19:12+08:00 ] 127.0.0.1 /ad/adseat/add
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000105s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000188s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000164s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000030s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 227 行.
+SQL: alsogood.adseat.insert({"name":"\u6d4b\u8bd5\u8fd9\u4e2a\u5bf9\u4e0d\u5bf9","shape":"2","priSize":["760","90"],"website":{"$id":"50a21ea0f8894e6f5d010000"},"desc":"\u4f60\u731c\u8fd9\u4e2a\u5bf9\u4e0d\u5bf9\u561b ","auxSize":0,"chnName":"\u6559\u80b2","isPush":"on","isScroll":"on","reTime":"-1","layout":{"orientation":"left","gavity":"top","vertical":"12","horizontal":"-1"},"time":{"sec":1352801952,"usec":0},"state":1}) [ RunTime:0.000689s ]
+
+[ 2012-11-13T18:23:29+08:00 ] 192.168.11.16 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000062s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000207s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000107s ]
+
+[ 2012-11-13T18:23:29+08:00 ] 192.168.11.16 /ad/s/lgn
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000058s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000176s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000464s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000105s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000599s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026091s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.026723s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.026833s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.026924s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.026975s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000352s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.027114s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000089s ]
+
+[ 2012-11-13T18:23:35+08:00 ] 192.168.11.16 /ad/s/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000074s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+SQL: alsogood.getCollection(user) [ RunTime:0.000019s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+SQL: alsogood.user.findOne({"email":"shiba@da.com","psd":"96e79218965eb72c92a549dd5a330112","state":1},["email","name","url"]) [ RunTime:0.000385s ]
+
+[ 2012-11-13T18:23:35+08:00 ] 192.168.11.16 /ad/index/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000057s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000128s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000564s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000089s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000679s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003649s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.004379s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.004715s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.004914s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.004981s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000741s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.005162s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000097s ]
+
+[ 2012-11-13T18:24:12+08:00 ] 192.168.11.16 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000063s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000213s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000098s ]
+
+[ 2012-11-13T18:25:50+08:00 ] 192.168.11.16 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000124s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+
+[ 2012-11-13T18:26:13+08:00 ] 192.168.11.16 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000066s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+
+[ 2012-11-13T18:27:55+08:00 ] 192.168.11.16 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000074s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000026s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000290s ]
+
+[ 2012-11-13T18:28:20+08:00 ] 192.168.11.16 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000066s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000220s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000016s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000256s ]
+
+[ 2012-11-13T18:28:38+08:00 ] 192.168.11.16 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000099s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000128s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000026s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000262s ]
+
+[ 2012-11-13T18:28:53+08:00 ] 192.168.11.16 /ad/adseat/getWebSite
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000062s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000210s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000095s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000017s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000260s ]
+
+[ 2012-11-13T18:28:58+08:00 ] 192.168.11.16 /ad/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000141s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000389s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000122s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000542s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004113s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.004723s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.004945s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.005071s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.005166s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000655s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.005452s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000168s ]
+
+[ 2012-11-13T18:29:14+08:00 ] 127.0.0.1 /ad/adseat/add
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000106s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000188s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000172s ]
+
+[ 2012-11-13T18:29:50+08:00 ] 127.0.0.1 /ad/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000090s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000155s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000407s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000108s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000547s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013502s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.014085s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.014293s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.014374s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.014424s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000453s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.014580s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000092s ]
+
+[ 2012-11-13T18:30:06+08:00 ] 127.0.0.1 /ad/adseat/add
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000060s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000088s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000019s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 227 行.
+SQL: alsogood.adseat.insert({"name":"\u6211\u542b\u6709","shape":"1","priSize":["760","90"],"website":{"$id":"509a04be96838cb770a61bd2"},"desc":"","auxSize":0,"chnName":"\u4e3b\u7ad9","isPush":"off","isScroll":"off","reTime":-1,"layout":{"orientation":0,"gavity":0,"vertical":0,"horizontal":0},"time":{"sec":1352802606,"usec":0},"state":1}) [ RunTime:0.000445s ]
+
+[ 2012-11-13T18:33:25+08:00 ] 127.0.0.1 /ad/adseat/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000060s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000025s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000275s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000012s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 431 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 445 行.
+SQL: alsogood.adseat.find({"webSite":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","priSize","auxSize"]) [ RunTime:0.000169s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 26 行.
+
+[ 2012-11-13T18:33:29+08:00 ] 127.0.0.1 /ad/adseat/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000095s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000151s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000036s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000526s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000013s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 431 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 445 行.
+SQL: alsogood.adseat.find({"webSite":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","priSize","auxSize"]) [ RunTime:0.000030s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 26 行.
+
+[ 2012-11-13T18:34:59+08:00 ] 127.0.0.1 /ad/adseat/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000109s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000199s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000176s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000019s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000290s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000013s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 431 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 445 行.
+SQL: alsogood.adseat.find({"webSite":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","priSize","auxSize"]) [ RunTime:0.000181s ]
+
+[ 2012-11-13T18:35:22+08:00 ] 127.0.0.1 /ad/adseat/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000059s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000231s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000155s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000017s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000280s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000013s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 431 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 445 行.
+SQL: alsogood.adseat.find({"webSite":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","priSize","auxSize"]) [ RunTime:0.000031s ]
+
+[ 2012-11-13T18:36:07+08:00 ] 127.0.0.1 /ad/adseat/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000103s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000026s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000326s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000016s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 431 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 445 行.
+SQL: alsogood.adseat.find({"webSite":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","priSize","auxSize"]) [ RunTime:0.000129s ]
+
+[ 2012-11-13T18:36:10+08:00 ] 127.0.0.1 /ad/adseat/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000072s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000115s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000020s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000393s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000023s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 431 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 445 行.
+SQL: alsogood.adseat.find({"webSite":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","priSize","auxSize"]) [ RunTime:0.000061s ]
+
+[ 2012-11-13T18:36:25+08:00 ] 127.0.0.1 /ad/adseat/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000059s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000118s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.001109s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000016s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 431 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 445 行.
+SQL: alsogood.adseat.find({"webSite":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","priSize","auxSize"]) [ RunTime:0.000156s ]
+
+[ 2012-11-13T18:37:43+08:00 ] 127.0.0.1 /ad/adseat/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000107s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000175s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000022s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000323s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000019s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 431 行.
+NOTIC: [8] Undefined index: where /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 433 行.
+NOTIC: [2] Invalid argument supplied for foreach() /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 756 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 434 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 445 行.
+SQL: alsogood.adseat.find({}) [ RunTime:0.000032s ]
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 28 行.
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 28 行.
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 28 行.
+
+[ 2012-11-13T18:38:18+08:00 ] 127.0.0.1 /ad/adseat/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000087s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000207s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000018s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000281s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000016s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 431 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 445 行.
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","priSize","auxSize"]) [ RunTime:0.000038s ]
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 28 行.
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 28 行.
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 28 行.
+
+[ 2012-11-13T18:38:41+08:00 ] 127.0.0.1 /ad/adseat/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000093s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000112s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000024s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000379s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000016s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 431 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 445 行.
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","priSize","auxSize","website"]) [ RunTime:0.000158s ]
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 28 行.
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 28 行.
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 28 行.
+
+[ 2012-11-13T18:41:03+08:00 ] 127.0.0.1 /ad/adseat/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000063s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000091s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000015s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000259s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000016s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 431 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 445 行.
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","priSize","auxSize"]) [ RunTime:0.000162s ]
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 28 行.
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 28 行.
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 28 行.
+
+[ 2012-11-13T18:41:16+08:00 ] 127.0.0.1 /ad/adseat/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000060s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000094s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000018s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000256s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000012s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 431 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 445 行.
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","priSize","auxSize"]) [ RunTime:0.000029s ]
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 27 行.
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 27 行.
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 27 行.
+
+[ 2012-11-13T18:42:00+08:00 ] 127.0.0.1 /ad/adseat/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000073s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000023s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000299s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000012s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 431 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 445 行.
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","priSize","auxSize"]) [ RunTime:0.000030s ]
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 27 行.
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 27 行.
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 27 行.
+
+[ 2012-11-13T18:42:38+08:00 ] 127.0.0.1 /ad/adseat/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000064s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000225s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000098s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000023s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 511 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 514 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000271s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000011s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 431 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 445 行.
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","priSize","auxSize"]) [ RunTime:0.000031s ]
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 27 行.
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 27 行.
+NOTIC: [8] Undefined index: width /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 27 行.
+
+[ 2012-11-13T18:51:21+08:00 ] 127.0.0.1 /ad/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000158s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000472s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000159s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000675s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005145s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.005876s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.006128s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.006237s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.006305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000584s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.006492s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000113s ]
+
+[ 2012-11-13T19:01:31+08:00 ] ERR: (ThinkException) 无法加载模块:Ads
+[ 2012-11-13T19:22:21+08:00 ] 127.0.0.1 /ad/user/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000058s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000126s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000674s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000077s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000777s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028151s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.028975s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.029082s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.029154s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.029204s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000324s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.029334s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000084s ]
+

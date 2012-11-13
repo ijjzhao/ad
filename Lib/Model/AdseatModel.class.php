@@ -9,7 +9,7 @@ class AdseatModel extends MongoModel{
 	*/
 	public function selectBySiteid($siteId){
 		$arr['where'] = array(
-			'webSite' => $siteId
+			'website' => new MongoId($siteId)
 		);
 		$arr['field'] = array('name','shape','priSize','auxSize');//指定查找的字段
 		return $this->db->select($arr);

@@ -14,7 +14,7 @@ class UserModel extends MongoModel{
 			'psd' => $psd,
 			'state' => 1
 		);//筛选条件
-		$arr['field'] = array('email','name');//指定要获取的字段
+		$arr['field'] = array('email','name','url');//指定要获取的字段
 		return $this->db->find($arr);
 	}
 }

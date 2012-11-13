@@ -55,13 +55,4 @@ class SAction extends Action{
 	private function showIndex(){
 		$this->redirect('Index/index');//重定向到首页
 	}
-
-    /**
-    * 退出
-    * Time:2012-11-09 19:37
-	* Author: zjs
-    */
-    public function q(){
-    	session($this->usr_key,null);
-    }
 }
