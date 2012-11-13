@@ -11,5 +11,9 @@
 		'DB_PWD'=>'',// 填写你连接数据库的密码
 		'DB_PORT'=>'27017',
 		'DB_PREFIX'=>'', // 数据表表名的前缀 
+		// 'URL_ROUTER_ON' => true,//开启路由
+		// 'URL_ROUTE_RULES' => array(//定义路由规则
+		// 	'index:name' => 'index/loca'
+		// ),
 	);
 ?>

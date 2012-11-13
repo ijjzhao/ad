@@ -11,6 +11,7 @@ class IndexAction extends SspAction {
 	* Author: zjs
 	*/
     public function index(){
+        // echo $_GET['name'];
     	$this->loca();
     }
     /**
