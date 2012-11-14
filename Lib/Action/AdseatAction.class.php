@@ -9,30 +9,43 @@ class AdseatAction extends SspAction{
 	* 广告位数据获取
 	*/
 	public function index(){
-		$return_arr = array();			//定义内容输出数组
-		$site = $this->getWebSite();	//获取站点信息
-		if($site){	//验证是否有站点数据
-			$chnnel_name_arr = array();						//频道名称列表
-			foreach ($site['channel'] as $k => $v) {
-				$chnnel_name = $v['chnName'];				//获取当前频道的名称
-				array_push($chnnel_name_arr,$chnnel_name);	//将频道名称添加到频道名称列表中
-			}
-			$return_arr['chn'] = $chnnel_name_arr;		//设置要输出的频道信息
-			//获取当前站点下的所有广告位
-			$adseat = new AdseatModel();	//实例化广告位模型对象
-			$seat_arr = $adseat->selectWithPage();
-			$seat_info_arr = array();
-			foreach ($seat_arr as $k => $v) {
-				$v['_id'] = $v['_id'];
-				if(!$v['auxSize']['width'] || !$v['auxSize']['height']){
-					unset($v['auxSize']);//移出不需要的元素
+		if($this->isGet()){
+			$page = $_GET['_URL_'][2];//获取查询的页数
+			$chn = $_GET['_URL_'][3];//根据频道筛选;
+			if(is_numeric($page)){//是否是数字
+				$return_arr = array('limit'=> 5,'page'=>$page);			//定义内容输出数组
+				$site = $this->getWebSite();	//获取站点信息				
+				if($site){	//验证是否有站点数据
+					$chnnel_name_arr = array();						//频道名称列表
+					foreach ($site['channel'] as $k => $v) {
+						$chnnel_name = $v['chnName'];				//获取当前频道的名称
+						array_push($chnnel_name_arr,$chnnel_name);	//将频道名称添加到频道名称列表中
+					}
+					$return_arr['chn'] = $chnnel_name_arr;		//设置要输出的频道信息
+					//获取当前站点下的所有广告位
+					$adseat = new AdseatModel();	//实例化广告位模型对象
+					$seat_arr = $adseat->selectWithPage($site['_id'],$page,$return_arr['limit'],$chn);
+					$seat_info_arr = array();
+					foreach ($seat_arr as $k => $v) {				
+						if(!$v['auxSize']['width'] || !$v['auxSize']['height']){
+							unset($v['auxSize']);//移出不需要的元素
+						}
+						if($k == 'count'){
+							$return_arr['count'] = $v;
+						}else{
+							array_push($seat_info_arr, $v);
+						}
+					}
+					$return_arr['sea'] = $seat_info_arr;			//设置要输出的频道信息
 				}
-				array_push($seat_info_arr, $v);
+				// print_r($return_arr);				
+				$this->ajaxReturn($return_arr,'广告位列表',1);
+			}else{
+				$this->ajaxReturn('','参数错误',0);
 			}
-			$return_arr['sea'] = $seat_info_arr;			//设置要输出的频道信息
+		}else{
+			$this->ajaxReturn('','请求错误',0);
 		}
-		$json_str = json_encode($return_arr);
-		echo $json_str;
 	}
 	/**
 	* 新增广告位

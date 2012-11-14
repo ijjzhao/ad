@@ -108,6 +108,7 @@ class MongoModel extends Model{
     public function count(){
         // 分析表达式
         $options =  $this->_parseOptions();
+        print_r($options);
         return $this->db->count($options);
     }
 

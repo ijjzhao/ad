@@ -65,7 +65,7 @@ function also_filler(typ,fid,tit,locker){
 			codes+='<div class="board_addSi"><p class="tit_addSi">基本信息</p>';
 			codes+='<p class="cont_addSi"><input id="name_addSi" name="ana" type="text" value="广告位名称"></p>';
 			codes+='<p class="cont_addSi"><input id="remark_addSi" name="des" type="text" value="备注" ></p>';
-			codes+='<p class="cont_addSi"><select id="chan_addSi" name="chn" onchange="if(this.value==\'add\'){also_slider(2,\''+fid+'\',\'新建频道\',\''+fid+'\');$(this).val(\'0\')}">'+getChan()+'</select></p>';
+			codes+='<p class="cont_addSi"><select id="chan_addSi" name="chn" onchange="if(this.value==\'add\'){also_slider(3,\''+fid+'\',\'新建频道\',\''+fid+'\');$(this).val(\'0\')}">'+getChan()+'</select></p>';
 			codes+='</div>';
 			codes+='<div class="board_addSi"><p class="tit_addSi"><span id="tt_addSi">广告位形式</span></p>';
 			codes+='<p class="tts_addSi"><span><input name="spe" id="t1_addSi" value="1" title="固定" type="radio"><label for="t1_addSi">固定</label></span>';
@@ -88,7 +88,37 @@ function also_filler(typ,fid,tit,locker){
 			});			
 			break;
 		case 2:
+			//编辑广告位
+			codes='<div class="addSi">';
+			codes+='<h2>'+tit+'</h2>';
+			codes+='</div>';
+			break;
+		case 3:
 			//新增频道
+			codes='<div class="addChan">';
+			codes+='<h2>'+tit+'</h2>';
+			codes+='</div>';
+			break;
+		case 4:
+			//编辑频道
+			break;
+		case 5:
+			//新增素材
+			break;
+		case 6:
+			//编辑素材
+			break;
+		case 7:
+			//新增广告
+			codes='<div class="addChan">';
+			codes+='<h2>'+tit+'</h2>';
+			codes+='</div>';
+			break;
+		case 8:
+			//编辑广告
+			break;
+		case 9:
+			//获取投放代码
 			codes='<div class="addChan">';
 			codes+='<h2>'+tit+'</h2>';
 			codes+='</div>';
@@ -560,3 +590,150 @@ function bubtips(dad,tit,tex){
 		content: cont
 	});
 }
+
+
+/*
+* 分页设置中心
+* tpy：1=广告位
+* loa：loading标签的id
+*/
+function pageStation(typ,loa){
+	var ur='';
+	switch(typ){
+		case 1:
+			ur='http://localhost/ad/adseat/index/';
+			break;
+	}
+
+	//获取总数，初始化分页方法
+	$.ajax({
+         url:ur+'1',
+         type:"get",
+         beforeSend:function(){
+         		//loading
+           	},
+         success:function(d){
+         		var rs=eval('('+d+')');
+         		if(rs.status==1){
+         			var numb=parseInt(rs.data.count/5),mo=rs.data.count%5;
+         			numb = mo>0?(numb+1):numb;
+         			$("#pgs_box").pagination(numb,{
+						num_edge_entries: 1, //边缘页数
+						num_display_entries: 4, //主体页数
+						callback: pageselectCallback,
+						items_per_page: 1, //每页显示1项
+						prev_text: "上一页",
+						next_text: "下一页"
+					});
+         		}else{
+         			alert('获取失败');
+         		}
+         	},
+         error:function(){
+				alert('err');
+			}
+       });
+	
+
+	function pageselectCallback(page_index,jq){
+		$.ajax({
+         url:ur+(page_index+1),
+         type:"get",
+         beforeSend:function(){
+         		//loading
+           	},
+         success:function(d){
+         		var rs=eval('('+d+')');
+         		if(rs.status==1){
+         			var cod=formatData(typ,rs.data);
+         			$('#contBox').empty().append(cod); //装载对应分页的内容
+         			$('a[name="edits_loca"]').bind('click',function(){
+						editCenter(2,$(this).attr('id'));
+					});
+					$('a[name="adJoinLoca"]').bind('click',function(){
+						also_slider(7,'main_loca','新增广告到id为'+$(this).attr('alt')+'的广告位','main');
+					});
+					$('a[name="getJS"]').bind('click',function(){
+						also_slider(9,'main_loca','获取代码-广告位id:'+$(this).attr('alt'),'main');
+					});
+					
+					return false;   	
+         		}else{
+         			alert('获取失败');
+         		}
+         	},
+         error:function(){
+				alert('err');
+			}
+       });
+	}
+
+	
+
+}	
+
+/*
+* 列表数据整理中心
+* typ：1=广告位
+* data：json数据
+*/
+function formatData(typ,data){
+	var code='';
+
+	switch(typ){
+		case 1:
+			var shap='';
+			$.each(data.sea,function(k,v){
+					switch(v.shape){
+						case '1':
+							shap='banner';
+							break;
+						case '2':
+							shap='漂浮';
+							break;
+						case '3':
+							shap='Crazy';
+							break;
+						case '4':
+							shap='PIP扩展';
+							break;
+
+					}
+					code+='<div class="list_loca ing_loca">';
+				   	code+='<div class="list_left_loca">';
+				   	code+='<p class="list_tit_loca">'+v.name+'<span id="list_chan_loca" title="所属频道">('+v.chnName+')</span></p>';
+				   	code+='<p class="list_oth_loca">';
+				   	code+='<span id="list_size_loca" title="尺寸">'+v.priSize[0]+'x'+v.priSize[1]+'</span>';
+				   	code+='<span id="list_type_loca" title="形式">'+shap+'</span>';
+				   	code+='</p>';
+				   	code+='</div>';
+				   	code+='<div class="list_state_loca">';
+				   	code+='<p>正在投放</p>';
+				   	code+='<p id="list_snum_loca">'+k+'</p>';
+				   	code+='</div>';
+				   	code+='<div class="list_ops_loca">';
+				   	code+='<a id="'+v._id+'" name="edits_loca" href="javascript:void(0)">编辑</a>';
+				   	code+='<a alt="'+v._id+'" name="adJoinLoca" href="javascript:void(0)">投放广告</a>';
+				   	code+='<a href="javascript:void(0)">查看统计</a>';
+				   	code+='<a alt="'+v._id+'" name="getJS" href="javascript:void(0)">获取代码</a>';
+				   	code+='</div>';
+				   	code+='</div>';	
+			});
+			break;
+	}
+				
+	return code;
+}
+
+
+/*
+* 编辑中心
+* typ：2=广告位
+* id：待编辑项的id
+* 
+*/
+function editCenter(typ,id){
+	also_slider(typ,'main_loca','编辑广告位-id:'+id,'main');
+}
+
+

@@ -27,15 +27,23 @@ class AdseatModel extends MongoModel{
 	}
 	/**
 	* 分页查询广告位
+	* $siteId 广告位在哪个站点下面
 	* $page 第几页
 	* $limit 每页多少条
-	* $where 筛选条件
+	* $chn 根据频道筛选
 	*/
-	public function selectWithPage($page=1,$limit=10,$where = null){
+	public function selectWithPage($siteId,$page=1,$limit=10,$chn = null){
 		$arr = array(
-			'page' => 1,
-			'limit' => 3,
+			'page' => $page,
+			'limit' => $limit,
 		);
-		return $this->db->select($arr);
+		$arr['where'] = array('website' => new MongoId($siteId));
+		if($chn){
+			$arr['where']['chnName']= $chn;
+		}
+		$rs = $this->order('_id desc')->select($arr);
+		$count = $this->db->count($arr);
+		$rs['count'] = $count;
+		return $rs;
 	}
 }

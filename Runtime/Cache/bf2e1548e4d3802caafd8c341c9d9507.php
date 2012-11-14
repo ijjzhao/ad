@@ -5,7 +5,6 @@
 		<title>广告位 - Adnets</title>
 		<link rel="stylesheet" href="../Public/img/favicon.ico">
 		<link rel="stylesheet" href="../Public/css/also.css">
-		<link rel="stylesheet" href="../Public/css/tip-fff.css">
 		<link rel="stylesheet" type="text/css" href="/Public/css/also.css" />
 	</head>
 	<body>
@@ -14,38 +13,38 @@
 			<div class="navbar">
 				<a href="ads.html" class="nav">
 					<span class="nav_arrow"></span>
-					<img src="../Public/img/m1.png" alt="广告">
+					<span class="nav_ad" alt="广告"></span>
 					<p>广告</p>
 				</a>
 				
 				<a class="nav n_on">
 					<span class="nav_arrow"></span>
-					<img src="../Public/img/m2.png" alt="广告位">
+					<span class="nav_loca" alt="广告位"></span>
 					<p>广告位</p>
 				</a>
 
 				<a href="#" class="nav">
 					<span class="nav_arrow"></span>
-					<img src="../Public/img/m3.png" alt="素材库">
+					<span class="nav_mat" alt="素材库"></span>
 					<p>素材库</p>
 				</a>
 				<span class="bline" ></span>
 				<a href="#" class="nav">
 					<span class="nav_arrow"></span>
-					<img src="../Public/img/m4.png" alt="客户和订单">
+					<span class="nav_ord" alt="客户和订单"></span>
 					<p>客户和订单</p>
 				</a>
 
 				<a href="#" class="nav">
 					<span class="nav_arrow"></span>
-					<img src="../Public/img/m5.png" alt="数据统计">
+					<span class="nav_data" alt="数据统计"></span>
 					<p>数据统计</p>
 				</a>
 				<span class="bline" ></span>
 				<a href="#" class="nav">
 					<span class="ad_on_num">9</span>
 					<span class="nav_arrow"></span>
-					<img src="../Public/img/m6.png" alt="通知中心">
+					<span class="nav_info" alt="通知中心"></span>
 					<p>通知中心</p>
 				</a>
 			</div>
@@ -78,162 +77,22 @@
 						</div>
 					</div>
 
-					<div class="cont_loca">
-
-						<div class="list_loca ing_loca">
-							<div class="list_left_loca">
-								<p class="list_tit_loca">首页banner1<span id="list_chan_loca" title="所属频道">(xxx1)</span></p>
-								<p class="list_oth_loca">
-									<span id="list_size_loca" title="尺寸">468x60</span>
-									<span id="list_type_loca" title="形式">banner</span>
-								</p>	
-							</div>
-							
-							<div class="list_state_loca">
-								<p>正在投放</p>
-								<p id="list_snum_loca">3</p>
-							</div>
-
-							<div class="list_ops_loca">
-								 <a href="#">编辑</a>
-								 <a href="#">投放广告</a>
-								 <a href="#">查看统计</a>
-								 <a href="#">获取代码</a>
-							</div>
-						</div>
-
-						<div class="list_loca ing_loca">
-							<div class="list_left_loca">
-								<p class="list_tit_loca">首页banner2<span id="list_chan_loca" title="所属频道">(sfdssss1)</span></p>
-								<p class="list_oth_loca">
-									<span id="list_type_loca" title="形式">crazy</span>
-								</p>	
-							</div>
-							
-							<div class="list_state_loca">
-								<p>正在投放</p>
-								<p id="list_snum_loca">1</p>
-							</div>
-
-							<div class="list_ops_loca">
-								 <a href="#">编辑</a>
-								 <a href="#">投放广告</a>
-								 <a href="#">查看统计</a>
-								 <a href="#">获取代码</a>
-							</div>
-						</div>
-
-						<div class="list_loca non_loca">
-							<div class="list_left_loca">
-								<p class="list_tit_loca">首页banner1<span id="list_chan_loca" title="所属频道">(xxx1)</span></p>
-								<p class="list_oth_loca">
-									<span id="list_size_loca" title="尺寸">468x60</span>
-									<span id="list_type_loca" title="形式">banner</span>
-								</p>	
-							</div>
-							
-							<div class="list_state_loca">
-								<p id="list_snum_loca">空闲</p>
-							</div>
-
-							<div class="list_ops_loca">
-								 <a href="#">编辑</a>
-								 <a href="#">投放广告</a>
-								 <a href="#">查看统计</a>
-								 <a href="#">获取代码</a>
-							</div>
-						</div>
-
-						<div class="list_loca pla_loca">
-							<div class="list_left_loca">
-								<p class="list_tit_loca">某某广告位<span id="list_chan_loca" title="所属频道">(某某频道)</span></p>
-								<p class="list_oth_loca">
-									<span id="list_size_loca" title="尺寸">260x300</span>
-									<span id="list_type_loca" title="形式">浮动</span>
-								</p>	
-							</div>
-							
-							<div class="list_state_loca">
-								<p id="list_snum_loca">计划</p>
-							</div>
-
-							<div class="list_ops_loca">
-								 <a href="#">编辑</a>
-								 <a href="#">投放广告</a>
-								 <a href="#">查看统计</a>
-								 <a href="#">获取代码</a>
-							</div>
-						</div>
-
-						<div class="list_loca pla_loca">
-							<div class="list_left_loca">
-								<p class="list_tit_loca">某某广告位<span id="list_chan_loca" title="所属频道">(某某频道)</span></p>
-								<p class="list_oth_loca">
-									<span id="list_size_loca" title="尺寸">260x300</span>
-									<span id="list_type_loca" title="形式">浮动</span>
-								</p>	
-							</div>
-							
-							<div class="list_state_loca">
-								<p id="list_snum_loca">计划</p>
-							</div>
-
-							<div class="list_ops_loca">
-								 <a href="#">编辑</a>
-								 <a href="#">投放广告</a>
-								 <a href="#">查看统计</a>
-								 <a href="#">获取代码</a>
-							</div>
-						</div>
-
-						<div class="list_loca pla_loca">
-							<div class="list_left_loca">
-								<p class="list_tit_loca">某某广告位<span id="list_chan_loca" title="所属频道">(某某频道)</span></p>
-								<p class="list_oth_loca">
-									<span id="list_size_loca" title="尺寸">260x300</span>
-									<span id="list_type_loca" title="形式">浮动</span>
-								</p>	
-							</div>
-							
-							<div class="list_state_loca">
-								<p id="list_snum_loca">计划</p>
-							</div>
-
-							<div class="list_ops_loca">
-								 <a href="#">编辑</a>
-								 <a href="#">投放广告</a>
-								 <a href="#">查看统计</a>
-								 <a href="#">获取代码</a>
-							</div>
-						</div>
-
-						<div class="list_loca pla_loca">
-							<div class="list_left_loca">
-								<p class="list_tit_loca">某某广告位<span id="list_chan_loca" title="所属频道">(某某频道)</span></p>
-								<p class="list_oth_loca">
-									<span id="list_size_loca" title="尺寸">260x300</span>
-									<span id="list_type_loca" title="形式">浮动</span>
-								</p>	
-							</div>
-							
-							<div class="list_state_loca">
-								<p id="list_snum_loca">计划</p>
-							</div>
-
-							<div class="list_ops_loca">
-								 <a href="#">编辑</a>
-								 <a href="#">投放广告</a>
-								 <a href="#">查看统计</a>
-								 <a href="#">获取代码</a>
-							</div>
-						</div>
-
-					</div>
+					<div id="contBox" class="cont_loca"></div>
+					<div class="pages_box">
+						<div id="pgs_box" class="pagination"></div>
 				</div>
 			</div>
 		</div>
 		<script type="text/javascript" src="../Public/js/jquery.js"></script>
 		<script type="text/javascript" src="../Public/js/also.js"></script>
 		<script type="text/javascript" src="../Public/js/poshytip.min.js"></script>
+		<script type="text/javascript" src="../Public/js/pagination.js"></script>
+		<script type="text/javascript">
+			
+
+			pageStation(1);
+			
+
+		</script>
 	</body>
 </html>
