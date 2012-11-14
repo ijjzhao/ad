@@ -10,7 +10,7 @@ function also_slider(typ,dad,tit,locker){
 	var sli={
 		id:'also_slider_'+num,
 		zin:num*100,
-		left:88+(num*36),
+		left:78+(num*36),
 		lock:'also_slider_'+num+'_lock',
 		lzin:num*90
 	}
