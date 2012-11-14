@@ -25,5 +25,17 @@ class AdseatModel extends MongoModel{
 		$rs = $this->db->insert($arr);		//新增操作
 		return $rs;
 	}
-
+	/**
+	* 分页查询广告位
+	* $page 第几页
+	* $limit 每页多少条
+	* $where 筛选条件
+	*/
+	public function selectWithPage($page=1,$limit=10,$where = null){
+		$arr = array(
+			'page' => 1,
+			'limit' => 3,
+		);
+		return $this->db->select($arr);
+	}
 }

@@ -20,7 +20,7 @@ class AdseatAction extends SspAction{
 			$return_arr['chn'] = $chnnel_name_arr;		//设置要输出的频道信息
 			//获取当前站点下的所有广告位
 			$adseat = new AdseatModel();	//实例化广告位模型对象
-			$seat_arr = $adseat->selectBySiteid($site['_id']);
+			$seat_arr = $adseat->selectWithPage();
 			$seat_info_arr = array();
 			foreach ($seat_arr as $k => $v) {
 				$v['_id'] = $v['_id'];

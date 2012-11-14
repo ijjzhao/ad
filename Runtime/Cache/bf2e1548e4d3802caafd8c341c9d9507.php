@@ -5,6 +5,7 @@
 		<title>广告位 - Adnets</title>
 		<link rel="stylesheet" href="../Public/img/favicon.ico">
 		<link rel="stylesheet" href="../Public/css/also.css">
+		<link rel="stylesheet" href="../Public/css/tip-fff.css">
 		<link rel="stylesheet" type="text/css" href="/Public/css/also.css" />
 	</head>
 	<body>
@@ -233,5 +234,6 @@
 		</div>
 		<script type="text/javascript" src="../Public/js/jquery.js"></script>
 		<script type="text/javascript" src="../Public/js/also.js"></script>
+		<script type="text/javascript" src="../Public/js/poshytip.min.js"></script>
 	</body>
 </html>
