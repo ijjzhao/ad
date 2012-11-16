@@ -12,6 +12,9 @@ class AdseatAction extends SspAction{
 		if($this->isGet()){
 			$page = $_GET['_URL_'][2];//获取查询的页数
 			$chn = $_GET['_URL_'][3];//根据频道筛选;
+			$chn = $chn == 'all' ? null : $chn;
+			$put = $_GET['_URL_'][4];//根据投放状态筛选
+			$put = $put == 'all' ? null : $put;
 			if(is_numeric($page)){//是否是数字
 				$return_arr = array('limit'=> 5,'page'=>$page);			//定义内容输出数组
 				$site = $this->getWebSite();	//获取站点信息				
@@ -24,17 +27,13 @@ class AdseatAction extends SspAction{
 					$return_arr['chn'] = $chnnel_name_arr;		//设置要输出的频道信息
 					//获取当前站点下的所有广告位
 					$adseat = new AdseatModel();	//实例化广告位模型对象
-					$seat_arr = $adseat->selectWithPage($site['_id'],$page,$return_arr['limit'],$chn);
+					$seat_arr = $adseat->selectWithPage($site['_id'],$page,$return_arr['limit'],$chn,$put);
 					$seat_info_arr = array();
 					foreach ($seat_arr as $k => $v) {				
 						if(!$v['auxSize']['width'] || !$v['auxSize']['height']){
 							unset($v['auxSize']);//移出不需要的元素
 						}
-						if($k == 'count'){
-							$return_arr['count'] = $v;
-						}else{
-							array_push($seat_info_arr, $v);
-						}
+						array_push($seat_info_arr, $v);
 					}
 					$return_arr['sea'] = $seat_info_arr;			//设置要输出的频道信息
 				}
@@ -87,9 +86,45 @@ class AdseatAction extends SspAction{
 		}
 	}
 	/**
+	* 修改广告位（客户端由表单提交）
+	*/
+	public function upd(){
+		if($this->isPost()){
+			if(!empty($_POST['id'])){//获取id
+				$arr = array();//定义修改的内容
+				if()
+			}else{
+				$this->ajaxReturn('','No Id',0);
+			}
+		}
+	}
+	/**
+	*根据条件统计当前站点下所有的广告位数量
+	*/
+	public function cnt(){
+		if($this->isGet()){
+			$chn = $_GET['_URL_'][2];//根据频道筛选;
+			$chn = $chn == 'all' ? null : $chn;
+			$put = $_GET['_URL_'][3];//根据投放状态筛选
+			$put = $put == 'all' ? null : $put;
+			$m_adseat = new AdseatModel();
+			$op = array();
+			// if($put != null && $put == 0){//查询空闲的
+			// 	$op['adnum'] = 0;
+			// }else if($put == 1){//查询正在投放的
+			// 	$op['adnum'] = array('gt',0);
+			// }
+			if($chn){//筛选频道
+				$op['chnName'] = $chn;
+			}
+			$count = $m_adseat->adcount($this->getWebSiteId(),$op);
+			$this->ajaxReturn($count,'广告位数量',1);
+		}
+	}
+	/**
 	* 获取当前用户的站点（单个）
 	*/
-	public function getWebSite(){
+	private function getWebSite(){
 		$usr_id = $this->getUsr('id');		//获取用户的编号
 		$website = new WebsiteModel();	//实例化站点模型对象
 		$site_info = $website->findByUid($usr_id);	//根据uid查找站点		
