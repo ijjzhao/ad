@@ -5,7 +5,6 @@
 		<title>广告位 - Adnets</title>
 		<link rel="stylesheet" href="../Public/img/favicon.ico">
 		<link rel="stylesheet" href="../Public/css/also.css">
-		<link rel="stylesheet" type="text/css" href="/Public/css/also.css" />
 	</head>
 	<body>
 		<div class="menu">

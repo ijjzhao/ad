@@ -53,6 +53,6 @@ class SAction extends Action{
 	* Author: zjs
 	*/
 	private function showIndex(){
-		$this->redirect('Index/index');//重定向到首页
+		$this->redirect('index/index');//重定向到首页
 	}
 }
