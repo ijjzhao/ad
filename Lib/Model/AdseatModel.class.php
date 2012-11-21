@@ -1,6 +1,7 @@
 <?php
 //+--------------------------------
 //+ 广告位模型
+//+ Author:zjs
 //+--------------------------------
 class AdseatModel extends MongoModel{
 	/**
@@ -61,5 +62,31 @@ class AdseatModel extends MongoModel{
 			$arr['where'] += $options;
 		}
 		return $this->db->count($arr);
+	}
+	/**
+	* 广告位修改
+	* $data 需要修改的数据
+	* $seatId 广告位ID
+	*/
+	public function upSeatById($data,$seatId){
+		$arr['where'] = array('_id' => new MongoId($seatId));
+		return $this->db->update($data,$arr);
+	}
+	/**
+	* 根据编号删除站点
+	*/
+	public function delById($id){
+		$arr['where'] = array(
+			'_id' => new MongoId($id)
+		);
+		return $this->delete($arr);
+	}
+	/**
+	* 根据编号查找广告位信息
+	* $seatId 广告位编号
+	*/
+	public function findById($seatId){
+		$arr['where'] = array('_id' => new MongoId($seatId));
+		return $this->db->find($arr);
 	}
 }

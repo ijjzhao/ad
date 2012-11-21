@@ -37,7 +37,6 @@ class AdseatAction extends SspAction{
 					}
 					$return_arr['sea'] = $seat_info_arr;			//设置要输出的频道信息
 				}
-				// print_r($return_arr);				
 				$this->ajaxReturn($return_arr,'广告位列表',1);
 			}else{
 				$this->ajaxReturn('','参数错误',0);
@@ -74,7 +73,7 @@ class AdseatAction extends SspAction{
 				$adseat_model = new AdseatModel();
 				$rs = $adseat_model->addNewSeat($arr);
 				if($rs['ok']){
-					$this->ajaxReturn('','添加成功',1);
+					$this->ajaxReturn($rs['id'],'添加成功',1);
 				}else{
 					$this->ajaxReturn('','添加失败',0);
 				}
@@ -86,13 +85,68 @@ class AdseatAction extends SspAction{
 		}
 	}
 	/**
-	* 修改广告位（客户端由表单提交）
+	* 修改广告位（客户端由表单提交）(修改有些关联项需要处理，这里和添加代码有点冗余需修改)
 	*/
 	public function upd(){
 		if($this->isPost()){
-			if(!empty($_POST['id'])){//获取id
-				$arr = array();//定义修改的内容
-				if()
+			if(!empty($_POST['id']) && !empty($_POST['ana']) && !empty($_POST['pri']) && !empty($_POST['des'])){//获取id
+				$seat_id = $_POST['id'];
+				$arr = array(
+					'name' => $_POST['ana'],
+					'priSize' => explode('x',$_POST['pri']),
+					'website' => new MongoId($this->getWebSiteId())
+				);//定义存储的内容
+				$arr['desc'] = $_POST['des'] == '备注' ? '' : $_POST['des'];
+				$arr['auxSize'] = empty($_POST['aux']) ? 0 : explode('x', $_POST['aux']);
+				$arr['chnName'] = empty($_POST['chn']) ? 0 : $_POST['chn'];
+				$arr['isPush'] = empty($_POST['psh']) ? 'off' : 'on';
+				$arr['isScroll'] = empty($_POST['sll']) ? 'off' : 'on';
+				$arr['reTime'] = empty($_POST['stp']) ? -1 : $_POST['stp'];
+				/*广告位形式有关联，暂时不修改
+				$arr['layout']['orientation'] = empty($_POST['ore']) ? 0 : $_POST['ore'];
+				$arr['layout']['gavity'] = empty($_POST['gty']) ? 0 : $_POST['gty'];
+				$arr['layout']['vertical'] = empty($_POST['ver']) ? 0 : $_POST['ver'];
+				$arr['layout']['horizontal'] = empty($_POST['hor']) ? 0 : $_POST['hor'];*/
+				//实例化广告位模型对象
+				$m_adseat = new AdseatModel();
+				$rs = $m_adseat->upSeatById($arr,$seat_id);
+				if($rs){
+					$this->ajaxReturn('','修改成功',1);
+				}else{
+					$this->ajaxReturn('','修改失败',1);	
+				}
+			}else{
+				$this->ajaxReturn('','信息不全',0);
+			}
+		}
+	}
+	/**
+	* 根据编号获取站点的详细信息
+	*/
+	public function inf(){
+		if($this->isGet()){
+			$seat_id = $_GET['_URL_'][2];//获取广告位ID
+			if($seat_id){
+				$m_adseat = new AdseatModel();//实例化广告位模型对象
+				$seat_info = $m_adseat->findById($seat_id);
+				$this->ajaxReturn($seat_info,'广告位信息',1);
+			}
+		}
+	}
+	/**
+	* 删除广告位
+	*/
+	public function del(){
+		if($this->isGet()){
+			$seat_id = $_GET['_URL_'][2];//获取广告位ID
+			if($seat_id){
+				$m_adseat = new AdseatModel();//实例化广告位模型对象
+				$rs = $m_adseat->delById($site_id);
+				if($rs){
+					$this->ajaxReturn('','删除成功',1);
+				}else{
+					$this->ajaxReturn('','删除失败',0);
+				}
 			}else{
 				$this->ajaxReturn('','No Id',0);
 			}

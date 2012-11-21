@@ -242,6 +242,8 @@ class DbMongo extends Db{
                     $_id = $_id->__toString();
                 }
                $this->lastInsID    = $_id;
+               //由zjs添加，我不知道lastInsID怎么或取，所以直接添加到result中
+               $result['id'] = $this->lastInsID;
             }
             return $result;
         } catch (MongoCursorException $e) {
