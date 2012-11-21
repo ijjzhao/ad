@@ -887,15 +887,7 @@ body{
 }
 
 .sav_addSi:hover{
-	-webkit-box-shadow: 0 2px 6px rgba(0,0,0,.3);
-	-moz-box-shadow: 0 2px 6px rgba(0,0,0,.3);
-	-o-box-shadow: 0 2px 6px rgba(0,0,0,.3);
-	-ms-box-shadow: 0 2px 6px rgba(0,0,0,.3);
 	box-shadow: 0 2px 6px rgba(0,0,0,.3);
-	-webkit-transition: all 0.2s ease-out;
-	-moz-transition: all 0.2s ease-out;
-	-o-transition: all 0.2s ease-out;
-	-ms-transition: all 0.2s ease-out;
 	transition: all 0.2s ease-out;
 }
 
@@ -1047,4 +1039,66 @@ body{
 .pagination .current.prev, .pagination .current.next{
 	color:#555;
 	background:#fff;
+}
+
+
+/*alsoKey*/
+.alsoKey{
+	width: 720px;
+	padding: 30px 0 0 30px;
+}
+
+.topic_key{
+	font-weight: 0;
+	font-size: 24px;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+.swi_key{
+	width: 280px;
+	height: 60px;
+	margin-top: 1px;
+}
+
+.swi_L_key{
+	width: 46px;
+	height: 60px;
+	float: left;
+	text-align: center;
+	line-height: 60px;
+}
+
+.h_key{
+	font-size: 18px;
+	color: #444;
+	padding-top: 8px;
+	font-weight: 600;
+}
+
+.c_key{
+	font-size: 12px;
+	color: #666;
+	padding-top: 2px;
+}
+
+#key_key{
+	width: 660px;
+	height: 160px;
+	margin-top: 25px;
+	border: 2px solid #ccc;
+	font-size: 14px;
+	color: #333;
+	padding: 10px;
+}
+
+.ps_key{
+	margin-top: 5px;
+	font-size: 12px;
+	color: #666;	
+}
+
+.setNewInList{
+	box-Shadow:0 0 24px rgba(100,168,226,.9);
+	transition: all 0.2s ease-out;
 }
