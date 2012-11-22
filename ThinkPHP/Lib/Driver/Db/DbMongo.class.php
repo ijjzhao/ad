@@ -656,11 +656,11 @@ class DbMongo extends Db{
                     case 'set':
                     case 'unset':
                     case 'push':
-                    case 'pushall':
-                    case 'addtoset':
+                    case 'pushAll':
+                    case 'addToSet'://这里原来是addtoset造成修改不成功，安装mongodb需要区分大小写
                     case 'pop':
                     case 'pull':
-                    case 'pullall':
+                    case 'pullAll':
                         $result['$'.$val[0]][$key] = $val[1];
                         break;
                     default:
@@ -669,7 +669,7 @@ class DbMongo extends Db{
             }else{
                 $result['$set'][$key]    = $val;
             }
-        }
+        }                
         return $result;
     }
 

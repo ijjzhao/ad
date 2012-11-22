@@ -11,37 +11,36 @@ class AdseatAction extends SspAction{
 	public function index(){
 		if($this->isGet()){
 			$page = $_GET['_URL_'][2];//获取查询的页数
-			if(!is_numeric($page)){ $page = 1;}
+			if (!is_numeric($page)) {
+				$page = 1;
+			}
 			$chn = $_GET['_URL_'][3];//根据频道筛选;
 			$chn = $chn == 'all' ? null : $chn;
 			$put = $_GET['_URL_'][4];//根据投放状态筛选
 			$put = $put == 'all' ? null : $put;
-			// if(is_numeric($page)){//是否是数字
-				$return_arr = array('limit'=> 5,'page'=>$page);			//定义内容输出数组
-				$site = $this->getWebSite();	//获取站点信息				
-				if($site){	//验证是否有站点数据
-					$chnnel_name_arr = array();						//频道名称列表
-					foreach ($site['channel'] as $k => $v) {
-						$chnnel_name = $v['chnName'];				//获取当前频道的名称
-						array_push($chnnel_name_arr,$chnnel_name);	//将频道名称添加到频道名称列表中
-					}
-					$return_arr['chn'] = $chnnel_name_arr;		//设置要输出的频道信息
-					//获取当前站点下的所有广告位
-					$adseat = new AdseatModel();	//实例化广告位模型对象
-					$seat_arr = $adseat->selectWithPage($site['_id'],$page,$return_arr['limit'],$chn,$put);
-					$seat_info_arr = array();
-					foreach ($seat_arr as $k => $v) {				
-						if(!$v['auxSize']['width'] || !$v['auxSize']['height']){
-							unset($v['auxSize']);//移出不需要的元素
-						}
-						array_push($seat_info_arr, $v);
-					}
-					$return_arr['sea'] = $seat_info_arr;			//设置要输出的频道信息
+			$return_arr = array('limit'=> 5,'page'=>$page);			//定义内容输出数组
+			$site = $this->getWebSite();	//获取站点信息				
+			if($site){	//验证是否有站点数据
+				$chnnel_name_arr = array();						//频道名称列表
+				foreach ($site['channel'] as $k => $v) {
+					$chnnel_name = $v['chnName'];				//获取当前频道的名称
+					array_push($chnnel_name_arr,$chnnel_name);	//将频道名称添加到频道名称列表中
 				}
-				$this->ajaxReturn($return_arr,'广告位列表',1);
-			// }else{
-			// 	$this->ajaxReturn('','参数错误',0);
-			// }
+				$return_arr['chn'] = $chnnel_name_arr;		//设置要输出的频道信息
+				//获取当前站点下的所有广告位
+				$adseat = new AdseatModel();	//实例化广告位模型对象
+				$seat_arr = $adseat->selectWithPage($site['_id'],$page,$return_arr['limit'],$chn,$put);
+				$seat_info_arr = array();
+				foreach ($seat_arr as $k => $v) {				
+					if(!$v['auxSize']['width'] || !$v['auxSize']['height']){
+						unset($v['auxSize']);//移出不需要的元素
+					}
+					array_push($seat_info_arr, $v);
+				}
+				$return_arr['sea'] = $seat_info_arr;			//设置要输出的频道信息
+			}
+				// print_r($return_arr);
+			$this->ajaxReturn($return_arr,'广告位列表',1);
 		}else{
 			$this->ajaxReturn('','请求错误',0);
 		}
@@ -176,6 +175,51 @@ class AdseatAction extends SspAction{
 			}
 			$count = $m_adseat->adcount($this->getWebSiteId(),$op);
 			$this->ajaxReturn($count,'广告位数量',1);
+		}
+	}
+	/**
+	* 获取当前站点下所有的频道
+	*/
+	public function chn(){
+		$seat_id = $this->getWebSiteId();
+		$m_site = new WebsiteModel();
+		$rs = $m_site->selectChannel($seat_id);
+		foreach ($rs as $k => $v) {				
+			$arr = $v['channel'];//获取频道的数据
+		}
+		$this->ajaxReturn($arr,'频道列表',1);
+	}
+	/**
+	* 添加信息的频道
+	*/
+	public function newchn(){		
+		if($this->isPost() && !empty($_POST['cna'])){
+			$name = $_POST['cna'];
+			$desc = $_POST['ces'];
+			$m_site = new WebsiteModel();
+			$rs = $m_site->addChannel($this->getWebSiteId(),$name,$desc);
+			if($rs){
+				$this->ajaxReturn('','添加频道成功',1);
+			}else{
+				$this->ajaxReturn('','添加频道失败',0);
+			}
+		}
+	}
+	/**
+	* 删除当前站点下的频道
+	*/
+	public function delchn(){
+		if($this->isGet()){
+			$chnName = $_GET['_URL_'][2];
+			if(!empty($chnName)){
+				$m_site = new WebsiteModel();
+				$rs = $m_site->delChannel($this->getWebSiteId(),$chnName);
+				if($rs){
+					$this->ajaxReturn('','删除频道成功',1);
+				}else{
+					$this->ajaxReturn('','删除频道失败',0);
+				}
+			}
 		}
 	}
 	/**

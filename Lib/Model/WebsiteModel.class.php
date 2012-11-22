@@ -36,10 +36,49 @@ class WebsiteModel extends MongoModel{
 	}
 	/**
 	* 新增频道
+	* $site_id 所属的站点
 	* $chnName 频道的名称
 	* $desc 频道备注
 	*/
-	public function addChannel($chnName,$desc){
-		
+	public function addChannel($site_id,$chnName,$desc){
+		$arr['where'] = array(
+			'_id' => new MongoId($site_id),
+		);
+		$chn_info = array(
+			'chnName' => $chnName,
+			'state' => 1,
+			'desc' => $desc
+		);
+		$data = array(
+			'channel' => array('addToSet',$chn_info)
+		);
+		return $this->db->update($data,$arr);
+	}
+	/**
+	* 删除指定站点下的频道
+	* $site_id 站点编号
+	* $chnName 要删除的频道
+	*/
+	public function delChannel($site_id,$chnName){
+		$arr['where'] = array(
+			'_id' => new MongoId($site_id),
+		);
+		$chn_info = array('chnName' => $chnName);
+		$data = array(
+			'channel' => array('pull',$chn_info)
+		);
+		return $this->db->update($data,$arr);
+	}
+	/**
+	* 查找当前站点下所有的频道
+	* $site_id 站点编号
+	*/
+	public function selectChannel($site_id){
+		$arr['where'] = array(
+			'_id' => new MongoId($site_id),
+			'channel.state' => 1
+		);
+		$arr['field'] = array('channel','channel.chnName','channel.desc');
+		return $this->db->select($arr);
 	}
 }
