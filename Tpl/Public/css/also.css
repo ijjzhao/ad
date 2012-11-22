@@ -465,6 +465,10 @@ body{
 	padding: 30px 0 30px 30px;
 }
 
+.topic_loca{
+	width: 1135px;
+}
+
 .topic_loca h2{
 	font-size: 25px;
 	font-weight: normal;
@@ -528,11 +532,12 @@ body{
 }
 
 .cont_loca{
+	width: 1135px;
 	margin-top: 25px;
 }
 
 .list_loca{
-	width: 1145px;
+	width: 1135px;
 	height: 90px;
 	margin-bottom: 8px;
 }
@@ -896,8 +901,6 @@ body{
 	cursor: default;
 }
 
-
-
 #cancel_addSi{
 	margin-left: 30px;
 }
@@ -1098,7 +1101,85 @@ body{
 	color: #666;	
 }
 
-.setNewInList{
-	box-Shadow:0 0 24px rgba(100,168,226,.9);
+
+/*addChan*/
+.addChan{
+	width: 720px;
+	padding: 20px 0 0 30px;
+}
+
+.addChan .topic_addCh{
+	font-weight: 0;
+	font-size: 26px;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+.addChan input[type="text"]{
+	color: #999;
+	height: 22px;
+	border: 1px solid #ccc;
+	padding:3px;
+	border-radius: 4px;
+	font-size: 13px;
+	line-height: 22px;
+}
+
+.board_addCh{
+	width: 686px;
+	border: 1px solid #EAEAEA;
+	background: #F9F9F9;
+	margin-top: 10px;
+	padding: 18px;
+}
+
+
+.cont_addCh{
+	margin-top: 16px;
+}
+
+#name_addCh{
+	width: 205px;
+}
+
+#remark_addCh{
+	width: 420px;
+	margin-bottom: 10px;
+}
+
+.btns_addCh{
+	margin: 45px 0 50px 0;
+}
+
+#save_addCh{
+	width: 180px;
+	height: 50px;
+	line-height: 50px;
+	display: inline-block;
+	color: #fff;
+	text-align: center;
+	font-size: 18px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.save_addCh_1{
+	background: #EF9B24;
+}
+
+.sav_addCh:hover{
+	box-shadow: 0 2px 6px rgba(0,0,0,.3);
 	transition: all 0.2s ease-out;
 }
+
+.save_addCh_2{
+	background: #ccc;
+	cursor: default;
+}
+
+
+#cancel_addCh{
+	margin-left: 30px;
+}
+
+/*editSi*/

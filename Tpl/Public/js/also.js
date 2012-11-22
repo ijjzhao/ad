@@ -1,10 +1,10 @@
-/*
-* 滑层
-* sid：slider的id
-* dad：父层id
-* tit：标题
-* locker：用于锁定/解开父层的纵向滚动条
-* fill：填充的内容
+/*	
+	 滑层
+	 sid：slider的id
+	 dad：父层id
+	 tit：标题
+	 locker：用于锁定/解开父层的纵向滚动条
+	 fill：填充的内容
 */
 function also_slider(sid,dad,tit,locker,fill){
 	var num=$('.also_slider').size()+1;
@@ -25,10 +25,10 @@ function also_slider(sid,dad,tit,locker,fill){
 	$('#'+locker).css('overflow-y','hidden');
 }
 
-/*
-* 删除滑层
-* id：slider的id
-* locker：locker的id
+/*	
+	 删除滑层
+	 id：slider的id
+	 locker：locker的id
 */
 function also_remove(id,locker){
 	$('#'+id).animate({
@@ -42,13 +42,13 @@ function also_remove(id,locker){
 	$('#'+locker).css('overflow-y','auto');
 }
 
-/* 
-* 滑层内容集中营
-* typ：类型
-* fid：父层id
-* tit：标题
-* locker：用于锁定/解开父层的纵向滚动条
-* eid：编辑时数据的id（数据库中的id）
+/*	 
+	 滑层内容集中营
+	 typ：类型
+	 fid：父层id
+	 tit：标题
+	 locker：用于锁定/解开父层的纵向滚动条
+	 eid：编辑时数据的id（数据库中的id）
 */
 function also_filler(typ,fid,tit,locker,eid){
 	var codes='',sid='';
@@ -64,7 +64,10 @@ function also_filler(typ,fid,tit,locker,eid){
 			codes+='<div class="board_addSi"><p class="tit_addSi">基本信息</p>';
 			codes+='<p class="cont_addSi"><input id="name_addSi" name="ana" type="text" value="广告位名称"></p>';
 			codes+='<p class="cont_addSi"><input id="remark_addSi" name="des" type="text" value="备注" ></p>';
-			codes+='<p class="cont_addSi"><select id="chan_addSi" name="chn" onchange="if(this.value==\'add\'){also_filler(3,\'also_slider_addSi\',\'新建频道\',\'also_slider_addSi\');$(this).val(\'0\')}">'+getChan()+'</select></p>';
+			codes+='<p class="cont_addSi">';
+			codes+='<select id="chan_addSi" name="chn" onchange="if(this.value==\'add\'){also_filler(3,\'also_slider_addSi\',\'新建频道\',\'also_slider_addSi\');$(this).val(\'0\')}">';
+			codes+='</select>';
+			codes+='</p>';
 			codes+='</div>';
 			codes+='<div class="board_addSi"><p class="tit_addSi"><span id="tt_addSi">广告位形式</span></p>';
 			codes+='<p class="tts_addSi"><span><input name="spe" id="t1_addSi" value="1" title="固定" type="radio"><label for="t1_addSi">固定</label></span>';
@@ -74,30 +77,17 @@ function also_filler(typ,fid,tit,locker,eid){
 			codes+='</p>';
 			codes+='<div id="base_addSi"></div></div>';
 			codes+='<div class="board_addSi"><p class="tru_addSi"><input id="trust_addSi" name="psh" type="checkbox"><label for="trust_addSi">接受锦途推送的广告</label></p>';
-			codes+='<p class="tru1_addSi">*勾选此项则我们会根据您的网站类型推荐广告给您，您可以选择接受或者不投放</p>';
+			codes+='<p class="tru1_addSi">	勾选此项则我们会根据您的网站类型推荐广告给您，您可以选择接受或者不投放</p>';
 			codes+='</div>';
 			codes+='<div class="btns_addSi">';
 			codes+='<a id="save_addSi" sli="also_slider_addSi" loc="'+locker+'"  class="save_addSi_1" >保存广告位</a>';
 			codes+='<a id="cancel_addSi" href="javascript:void(0)" onclick="also_remove(\'also_slider_addSi\',\''+locker+'\')">取消</a>';
 			codes+='</div>';
-			codes+='<input type="hidden" name="pri"><input type="hidden" name="aux">'
+			codes+='<input type="hidden" name="pri"><input type="hidden" name="aux">';
 			codes+='</form></div>';
+			codes+='<iframe onload="afterLoad(1)"></iframe>';
 
-			$('#name_addSi').live('focus',function(){
-				textholder(0,'name_addSi','广告位名称',$(this).val());
-			});
-
-			$('#name_addSi').live('blur',function(){
-				textholder(1,'name_addSi','广告位名称',$(this).val());
-			});
-
-			$('#remark_addSi').live('focus',function(){
-				textholder(0,'remark_addSi','备注',$(this).val());
-			});
-
-			$('#remark_addSi').live('blur',function(){
-				textholder(1,'remark_addSi','备注',$(this).val());
-			});
+			
 
 			$('input[name="spe"]').live('click',function(){
 				var va=parseInt($(this).val()),name=$(this).attr('title'),co='';
@@ -195,6 +185,7 @@ function also_filler(typ,fid,tit,locker,eid){
 							textholder(1,'height3_addSi','高',$(this).val());
 						});
 				}
+
 				$("#base_addSi").empty();
 				$("#base_addSi").append(co);
 
@@ -216,25 +207,32 @@ function also_filler(typ,fid,tit,locker,eid){
 				});
 			});
 
-			$('#save_addSi').live('click',function(){
-				sub_addLoca();
-			});
-
-			bubble(1); // 气泡通知框
 			break;
 		case 2:
 			//编辑广告位
 			sid='also_slider_editSi';
-			codes='<div class="addSi">';
-			codes+='<h2>'+tit+'</h2>';
+			codes='<div class="editSi">';
+			codes+='<p>'+tit+'</p>';
 			codes+='</div>';
 			break;
 		case 3:
 			//新增频道
 			sid='also_slider_addCh';
 			codes='<div class="addChan">';
-			codes+='<h2>'+tit+'</h2>';
+			codes+='<form id="form_addCh">';
+			codes+='<p class="topic_addCh">'+tit+'</p>';
+			codes+='<div class="board_addCh">';
+			codes+='<p class="cont_addCh"><input id="name_addCh" name="cna" type="text" value="频道名称"></p>';
+			codes+='<p class="cont_addCh"><input id="remark_addCh" name="ces" type="text" value="备注"></p>';
 			codes+='</div>';
+			codes+='<div class="btns_addCh">';
+			codes+='<a id="save_addCh" sli="also_slider_addCh" loc="'+locker+'"  class="save_addCh_1" >保存频道</a>';
+			codes+='<a id="cancel_addCh" href="javascript:void(0)" onclick="also_remove(\'also_slider_addCh\',\''+locker+'\')">取消</a>';
+			codes+='</div>';
+			codes+='</form>';
+			codes+='</div>';
+			codes+='<iframe onload="afterLoad(2)"></iframe>';
+			
 			break;
 		case 4:
 			//编辑频道
@@ -306,9 +304,63 @@ function also_filler(typ,fid,tit,locker,eid){
 	also_slider(sid,fid,tit,locker,codes);
 }
 
-
 /*
-* 屏幕位置选择为“居中”时的处理
+	划层数据append后调用的函数
+	typ：1=新增广告位 2=新增频道
+*/
+function afterLoad(typ){
+	switch(typ){
+		case 1:
+			$('#name_addSi').bind('focus',function(){
+				textholder(0,'name_addSi','广告位名称',$(this).val());
+			});
+
+			$('#name_addSi').bind('blur',function(){
+				textholder(1,'name_addSi','广告位名称',$(this).val());
+			});
+
+			$('#remark_addSi').bind('focus',function(){
+				textholder(0,'remark_addSi','备注',$(this).val());
+			});
+
+			$('#remark_addSi').bind('blur',function(){
+				textholder(1,'remark_addSi','备注',$(this).val());
+			});
+
+			$('#save_addSi').bind('click',function(){
+				sub_addLoca();
+			});
+
+			bubble(1); // 气泡通知框
+
+			getChan(1);// 获取频道数据
+			break;
+		case 2:
+			$('#name_addCh').bind('focus',function(){
+				textholder(0,'name_addCh','频道名称',$(this).val());
+			});
+
+			$('#name_addCh').bind('blur',function(){
+				textholder(1,'name_addCh','频道名称',$(this).val());
+			});
+
+			$('#remark_addCh').bind('focus',function(){
+				textholder(0,'remark_addCh','备注',$(this).val());
+			});
+
+			$('#remark_addCh').bind('blur',function(){
+				textholder(1,'remark_addCh','备注',$(this).val());
+			});
+
+			$('#save_addCh').bind('click',function(){
+				sub_addCh();
+			});
+			break;
+	}
+}
+
+/*	
+  屏幕位置选择为“居中”时的处理
 */
 function setScrLoca(val,tex,inp){
 	if(val==tex){
@@ -320,7 +372,9 @@ function setScrLoca(val,tex,inp){
 	}
 }
 
-/*处理尺寸选择处的切换*/
+/*
+	处理尺寸选择处的切换
+*/
 function sizeType(id,s1,s2){
 	var tpy=$('#'+id).attr('alt');
 	if(tpy=='0'){
@@ -339,7 +393,9 @@ function sizeType(id,s1,s2){
 	tips(id);
 }
 
-/*onfocus、onblur 处理占位文字*/
+/*	
+	onfocus、onblur 处理占位文字
+*/
 function textholder(tpy,id,tex,val){
 	switch(tpy){
 		case 0:
@@ -358,30 +414,89 @@ function textholder(tpy,id,tex,val){
 	
 }
 
-/*获取频道内容*/
-function getChan(id){
-	//id为广告位的id,新增时，后端只需返回所有的频道信息；修改时，后端返回所有频道信息的同时还要返回这个广告位所属频道的id.
-	//目前为模拟数据，真实数据从后端获取
-	//获取后存放至全局变量中，避免频繁请求
-	var chan='';
-	chan='<option value="">选择所属频道(非必选)</option>';
-	chan+='<option value="" disabled="disabled">-----</option>';
-	chan+='<option value="主站">主站</option>';
-	chan+='<option value="教育">教育</option>';
-	chan+='<option value="体育">体育</option>';
-	chan+='<option value="" disabled="disabled">-----</option>';
-	chan+='<option value="add">新建频道</option>';
-	return chan;
+
+/*	
+ 	获取频道内容
+ 	typ：1=广告列表处的select 2=新增广告处的select  3=系统设置处的列表
+ 	cho：1=选中最后一个
+*/
+function getChan(typ,cho){
+	var dat=$('#datas_chan').val();
+	if(dat==""){
+		$.ajax({
+         url:'http://localhost/ad/adseat/chn',
+         type:"get",
+         beforeSend:function(){
+         		
+           	},
+         success:function(d){
+         		var rs=eval('('+d+')');
+         		if(rs.status==1){
+         			var da=[];
+					$('#datas_chan').val(d);
+         			formatChan(typ,d);
+         		}else{
+         			alert('获取频道内容失败');
+         		}
+         	},
+         error:function(){
+				alert('获取频道内容err');
+			}
+       });
+	}else{
+		formatChan(typ,dat);
+	}
+	/*
+		typ：1=广告列表处的select 2=新增广告处的select  3=系统设置处的列表
+		dt：数据
+	*/
+	function formatChan(typ,dt){
+		dt=eval('('+dt+')');
+		var chan='';
+		switch(typ){
+			case 1:
+				chan+='<option value="">选择所属频道(非必选)</option><option value="" disabled="disabled">-----</option>';
+				$.each(dt.data,function(k,v){
+					chan+='<option value="'+v.chnName+'">'+v.chnName+'</option>';
+				});
+				chan+='<option value="" disabled="disabled">-----</option><option value="add">新建频道</option>';
+				$('#chan_addSi').empty().append(chan);
+				if(cho==1){
+					var lent=dt.data.length-1;
+					$('#chan_addSi').val(dt.data[lent].chnName);
+				}
+				break;
+			case 2:
+				chan+='<option value="all">全部频道</option>';
+				$.each(dt.data,function(k,v){
+					chan+='<option value="'+v.chnName+'">'+v.chnName+'</option>';
+				});
+				var chanNow=$('#chan_now').val();
+				$('#sele_chan').empty().append(chan);
+				if(chanNow!=''){
+					$('#sele_chan').val(chanNow);
+				}
+				break;
+			case 3:
+				break;
+		}
+
+		return chan;
+	}
+
+	
 }
 
-/*提交-新增广告位*/
+/*
+	提交-新增广告位
+*/
 function sub_addLoca(){
 
 	var name=$('#name_addSi').val(),
 		chan=$('#chan_addSi').val(),
 		type=$('input[name="spe"]:checked').val();
 
-	if(checkStation(name,0,'广告位名称')==false){
+	if(checkStation(name,1,'广告位名称')==false){
 		tips('name_addSi','请填写广告位名称','name_addSi');
 		return;
 	}else{
@@ -429,13 +544,14 @@ function sub_addLoca(){
 		tips('tt_addSi','请选择广告位形式');
 		return;
 	}
-	/*
-	* 处理尺寸的获取问题（自定义尺寸和常用尺寸）
-	* tpy：0常用  1自定义
-	* sid：select的id
-	* st：priSize(主尺寸) auxSize(副尺寸)
-	* wid：自定义宽的id
-	* hid：自定义高的id
+
+	/*	
+		 处理尺寸的获取问题（自定义尺寸和常用尺寸）
+		 tpy：0常用  1自定义
+		 sid：select的id
+		 st：priSize(主尺寸) auxSize(副尺寸)
+		 wid：自定义宽的id
+		 hid：自定义高的id
 	*/
 	function pushSizes(tpy,sid,st,wid,hid){
 		if(tpy==0){
@@ -467,20 +583,52 @@ function sub_addLoca(){
 		return true;
 	}
 
-	subData('form_addSi','http://localhost/ad/index.php/adseat/add','save_addSi','cancel_addSi','正在保存...','保存广告位');
+	subData(1,'form_addSi','http://localhost/ad/adseat/add','save_addSi','cancel_addSi','正在保存...','保存广告位');
 
 }
 
 /*
-* 提交表单的公用方法
-* fid：form id
-* ur：处理页地址
-* bid：提交按钮id
-* cid：取消按钮id
-* ing：beforeSend文字
-* wor: 按钮原有文字
+	提交-新增频道
 */
-function subData(fid,ur,bid,cid,ing,wor){
+function sub_addCh(){
+	var name=$('#name_addCh').val(),dat=$('#datas_chan').val();
+	if(checkStation(name,1,'频道名称')==false){
+		tips('name_addCh','请填写频道名称','name_addCh');
+		return;
+	}else{
+		tips('name_addCh');
+		if(dat!=""){
+			var isRep=0;
+			dat=eval('('+dat+')');
+			$.each(dat.data,function(k,v){
+				if(v.chnName==name){
+					isRep=1;
+				}
+			});
+			if(isRep!=0){
+				tips('name_addCh','频道已存在','name_addCh');
+				return;
+			}else{
+				tips('name_addCh');
+			}
+		}
+	}
+
+	subData(2,'form_addCh','http://localhost/ad/adseat/newchn','save_addCh','cancel_addCh','正在保存...','保存频道');
+}
+
+
+/*	
+	提交表单的公用方法
+	typ：1=新增广告位  2=新增频道
+	fid：form的id
+	ur：处理页地址
+	bid：提交按钮id
+	cid：取消按钮id
+	ing：beforeSend文字
+	wor: 按钮原有文字
+*/
+function subData(typ,fid,ur,bid,cid,ing,wor){
 	$.ajax({
          url:ur,
          data:$('#'+fid).serialize(),
@@ -493,7 +641,16 @@ function subData(fid,ur,bid,cid,ing,wor){
          success:function(d){
          		var rs=eval('('+d+')');
          		if(rs.status==1){
-         			getNewData(2,rs.data);
+         			switch(typ){
+         				case 1:
+         					getNewData(2,rs.data);		
+         					break;
+         				case 2:
+         					$('#datas_chan').val('');
+         					getChan(1,1);
+         					getChan(2);
+         					break;
+     				}
          			also_remove($('#'+bid).attr('sli'),$('#'+bid).attr('loc'));
          		}else{
          			tips(cid,'提交失败，请稍后再试');
@@ -501,7 +658,6 @@ function subData(fid,ur,bid,cid,ing,wor){
          			$('#'+bid).text(wor);
          			$('#'+bid).removeClass().addClass(bid+'_1');
          		}
-           		
          	},
          error:function(){
 				tips(cid,'提交失败，请稍后再试');
@@ -512,16 +668,17 @@ function subData(fid,ur,bid,cid,ing,wor){
        });
 }
 
-/*
-* 新增数据成功后请求最新的一条数据
-* typ：2=广告位（新增成功后）
-* nid：最新数据的id
+/*	
+	新增数据成功后请求最新的一条数据
+	typ：2=广告位（新增成功后）
+	nid：最新数据的id
 */
 function getNewData(typ,nid){
 	var ur='';
 	switch(typ){
 		case 2:
 			ur='http://localhost/ad/adseat/inf/';
+			getAnum('http://localhost/ad/adseat/cnt/','topic_loca_num1');
 			break;
 	}
 
@@ -534,7 +691,7 @@ function getNewData(typ,nid){
          success:function(d){
          		var rs=eval('('+d+')');
          		if(rs.status==1){
-         			formatData(typ,rs.data);   			
+         			formatData(typ,rs.data);			
          		}else{
          			alert('获取广告数据失败--新增成功后');
          		}
@@ -546,13 +703,12 @@ function getNewData(typ,nid){
        });
 }
 
-getNewData(2,'50acbb34b89576c423000001');
 
-/*
-* 在获取的数据被格式化以后加入到list中
-* 用于处理出现时有特效的情况
-* typ：1=广告位，2=广告位（新增成功后）
-* cod：html代码
+/*	
+	在获取的数据被格式化以后加入到list中
+	用于处理出现时有特效的情况
+	typ：1=广告位，2=广告位（新增成功后）
+	cod：html代码
 */
 function setDataInlist(typ,cod){
 	switch(typ){
@@ -571,21 +727,18 @@ function setDataInlist(typ,cod){
 			break;
 		case 2:
 			$('#contBox').prepend(cod);
-			$('#contBox div:first').addClass('setNewInList');
-			 setTimeout(function () {
-            	$('#contBox div:first').removeClass('setNewInList');
-        	}, 3000);
-			
+			$('#contBox div:first').animate({opacity:'1'},1200);
+
 			break;
 	}
 	
 }
 
-/*
-* 表单验证中心
-* val：要验证的值
-* tpy：要验证的类型(1:空  2：空+undefined  3：空+undefined+数字 4：空+undefined+数字+正整数)
-* hol：占位文本
+/*	
+	表单验证中心
+	val：要验证的值
+	tpy：要验证的类型(1:空  2：空+undefined  3：空+undefined+数字 4：空+undefined+数字+正整数)
+	hol：占位文本
 */
 function checkStation(val,tpy,hol){
 
@@ -622,10 +775,10 @@ function checkStation(val,tpy,hol){
 }
 
 /*
-* 按分隔符截取字符串
-* num：取第几位
-* sign:分隔符
-* tex：字符串
+	 按分隔符截取字符串
+	 num：取第几位
+	 sign:分隔符
+	 tex：字符串
 */
 function cutText(num,sign,tex){
 	 var result=tex.split(sign);
@@ -634,11 +787,11 @@ function cutText(num,sign,tex){
 
 
 /*
-* 表单提示
-* dad: 父元素id
-* tex：提示内容,没有内容则删除已存在的tip
-* foc：focus 
-* col：文字颜色
+	 表单提示
+	 dad: 父元素id
+	 tex：提示内容,没有内容则删除已存在的tip
+	 foc：focus 
+	 col：文字颜色
 */
 function tips(dad,tex,foc,col){
 	if(typeof(tex)!='undefined'){
@@ -664,10 +817,9 @@ function tips(dad,tex,foc,col){
 
 
 /*
-* 气泡提示指挥中心
-* typ：1=新增广告位
+	 气泡提示指挥中心
+	 typ：1=新增广告位
 */
-
 function bubble(typ){
 	switch(typ){
 		case 1:
@@ -682,10 +834,10 @@ function bubble(typ){
 }
 
 /*
-* 调用气泡方法
-* dad：调用者id
-* tit：标题
-* tex：内容
+	 调用气泡方法
+	 dad：调用者id
+	 tit：标题
+	 tex：内容
 */
 function bubtips(dad,tit,tex){
 	var cont='<div class="tit_bub">'+tit+'</div>';
@@ -703,14 +855,20 @@ function bubtips(dad,tit,tex){
 
 
 /*
-* 分页设置中心
-* tpy：1=广告位
+	 分页设置中心
+	 tpy：1=广告位
 */
 function pageStation(typ){
-	var ur='',ul='';
+	var ur='',ul='',chan=$('#sele_chan').val(),sta=$('#sele_state').val();
+	if(chan==null){
+		chan="all";
+	}
+	if(sta==null){
+		sta="all";
+	}
 	switch(typ){
 		case 1:
-			ur='http://localhost/ad/adseat/cnt/';
+			ur='http://localhost/ad/adseat/cnt/'+chan+'/'+sta;
 			ul='http://localhost/ad/adseat/index/';
 			//获取总数，初始化分页方法
 			break;
@@ -746,7 +904,7 @@ function pageStation(typ){
 
 	function pageselectCallback(page_index,jq){
 		$.ajax({
-	         url:ul+(page_index+1),
+	         url:ul+(page_index+1)+'/'+chan+'/'+sta,
 	         type:"get",
 	         beforeSend:function(){
 	         		//loading
@@ -767,10 +925,10 @@ function pageStation(typ){
 	}
 }	
 
-/*
-* 列表数据整理中心
-* typ：1=广告位，2=广告位（新增成功后）
-* data：json数据
+/*	
+	 列表数据整理中心
+	 typ：1=广告位，2=广告位（新增成功后）
+	 data：json数据
 */
 function formatData(typ,data){
 	var code='';
@@ -861,10 +1019,10 @@ function formatData(typ,data){
 			if(data.chnName==0){
 				chan='';
 			}else{
-				chan='('+v.chnName+')';
+				chan='('+data.chnName+')';
 			}
 
-			code+='<div class="list_loca non_loca">';
+			code+='<div class="list_loca non_loca" style="opacity:0.1;">';
 		   	code+='<div class="list_left_loca">';
 		   	code+='<p class="list_tit_loca">'+data.name+'<span id="list_chan_loca" title="所属频道">'+chan+'</span></p>';
 		   	code+='<p class="list_oth_loca">';
@@ -891,11 +1049,11 @@ function formatData(typ,data){
 }
 
 
-/*
-* 编辑中心
-* typ：2=广告位
-* id：待编辑项的id
-* 
+/*	
+	 编辑中心
+	 typ：2=广告位
+	 id：待编辑项的id
+	 
 */
 function editCenter(typ,id){
 	switch(typ){
@@ -904,4 +1062,30 @@ function editCenter(typ,id){
 			break;
 	}
 	
+}
+
+
+/*	
+	 当仅需从服务器获取一个数字并添加到页面时 
+	 ur：url
+	 inid：append的元素id
+	 
+*/
+function getAnum(ur,inid){
+	$.ajax({
+         url:ur,
+         type:"get",
+         beforeSend:function(){
+         		//loading
+           	},
+         success:function(d){
+         		var rs=eval('('+d+')');
+         		if(rs.status==1){
+         			$('#'+inid).empty().append(rs.data);
+         		}
+         	},
+         error:function(){
+				alert('err');
+			}
+       });
 }

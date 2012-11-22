@@ -58,27 +58,27 @@
 			<div class="board">
 				<div class="main_loca" id="main_loca">
 					<div class="topic_loca">
-						<h2>有<span class="topic_loca_num1">12</span>个广告位，<span class="topic_loca_num2">6</span>个正在投放</h2>
+						<h2>有<span id="topic_loca_num1" class="topic_loca_num1"></span>个广告位，<span id="topic_loca_num2" class="topic_loca_num2">6</span>个正在投放</h2>
 						<a href="tita.html" class="timetable_loca">查看广告排期</a>
 						<a href="javascript:void(0)" onclick="also_filler(1,'main_loca','新增广告位','main')" class="addLoca_loca">新增广告位</a>
 						<div class="filter_loca">
-							<select id="sele_chan">
-								<option value="0">全部频道</option>
-								<option value="1">频道1</option>
-								<option value="2">频道2</option>
-							</select>
+							<select id="sele_chan"></select>
+							<input id="datas_chan" type="hidden">
+							<input id="chan_now" type="hidden">
 							<select id="sele_state">
-								<option value="0">全部状态</option>
+								<option value="all">全部状态</option>
 								<option value="1">正在投放</option>
-								<option value="2">空闲</option>
-								<option value="2">计划</option>
+								<option value="0">空闲</option>
+								<option value="-1">计划</option>
 							</select>
+							<input id="state_now" type="hidden">
 						</div>
 					</div>
 
 					<div id="contBox" class="cont_loca"></div>
 					<div class="pages_box">
 						<div id="pgs_box" class="pagination"></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -87,9 +87,19 @@
 		<script type="text/javascript" src="../Public/js/poshytip.min.js"></script>
 		<script type="text/javascript" src="../Public/js/pagination.js"></script>
 		<script type="text/javascript">
-			
+			getAnum('http://localhost/ad/adseat/cnt/','topic_loca_num1');
+			getChan(2);
 			pageStation(1);
-			
+			$('#sele_chan').bind('change',function(){
+				$('#chan_now').val($(this).val());
+				pageStation(1);
+			});
+
+			// $('#sele_state').bind('change',function(){
+			// 	$('#state_now').val($(this).val());
+			// 	pageStation(1);
+			// });
+
 		</script>
 	</body>
 </html>
