@@ -5,7 +5,6 @@
 		<title>广告位 - Adnets</title>
 		<link rel="stylesheet" href="../Public/img/favicon.ico">
 		<link rel="stylesheet" href="../Public/css/also.css">
-		<link rel="stylesheet" type="text/css" href="/Public/css/also.css" />
 	</head>
 	<body>
 		<div class="menu">
@@ -61,7 +60,7 @@
 					<div class="topic_loca">
 						<h2>有<span class="topic_loca_num1">12</span>个广告位，<span class="topic_loca_num2">6</span>个正在投放</h2>
 						<a href="tita.html" class="timetable_loca">查看广告排期</a>
-						<a href="javascript:void(0)" onclick="also_slider(1,'main_loca','新增广告位','main')" class="addLoca_loca">新增广告位</a>
+						<a href="javascript:void(0)" onclick="also_filler(1,'main_loca','新增广告位','main')" class="addLoca_loca">新增广告位</a>
 						<div class="filter_loca">
 							<select id="sele_chan">
 								<option value="0">全部频道</option>
@@ -89,10 +88,8 @@
 		<script type="text/javascript" src="../Public/js/pagination.js"></script>
 		<script type="text/javascript">
 			
-
 			pageStation(1);
 			
-
 		</script>
 	</body>
 </html>

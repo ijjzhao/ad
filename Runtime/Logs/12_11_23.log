@@ -1,0 +1,100 @@
+[ 2012-11-23T14:47:46+08:00 ] 127.0.0.1 /ad/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000118s ]
+
+[ 2012-11-23T14:47:47+08:00 ] 127.0.0.1 /ad/s/lgn
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000067s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000225s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000124s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004076s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000205s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004321s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022296s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.026642s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.026745s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.026859s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.026936s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000441s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.027128s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000120s ]
+
+[ 2012-11-23T14:47:48+08:00 ] 127.0.0.1 /ad/s/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000082s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000191s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000163s ]
+SQL: alsogood.getCollection(user) [ RunTime:0.000025s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 513 行.
+SQL: alsogood.user.findOne({"email":"shiba@da.com","psd":"96e79218965eb72c92a549dd5a330112","state":1},["email","name","url"]) [ RunTime:0.000388s ]
+
+[ 2012-11-23T14:47:48+08:00 ] 127.0.0.1 /ad/index/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000060s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000191s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000147s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000714s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000147s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000891s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023977s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.024903s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.025042s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.025124s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.025210s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000488s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.025433s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000146s ]
+
+[ 2012-11-23T14:47:49+08:00 ] ERR: [1] Call to a member function __toString() on a non-object /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 132 行.
+[ 2012-11-23T14:47:49+08:00 ] 127.0.0.1 /ad/adseat/cnt/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000094s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+NOTIC: [8] Undefined offset: 2 /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 162 行.
+NOTIC: [8] Undefined offset: 3 /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 164 行.
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000294s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000018s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 513 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}},["_id"]) [ RunTime:0.000437s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 552 行.
+SQL: alsogood.website.find({"website":{"$id":"509a04be96838cb770a61bd2"}}).count() [ RunTime:0.000202s ]
+
+[ 2012-11-23T14:47:49+08:00 ] 127.0.0.1 /ad/adseat/index/1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000069s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000215s ]
+NOTIC: [8] Undefined offset: 3 /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 17 行.
+NOTIC: [8] Undefined offset: 4 /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 19 行.
+SQL: alsogood.getCollection(website) [ RunTime:0.000055s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 513 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 516 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000292s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000012s ]
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","chnName","priSize","desc"]).sort({"_id":-1}).limit(5) [ RunTime:0.000055s ]
+NOTIC: [8] Undefined index: auxSize /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 35 行.
+NOTIC: [8] Undefined index: auxSize /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 35 行.
+NOTIC: [8] Undefined index: auxSize /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 35 行.
+NOTIC: [8] Undefined index: auxSize /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 35 行.
+NOTIC: [8] Undefined index: auxSize /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 35 行.
+
