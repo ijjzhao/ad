@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="utf-8">
 		<title>广告位 - Adnets</title>
-		<link rel="stylesheet" href="../Public/img/favicon.ico">
-		<link rel="stylesheet" href="../Public/css/also.css">
-		<link rel="stylesheet" href="Tpl/Public/css/also.css">
+		<link rel="stylesheet" href="Tpl__PUBLIC__/img/favicon.ico">
+		<link rel="stylesheet" href="Tpl__PUBLIC__/css/also.css">
+		<link rel="stylesheet" href="Tpl__PUBLIC__/css/also.css">
 	</head>
 	<body>
 		<div class="menu">
-			<div class="logo"><a href="#"><img src="../Public/img/logo.png" alt="Adnets 广告管理系统"></a></div>
+			<div class="logo"><a href="#"><img src="Tpl__PUBLIC__/img/logo.png" alt="Adnets 广告管理系统"></a></div>
 			<div class="navbar">
 				<a href="ads.html" class="nav">
 					<span class="nav_arrow"></span>
@@ -83,10 +83,10 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="../Public/js/jquery.js"></script>
-		<script type="text/javascript" src="../Public/js/also.js"></script>
-		<script type="text/javascript" src="../Public/js/poshytip.min.js"></script>
-		<script type="text/javascript" src="../Public/js/pagination.js"></script>
+		<script type="text/javascript" src="Tpl__PUBLIC__/js/jquery.js"></script>
+		<script type="text/javascript" src="Tpl__PUBLIC__/js/also.js"></script>
+		<script type="text/javascript" src="Tpl__PUBLIC__/js/poshytip.min.js"></script>
+		<script type="text/javascript" src="Tpl__PUBLIC__/js/pagination.js"></script>
 		<script type="text/javascript">
 			getAnum('http://localhost/ad/adseat/cnt/','topic_loca_num1');
 			getChan(2);
