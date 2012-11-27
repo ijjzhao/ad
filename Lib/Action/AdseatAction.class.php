@@ -89,7 +89,7 @@ class AdseatAction extends SspAction{
 	*/
 	public function upd(){
 		if($this->isPost()){
-			if(!empty($_POST['id']) && !empty($_POST['ana']) && !empty($_POST['pri']) && !empty($_POST['des'])
+			if(!empty($_POST['id']) && !empty($_POST['ana']) && !empty($_POST['pri']) && !empty($_POST['des']) && 
 				!empty($_POST['sta'])){//获取id
 				$seat_id = $_POST['id'];
 				$arr = array(
