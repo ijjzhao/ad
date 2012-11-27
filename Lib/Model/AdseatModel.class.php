@@ -87,6 +87,7 @@ class AdseatModel extends MongoModel{
 	*/
 	public function findById($seatId){
 		$arr['where'] = array('_id' => new MongoId($seatId));
+		$arr['put'] = rand(-1,6);//获取广告位的投放状态，现在没有数据，在这进行模拟
 		return $this->db->find($arr);
 	}
 }

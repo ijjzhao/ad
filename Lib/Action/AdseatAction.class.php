@@ -89,7 +89,8 @@ class AdseatAction extends SspAction{
 	*/
 	public function upd(){
 		if($this->isPost()){
-			if(!empty($_POST['id']) && !empty($_POST['ana']) && !empty($_POST['pri']) && !empty($_POST['des'])){//获取id
+			if(!empty($_POST['id']) && !empty($_POST['ana']) && !empty($_POST['pri']) && !empty($_POST['des'])
+				!empty($_POST['sta'])){//获取id
 				$seat_id = $_POST['id'];
 				$arr = array(
 					'name' => $_POST['ana'],
@@ -102,11 +103,15 @@ class AdseatAction extends SspAction{
 				$arr['isPush'] = empty($_POST['psh']) ? 'off' : 'on';
 				$arr['isScroll'] = empty($_POST['sll']) ? 'off' : 'on';
 				$arr['reTime'] = empty($_POST['stp']) ? -1 : $_POST['stp'];
-				/*广告位形式有关联，暂时不修改
-				$arr['layout']['orientation'] = empty($_POST['ore']) ? 0 : $_POST['ore'];
-				$arr['layout']['gavity'] = empty($_POST['gty']) ? 0 : $_POST['gty'];
-				$arr['layout']['vertical'] = empty($_POST['ver']) ? 0 : $_POST['ver'];
-				$arr['layout']['horizontal'] = empty($_POST['hor']) ? 0 : $_POST['hor'];*/
+				if($_POST['sta'] == 'yes'){
+					/**
+						这里修改广告位形式之前，要暂定所有投放的广告
+					*/
+					$arr['layout']['orientation'] = empty($_POST['ore']) ? 0 : $_POST['ore'];
+					$arr['layout']['gavity'] = empty($_POST['gty']) ? 0 : $_POST['gty'];
+					$arr['layout']['vertical'] = empty($_POST['ver']) ? 0 : $_POST['ver'];
+					$arr['layout']['horizontal'] = empty($_POST['hor']) ? 0 : $_POST['hor'];
+				}
 				//实例化广告位模型对象
 				$m_adseat = new AdseatModel();
 				$rs = $m_adseat->upSeatById($arr,$seat_id);
