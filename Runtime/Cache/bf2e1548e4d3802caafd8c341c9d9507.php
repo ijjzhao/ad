@@ -5,7 +5,7 @@
 		<title>广告位 - Adnets</title>
 		<link rel="stylesheet" href="Tpl__PUBLIC__/img/favicon.ico">
 		<link rel="stylesheet" href="Tpl__PUBLIC__/css/also.css">
-		<link rel="stylesheet" href="Tpl__PUBLIC__/css/also.css">
+		<link rel="stylesheet" href="../Public/css/also.css">
 	</head>
 	<body>
 		<div class="menu">
@@ -88,7 +88,7 @@
 		<script type="text/javascript" src="Tpl__PUBLIC__/js/poshytip.min.js"></script>
 		<script type="text/javascript" src="Tpl__PUBLIC__/js/pagination.js"></script>
 		<script type="text/javascript">
-			getAnum('http://localhost/ad/adseat/cnt/','topic_loca_num1');
+			getAnum('cnt','topic_loca_num1');
 			getChan(2);
 			pageStation(1);
 			$('#sele_chan').bind('change',function(){
@@ -100,7 +100,6 @@
 			// 	$('#state_now').val($(this).val());
 			// 	pageStation(1);
 			// });
-
 		</script>
 	</body>
 </html>

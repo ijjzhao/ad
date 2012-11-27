@@ -107,11 +107,12 @@ class AdseatAction extends SspAction{
 					/**
 						这里修改广告位形式之前，要暂定所有投放的广告
 					*/
+					$arr['shape'] = empty($_POST['spe']);
+				}
 					$arr['layout']['orientation'] = empty($_POST['ore']) ? 0 : $_POST['ore'];
 					$arr['layout']['gavity'] = empty($_POST['gty']) ? 0 : $_POST['gty'];
 					$arr['layout']['vertical'] = empty($_POST['ver']) ? 0 : $_POST['ver'];
 					$arr['layout']['horizontal'] = empty($_POST['hor']) ? 0 : $_POST['hor'];
-				}
 				//实例化广告位模型对象
 				$m_adseat = new AdseatModel();
 				$rs = $m_adseat->upSeatById($arr,$seat_id);
