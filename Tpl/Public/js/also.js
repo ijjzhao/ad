@@ -1,3 +1,9 @@
+/*
+	url
+*/
+function also_url(){
+	return 'http://localhost/ad/adseat/';
+}
 /*	
 	 滑层
 	 sid：slider的id
@@ -58,181 +64,44 @@ function also_filler(typ,fid,tit,locker,eid){
 			break;
 		case 1:
 			//新增广告位
-			sid='also_slider_addSi';
-			codes='<div class="addSi"><form id="form_addSi">';
-			codes+='<p class="topic_addSi">'+tit+'</p>';
-			codes+='<div class="board_addSi"><p class="tit_addSi">基本信息</p>';
-			codes+='<p class="cont_addSi"><input id="name_addSi" name="ana" type="text" value="广告位名称"></p>';
-			codes+='<p class="cont_addSi"><input id="remark_addSi" name="des" type="text" value="备注" ></p>';
-			codes+='<p class="cont_addSi">';
-			codes+='<select id="chan_addSi" name="chn" onchange="if(this.value==\'add\'){also_filler(3,\'also_slider_addSi\',\'新建频道\',\'also_slider_addSi\');$(this).val(\'0\')}">';
-			codes+='</select>';
-			codes+='</p>';
-			codes+='</div>';
-			codes+='<div class="board_addSi"><p class="tit_addSi"><span id="tt_addSi">广告位形式</span></p>';
-			codes+='<p class="tts_addSi"><span><input name="spe" id="t1_addSi" value="1" title="固定" type="radio"><label for="t1_addSi">固定</label></span>';
-			codes+='<span><input name="spe" id="t2_addSi" value="2" title="漂浮" type="radio"><label for="t2_addSi">漂浮</label></span>';
-			codes+='<span><input name="spe" id="t3_addSi" value="3" title="Crazy" type="radio"><label for="t3_addSi">Crazy</label><a id="cra_tips" class="also_helper" href="javascript:void(0)">?</a></span>';
-			codes+='<span><input name="spe" id="t4_addSi" value="4" title="PIP扩展" type="radio"><label for="t4_addSi">PIP扩展</label><a id="pip_tips" class="also_helper" href="javascript:void(0)">?</a></span>';
-			codes+='</p>';
-			codes+='<div id="base_addSi"></div></div>';
-			codes+='<div class="board_addSi"><p class="tru_addSi"><input id="trust_addSi" name="psh" type="checkbox"><label for="trust_addSi">接受锦途推送的广告</label></p>';
-			codes+='<p class="tru1_addSi">	勾选此项则我们会根据您的网站类型推荐广告给您，您可以选择接受或者不投放</p>';
-			codes+='</div>';
-			codes+='<div class="btns_addSi">';
-			codes+='<a id="save_addSi" sli="also_slider_addSi" loc="'+locker+'"  class="save_addSi_1" >保存广告位</a>';
-			codes+='<a id="cancel_addSi" href="javascript:void(0)" onclick="also_remove(\'also_slider_addSi\',\''+locker+'\')">取消</a>';
-			codes+='</div>';
-			codes+='<input type="hidden" name="pri"><input type="hidden" name="aux">';
-			codes+='</form></div>';
-			codes+='<iframe onload="afterLoad(1)"></iframe>';
+			sid='also_slider_locaf';
 
-			
+			codes=formBulder(1,tit,locker);
+			var siz='<option value="">请选择</option>';
+				siz+='<option value="" disabled="disabled">-----</option>';
+				siz+='<option value="960x90">960x90</option>';
+				siz+='<option value="960x60">960x60</option>';
+				siz+='<option value="760x90">760x90</option>';
+				siz+='<option value="728x90">728x90</option>';
+				siz+='<option value="640x60">640x60</option>';
+				siz+='<option value="580x90">580x90</option>';
+				siz+='<option value="500x200">500x200</option>';
+				siz+='<option value="480x160">480x160</option>';
+				siz+='<option value="468x60">468x60</option>';
+				siz+='<option value="460x60">460x60</option>';
+				siz+='<option value="360x300">360x300</option>';
+				siz+='<option value="300x250">300x250</option>';
+				siz+='<option value="250x250">250x250</option>';
+				siz+='<option value="234x60">234x60</option>';
+				siz+='<option value="200x200">200x200</option>';
+				siz+='<option value="180x150">180x150</option>';
+				siz+='<option value="160x600">160x600</option>';
+				siz+='<option value="125x125">125x125</option>';
+				siz+='<option value="120x600">120x600</option>';
+				siz+='<option value="120x240">120x240</option>';
 
-			$('input[name="spe"]').live('click',function(){
-				var va=parseInt($(this).val()),name=$(this).attr('title'),co='';
-				var siz='<option value="">请选择</option>';
-					siz+='<option value="" disabled="disabled">-----</option>';
-					siz+='<option value="960x90">960x90</option>';
-					siz+='<option value="960x60">960x60</option>';
-					siz+='<option value="760x90">760x90</option>';
-					siz+='<option value="728x90">728x90</option>';
-					siz+='<option value="640x60">640x60</option>';
-					siz+='<option value="580x90">580x90</option>';
-					siz+='<option value="500x200">500x200</option>';
-					siz+='<option value="480x160">480x160</option>';
-					siz+='<option value="468x60">468x60</option>';
-					siz+='<option value="460x60">460x60</option>';
-					siz+='<option value="360x300">360x300</option>';
-					siz+='<option value="300x250">300x250</option>';
-					siz+='<option value="250x250">250x250</option>';
-					siz+='<option value="234x60">234x60</option>';
-					siz+='<option value="200x200">200x200</option>';
-					siz+='<option value="180x150">180x150</option>';
-					siz+='<option value="160x600">160x600</option>';
-					siz+='<option value="125x125">125x125</option>';
-					siz+='<option value="120x600">120x600</option>';
-					siz+='<option value="120x240">120x240</option>';
-
-				co='<p class="tit2_addSi">请选择'+name+'广告位的尺寸</p>';
-
-				if(va<=2){
-					co+='<p class="sis_addSi"><select id="size1_addSi" name="size_addSi">'+siz;
-					co+='</select><span id="diy1_addSi"><input id="width1_addSi" type="text" class="intex_addSi" value="宽">&nbsp;x&nbsp;<input id="height1_addSi" type="text" class="intex_addSi" value="高">&nbsp;(px)</span><a id="t_size1_addSi" alt="0" href="javascript:void(0)" onclick="sizeType(this.id,\'size1_addSi\',\'diy1_addSi\')">自定义尺寸</a></p>';
-					if(va==2){
-						co+='<p class="tit2_addSi"><span id="screenPo_addSi">屏幕位置</span></p>';
-						co+='<p class="sis_addSi"><select id="gty_addSi" name="gty" onchange="setScrLoca(this.value,\'middle\',\'ver_addSi\')"><option value="top">居上</option><option value="middle">居中</option><option value="bottom">居下</option></select>';
-						co+='<span class="borp_addSi">边距：<input id="ver_addSi" name="ver" type="text">(px)</span></p>';
-						co+='<p class="sis_addSi"><select id="ore_addSi" name="ore" onchange="setScrLoca(this.value,\'center\',\'hor_addSi\')"><option value="left">居左</option><option value="center">居中</option><option value="right">居右</option></select>';
-						co+='<span class="borp_addSi">边距：<input id="hor_addSi" name="hor" type="text">(px)</span></p>';
-						co+='<p class="tit2_addSi">停留时间</p>';
-						co+='<p class="sis_addSi"><span id="stp1_addSi">[不限]</span><span id="stp2_addSi"><input id="stp_addSi" name="stp" value="-1" type="text">(秒)</span><a id="btn_stp_addSi" href="javascript:void(0)" onclick="">更改</a></p>';
-						co+='<p class="tit2_addSi"><input id="sll_addSi" name="sll" type="checkbox"><label for="sll_addSi">跟随滚动条</label><a>?</a></p>';
-					}
-
-					$('#width1_addSi').live('focus',function(){
-						textholder(0,'width1_addSi','宽',$(this).val());
-					});
-
-					$('#width1_addSi').live('blur',function(){
-						textholder(1,'width1_addSi','宽',$(this).val());
-					});
-
-					$('#height1_addSi').live('focus',function(){
-						textholder(0,'height1_addSi','高',$(this).val());
-					});
-
-					$('#height1_addSi').live('blur',function(){
-						textholder(1,'height1_addSi','高',$(this).val());
-					});
-
-				}else if(2<va<=4){
-					co+='<p class="sis_addSi">主画面：<select id="size2_addSi" name="size_addSi">'+siz;
-					co+='</select><span id="diy2_addSi"><input id="width2_addSi" type="text" class="intex_addSi" value="宽">&nbsp;x&nbsp;<input id="height2_addSi" type="text" class="intex_addSi" value="高">&nbsp;(px)</span><a id="t_size2_addSi" alt="0" href="javascript:void(0)" onclick="sizeType(this.id,\'size2_addSi\',\'diy2_addSi\')">自定义尺寸</a></p>';
-
-					co+='<p class="sis_addSi">副画面：<select id="size3_addSi" name="size_addSi">'+siz;
-					co+='</select><span id="diy3_addSi"><input id="width3_addSi" type="text" class="intex_addSi" value="宽">&nbsp;x&nbsp;<input id="height3_addSi" type="text" class="intex_addSi" value="高">&nbsp;(px)</span><a id="t_size3_addSi" alt="0" href="javascript:void(0)" onclick="sizeType(this.id,\'size3_addSi\',\'diy3_addSi\')">自定义尺寸</a></p>';
-
-						$('#width2_addSi').live('focus',function(){
-							textholder(0,'width2_addSi','宽',$(this).val());
-						});
-
-						$('#width2_addSi').live('blur',function(){
-							textholder(1,'width2_addSi','宽',$(this).val());
-						});
-
-						$('#height2_addSi').live('focus',function(){
-							textholder(0,'height2_addSi','高',$(this).val());
-						});
-
-						$('#height2_addSi').live('blur',function(){
-							textholder(1,'height2_addSi','高',$(this).val());
-						});
-
-						$('#width3_addSi').live('focus',function(){
-							textholder(0,'width3_addSi','宽',$(this).val());
-						});
-
-						$('#width3_addSi').live('blur',function(){
-							textholder(1,'width3_addSi','宽',$(this).val());
-						});
-
-						$('#height3_addSi').live('focus',function(){
-							textholder(0,'height3_addSi','高',$(this).val());
-						});
-
-						$('#height3_addSi').live('blur',function(){
-							textholder(1,'height3_addSi','高',$(this).val());
-						});
-				}
-
-				$("#base_addSi").empty();
-				$("#base_addSi").append(co);
-
-				$('#btn_stp_addSi').live('click',function(){
-					var val=$('#stp_addSi').val();
-					if(val=='-1'){
-						$('#stp1_addSi').fadeOut('fast',function(){
-							$('#stp2_addSi').fadeIn();
-							$('#btn_stp_addSi').text('不限');
-							$('#stp_addSi').val('60');
-						});
-					}else{
-						$('#stp2_addSi').fadeOut('fast',function(){
-							$('#stp1_addSi').fadeIn();
-							$('#btn_stp_addSi').text('更改');
-							$('#stp_addSi').val('-1');
-						});
-					}
-				});
-			});
-
+		
 			break;
 		case 2:
 			//编辑广告位
-			sid='also_slider_editSi';
-			codes='<div class="editSi">';
-			codes+='<p>'+tit+'</p>';
-			codes+='</div>';
+			sid='also_slider_locaf';
+			codes=formBulder(1,tit,locker,eid);
+
 			break;
 		case 3:
 			//新增频道
 			sid='also_slider_addCh';
-			codes='<div class="addChan">';
-			codes+='<form id="form_addCh">';
-			codes+='<p class="topic_addCh">'+tit+'</p>';
-			codes+='<div class="board_addCh">';
-			codes+='<p class="cont_addCh"><input id="name_addCh" name="cna" type="text" value="频道名称"></p>';
-			codes+='<p class="cont_addCh"><input id="remark_addCh" name="ces" type="text" value="备注"></p>';
-			codes+='</div>';
-			codes+='<div class="btns_addCh">';
-			codes+='<a id="save_addCh" sli="also_slider_addCh" loc="'+locker+'"  class="save_addCh_1" >保存频道</a>';
-			codes+='<a id="cancel_addCh" href="javascript:void(0)" onclick="also_remove(\'also_slider_addCh\',\''+locker+'\')">取消</a>';
-			codes+='</div>';
-			codes+='</form>';
-			codes+='</div>';
-			codes+='<iframe onload="afterLoad(2)"></iframe>';
-			
+			codes=formBulder(2,tit,locker);			
 			break;
 		case 4:
 			//编辑频道
@@ -304,57 +173,598 @@ function also_filler(typ,fid,tit,locker,eid){
 	also_slider(sid,fid,tit,locker,codes);
 }
 
+
 /*
-	划层数据append后调用的函数
-	typ：1=新增广告位 2=新增频道
+	表单生成者
+	typ：1=广告位（新增/编辑）2=频道
+	tit
+	locker
+	eid：编辑项的id
 */
-function afterLoad(typ){
+function formBulder(typ,tit,locker,eid){
+	var codes='';
 	switch(typ){
 		case 1:
-			$('#name_addSi').bind('focus',function(){
-				textholder(0,'name_addSi','广告位名称',$(this).val());
+			codes='<div class="locaf"><form id="form_locaf">';
+			codes+='<p class="topic_locaf">'+tit+'</p>';
+			codes+='<div class="board_locaf"><p class="tit_locaf">基本信息</p>';
+			codes+='<p class="cont_locaf"><input id="name_locaf" name="ana" type="text" value="广告位名称"></p>';
+			codes+='<p class="cont_locaf"><input id="remark_locaf" name="des" type="text" value="备注" ></p>';
+			codes+='<p class="cont_locaf">';
+			codes+='<select id="chan_locaf" name="chn" onchange="if(this.value==\'add\'){also_filler(3,\'also_slider_locaf\',\'新建频道\',\'also_slider_locaf\');$(this).val(\'0\')}">';
+			codes+='</select>';
+			codes+='</p>';
+			codes+='</div>';
+			codes+='<div class="board_locaf"><p class="tit_locaf"><span id="tt_locaf">广告位形式</span></p>';
+			codes+='<p class="tts_locaf"><span><input name="spe" id="t1_locaf" value="1" title="固定" type="radio"><label for="t1_locaf">固定</label></span>';
+			codes+='<span><input name="spe" id="t2_locaf" value="2" title="漂浮" type="radio"><label for="t2_locaf">漂浮</label></span>';
+			codes+='<span><input name="spe" id="t3_locaf" value="3" title="Crazy" type="radio"><label for="t3_locaf">Crazy</label><a id="cra_tips" class="also_helper" href="javascript:void(0)">?</a></span>';
+			codes+='<span><input name="spe" id="t4_locaf" value="4" title="PIP扩展" type="radio"><label for="t4_locaf">PIP扩展</label><a id="pip_tips" class="also_helper" href="javascript:void(0)">?</a></span>';
+			codes+='</p>';
+			codes+='<div id="base_locaf"></div>';
+			codes+='</div>';
+			codes+='<div class="board_locaf"><p class="tru_locaf"><input id="trust_locaf" name="psh" type="checkbox"><label for="trust_locaf">接受锦途推送的广告</label></p>';
+			codes+='<p class="tru1_locaf">	勾选此项则我们会根据您的网站类型推荐广告给您，您可以选择接受或者不投放</p>';
+			codes+='</div>';
+			codes+='<div class="btns_locaf">';
+			codes+='<a id="save_locaf" sli="also_slider_locaf" loc="'+locker+'"  class="save_locaf_1" >保存广告位</a>';
+			codes+='<a id="cancel_locaf" href="javascript:void(0)" onclick="also_remove(\'also_slider_locaf\',\''+locker+'\')">取消</a>';
+			codes+='</div>';
+			codes+='<input type="hidden" name="pri"><input type="hidden" name="aux">';
+			if(tit=='新增广告位'){
+				codes+='</form></div>';
+				codes+='<iframe onload="afterLoad(1)"></iframe>';
+			}else{
+				codes+='<input id="sta_locaf" type="hidden" name="sta" value="no">';
+				codes+='<input id="eid_locaf" type="hidden" name="id" value="'+eid+'">';
+				codes+='</form></div>';
+				codes+='<iframe onload="afterLoad(3,\''+eid+'\')"></iframe>';
+			}
+			
+			break;
+		case 2:
+			codes='<div class="chanf">';
+			codes+='<form id="form_chanf">';
+			codes+='<p class="topic_chanf">'+tit+'</p>';
+			codes+='<div class="board_chanf">';
+			codes+='<p class="cont_chanf"><input id="name_chanf" name="cna" type="text" value="频道名称"></p>';
+			codes+='<p class="cont_chanf"><input id="remark_chanf" name="ces" type="text" value="备注"></p>';
+			codes+='</div>';
+			codes+='<div class="btns_chanf">';
+			codes+='<a id="save_chanf" sli="also_slider_addCh" loc="'+locker+'"  class="save_chanf_1" >保存频道</a>';
+			codes+='<a id="cancel_chanf" href="javascript:void(0)" onclick="also_remove(\'also_slider_addCh\',\''+locker+'\')">取消</a>';
+			codes+='</div>';
+			codes+='</form>';
+			codes+='</div>';
+			codes+='<iframe onload="afterLoad(2)"></iframe>';
+
+			break;
+	}
+	return codes;
+}
+
+/*
+	滑层数据append后调用的函数
+	typ：1=广告位 2=新增频道 3=编辑广告位
+	eid：编辑项的id
+*/
+function afterLoad(typ,eid){
+	switch(typ){
+		case 1:
+			var siz='<option value="">请选择</option>';
+				siz+='<option value="" disabled="disabled">-----</option>';
+				siz+='<option value="960x90">960x90</option>';
+				siz+='<option value="960x60">960x60</option>';
+				siz+='<option value="760x90">760x90</option>';
+				siz+='<option value="728x90">728x90</option>';
+				siz+='<option value="640x60">640x60</option>';
+				siz+='<option value="580x90">580x90</option>';
+				siz+='<option value="500x200">500x200</option>';
+				siz+='<option value="480x160">480x160</option>';
+				siz+='<option value="468x60">468x60</option>';
+				siz+='<option value="460x60">460x60</option>';
+				siz+='<option value="360x300">360x300</option>';
+				siz+='<option value="300x250">300x250</option>';
+				siz+='<option value="250x250">250x250</option>';
+				siz+='<option value="234x60">234x60</option>';
+				siz+='<option value="200x200">200x200</option>';
+				siz+='<option value="180x150">180x150</option>';
+				siz+='<option value="160x600">160x600</option>';
+				siz+='<option value="125x125">125x125</option>';
+				siz+='<option value="120x600">120x600</option>';
+				siz+='<option value="120x240">120x240</option>';
+			var codes='<p class="tit2_locaf">请设置固定广告位的尺寸</p>'
+				codes+='<p class="sis_locaf"><select id="size1_locaf" name="size_locaf">'+siz;
+				codes+='</select><span id="diy1_locaf"><input id="width1_locaf" type="text" class="intex_locaf" value="宽">&nbsp;x&nbsp;<input id="height1_locaf" type="text" class="intex_locaf" value="高">&nbsp;(px)</span><a id="t_size1_locaf" alt="0" href="javascript:void(0)" onclick="sizeType(this.id,\'size1_locaf\',\'diy1_locaf\')">自定义尺寸</a></p>';
+
+			$('#base_locaf').append(codes);
+
+			$('#t1_locaf').attr('checked',true);
+
+			$('input[name="spe"]').bind('click',function(){
+
+				var va=parseInt($(this).val()),name=$(this).attr('title'),co='';
+				co='<p class="tit2_locaf">请设置'+name+'广告位的尺寸</p>';
+				if(va<=2){
+					co+='<p class="sis_locaf"><select id="size1_locaf" name="size_locaf">'+siz;
+					co+='</select><span id="diy1_locaf"><input id="width1_locaf" type="text" class="intex_locaf" value="宽">&nbsp;x&nbsp;<input id="height1_locaf" type="text" class="intex_locaf" value="高">&nbsp;(px)</span><a id="t_size1_locaf" alt="0" href="javascript:void(0)" onclick="sizeType(this.id,\'size1_locaf\',\'diy1_locaf\')">自定义尺寸</a></p>';
+					if(va==2){
+						co+='<p class="tit2_locaf"><span id="screenPo_locaf">屏幕位置</span></p>';
+						co+='<p class="sis_locaf"><select id="gty_locaf" name="gty" onchange="setScrLoca(this.value,\'middle\',\'ver_locaf\')"><option value="top">居上</option><option value="middle">居中</option><option value="bottom">居下</option></select>';
+						co+='<span class="borp_locaf">边距：<input id="ver_locaf" name="ver" type="text" value="0">(px)</span></p>';
+						co+='<p class="sis_locaf"><select id="ore_locaf" name="ore" onchange="setScrLoca(this.value,\'center\',\'hor_locaf\')"><option value="left">居左</option><option value="center">居中</option><option value="right">居右</option></select>';
+						co+='<span class="borp_locaf">边距：<input id="hor_locaf" name="hor" type="text" value="0">(px)</span></p>';
+						co+='<p class="tit2_locaf">停留时间</p>';
+						co+='<p class="sis_locaf"><span id="stp1_locaf">[不限]</span><span id="stp2_locaf"><input id="stp_locaf" name="stp" value="-1" type="text">(秒)</span><a id="btn_stp_locaf" href="javascript:void(0)" onclick="">更改</a></p>';
+						co+='<p class="tit2_locaf"><input id="sll_locaf" name="sll" type="checkbox"><label for="sll_locaf">跟随滚动条</label><a>?</a></p>';
+					}
+				}else if(2<va<=4){
+					co+='<p class="sis_locaf">主画面：<select id="size2_locaf" name="size_locaf">'+siz;
+					co+='</select><span id="diy2_locaf"><input id="width2_locaf" type="text" class="intex_locaf" value="宽">&nbsp;x&nbsp;<input id="height2_locaf" type="text" class="intex_locaf" value="高">&nbsp;(px)</span><a id="t_size2_locaf" alt="0" href="javascript:void(0)" onclick="sizeType(this.id,\'size2_locaf\',\'diy2_locaf\')">自定义尺寸</a></p>';
+
+					co+='<p class="sis_locaf">副画面：<select id="size3_locaf" name="size_locaf">'+siz;
+					co+='</select><span id="diy3_locaf"><input id="width3_locaf" type="text" class="intex_locaf" value="宽">&nbsp;x&nbsp;<input id="height3_locaf" type="text" class="intex_locaf" value="高">&nbsp;(px)</span><a id="t_size3_locaf" alt="0" href="javascript:void(0)" onclick="sizeType(this.id,\'size3_locaf\',\'diy3_locaf\')">自定义尺寸</a></p>';
+
+						
+				}
+
+				$("#base_locaf").empty();
+				$("#base_locaf").append(co);
+
+				$('#btn_stp_locaf').bind('click',function(){
+					var val=$('#stp_locaf').val();
+					if(val=='-1'){
+						$('#stp1_locaf').fadeOut('fast',function(){
+							$('#stp2_locaf').fadeIn('fast');
+							$('#btn_stp_locaf').text('不限');
+							$('#stp_locaf').val('60');
+						});
+					}else{
+						$('#stp2_locaf').fadeOut('fast',function(){
+							$('#stp1_locaf').fadeIn('fast');
+							$('#btn_stp_locaf').text('更改');
+							$('#stp_locaf').val('-1');
+						});
+					}
+				});
+
+				$('#width1_locaf').bind('focus',function(){
+					textholder(0,'width1_locaf','宽',$(this).val());
+				});
+
+				$('#width1_locaf').bind('blur',function(){
+					textholder(1,'width1_locaf','宽',$(this).val());
+				});
+
+				$('#height1_locaf').bind('focus',function(){
+					textholder(0,'height1_locaf','高',$(this).val());
+				});
+
+				$('#height1_locaf').bind('blur',function(){
+					textholder(1,'height1_locaf','高',$(this).val());
+				});
+
+				$('#width2_locaf').bind('focus',function(){
+					textholder(0,'width2_locaf','宽',$(this).val());
+				});
+
+				$('#width2_locaf').bind('blur',function(){
+					textholder(1,'width2_locaf','宽',$(this).val());
+				});
+
+				$('#height2_locaf').bind('focus',function(){
+					textholder(0,'height2_locaf','高',$(this).val());
+				});
+
+				$('#height2_locaf').bind('blur',function(){
+					textholder(1,'height2_locaf','高',$(this).val());
+				});
+
+				$('#width3_locaf').bind('focus',function(){
+					textholder(0,'width3_locaf','宽',$(this).val());
+				});
+
+				$('#width3_locaf').bind('blur',function(){
+					textholder(1,'width3_locaf','宽',$(this).val());
+				});
+
+				$('#height3_locaf').bind('focus',function(){
+					textholder(0,'height3_locaf','高',$(this).val());
+				});
+
+				$('#height3_locaf').bind('blur',function(){
+					textholder(1,'height3_locaf','高',$(this).val());
+				});
+			});
+			
+			$('#width1_locaf').bind('focus',function(){
+				textholder(0,'width1_locaf','宽',$(this).val());
 			});
 
-			$('#name_addSi').bind('blur',function(){
-				textholder(1,'name_addSi','广告位名称',$(this).val());
+			$('#width1_locaf').bind('blur',function(){
+				textholder(1,'width1_locaf','宽',$(this).val());
 			});
 
-			$('#remark_addSi').bind('focus',function(){
-				textholder(0,'remark_addSi','备注',$(this).val());
+			$('#height1_locaf').bind('focus',function(){
+				textholder(0,'height1_locaf','高',$(this).val());
 			});
 
-			$('#remark_addSi').bind('blur',function(){
-				textholder(1,'remark_addSi','备注',$(this).val());
+			$('#height1_locaf').bind('blur',function(){
+				textholder(1,'height1_locaf','高',$(this).val());
 			});
 
-			$('#save_addSi').bind('click',function(){
-				sub_addLoca();
+			$('#name_locaf').bind('focus',function(){
+				textholder(0,'name_locaf','广告位名称',$(this).val());
 			});
+
+			$('#name_locaf').bind('blur',function(){
+				textholder(1,'name_locaf','广告位名称',$(this).val());
+			});
+
+			$('#remark_locaf').bind('focus',function(){
+				textholder(0,'remark_locaf','备注',$(this).val());
+			});
+
+			$('#remark_locaf').bind('blur',function(){
+				textholder(1,'remark_locaf','备注',$(this).val());
+			});
+
+			$('#save_locaf').bind('click',function(){
+				sub_locaf(1);
+			});
+
+
 
 			bubble(1); // 气泡通知框
 
 			getChan(1);// 获取频道数据
+
 			break;
 		case 2:
-			$('#name_addCh').bind('focus',function(){
-				textholder(0,'name_addCh','频道名称',$(this).val());
+			$('#name_chanf').bind('focus',function(){
+				textholder(0,'name_chanf','频道名称',$(this).val());
 			});
 
-			$('#name_addCh').bind('blur',function(){
-				textholder(1,'name_addCh','频道名称',$(this).val());
+			$('#name_chanf').bind('blur',function(){
+				textholder(1,'name_chanf','频道名称',$(this).val());
 			});
 
-			$('#remark_addCh').bind('focus',function(){
-				textholder(0,'remark_addCh','备注',$(this).val());
+			$('#remark_chanf').bind('focus',function(){
+				textholder(0,'remark_chanf','备注',$(this).val());
 			});
 
-			$('#remark_addCh').bind('blur',function(){
-				textholder(1,'remark_addCh','备注',$(this).val());
+			$('#remark_chanf').bind('blur',function(){
+				textholder(1,'remark_chanf','备注',$(this).val());
 			});
 
-			$('#save_addCh').bind('click',function(){
-				sub_addCh();
+			$('#save_chanf').bind('click',function(){
+				sub_chanf();
 			});
+			break;
+		case 3:
+			$('#name_locaf').bind('focus',function(){
+				textholder(0,'name_locaf','广告位名称',$(this).val());
+			});
+
+			$('#name_locaf').bind('blur',function(){
+				textholder(1,'name_locaf','广告位名称',$(this).val());
+			});
+
+			$('#remark_locaf').bind('focus',function(){
+				textholder(0,'remark_locaf','备注',$(this).val());
+			});
+
+			$('#remark_locaf').bind('blur',function(){
+				textholder(1,'remark_locaf','备注',$(this).val());
+			});
+			
+			$('#save_locaf').bind('click',function(){
+				sub_locaf(2);
+			});
+
+			bubble(1); // 气泡通知框
+			getChan(1);// 获取频道数据
+
+			$.ajax({
+		         url:also_url()+'inf/'+eid,
+		         type:"get",
+		         beforeSend:function(){
+		         		//loading
+		           	},
+		         success:function(d){
+		         		var rs=eval('('+d+')');
+		         		if(rs.status==1){
+		         		var siz='<option value="">请选择</option>';
+							siz+='<option value="" disabled="disabled">-----</option>';
+							siz+='<option value="960x90">960x90</option>';
+							siz+='<option value="960x60">960x60</option>';
+							siz+='<option value="760x90">760x90</option>';
+							siz+='<option value="728x90">728x90</option>';
+							siz+='<option value="640x60">640x60</option>';
+							siz+='<option value="580x90">580x90</option>';
+							siz+='<option value="500x200">500x200</option>';
+							siz+='<option value="480x160">480x160</option>';
+							siz+='<option value="468x60">468x60</option>';
+							siz+='<option value="460x60">460x60</option>';
+							siz+='<option value="360x300">360x300</option>';
+							siz+='<option value="300x250">300x250</option>';
+							siz+='<option value="250x250">250x250</option>';
+							siz+='<option value="234x60">234x60</option>';
+							siz+='<option value="200x200">200x200</option>';
+							siz+='<option value="180x150">180x150</option>';
+							siz+='<option value="160x600">160x600</option>';
+							siz+='<option value="125x125">125x125</option>';
+							siz+='<option value="120x600">120x600</option>';
+							siz+='<option value="120x240">120x240</option>';
+		         		var da=rs.data,
+		         			desc=da.desc?da.desc:'备注',
+		         			chan=(da.chnName=='0')?'all':da.chnName,
+		         			shap=da.shape,
+		         			codes='';
+
+		         			if(shap=='1'){
+		         				codes='<p class="tit2_locaf">请设置固定广告位的尺寸</p>'
+								codes+='<p class="sis_locaf"><select id="size1_locaf" name="size_locaf">'+siz+'<option value="'+da.priSize[0]+'x'+da.priSize[1]+'">'+da.priSize[0]+'x'+da.priSize[1]+'</option>';
+								codes+='</select>';
+								codes+='<span id="diy1_locaf">';
+								codes+='<input id="width1_locaf" type="text" class="intex_locaf" value="'+da.priSize[0]+'">&nbsp;x&nbsp;';
+								codes+='<input id="height1_locaf" type="text" class="intex_locaf" value="'+da.priSize[1]+'">&nbsp;';
+								codes+='(px)</span>';
+								codes+='<a id="t_size1_locaf" alt="0" href="javascript:void(0)" onclick="sizeType(this.id,\'size1_locaf\',\'diy1_locaf\')">自定义尺寸</a>';
+								codes+='</p>';
+
+								$('#base_locaf').append(codes);
+								$('#size1_locaf').val(da.priSize[0]+'x'+da.priSize[1]);
+								$('#width1_locaf').bind('focus',function(){
+									textholder(0,'width1_locaf','宽',$(this).val());
+								});
+
+								$('#width1_locaf').bind('blur',function(){
+									textholder(1,'width1_locaf','宽',$(this).val());
+								});
+
+								$('#height1_locaf').bind('focus',function(){
+									textholder(0,'height1_locaf','高',$(this).val());
+								});
+
+								$('#height1_locaf').bind('blur',function(){
+									textholder(1,'height1_locaf','高',$(this).val());
+								});
+
+		         			}else if(shap=='2'){
+
+		         				codes='<p class="tit2_locaf">请设置漂浮广告位的尺寸</p>';
+		         				codes+='<p class="sis_locaf"><select id="size1_locaf" name="size_locaf">'+siz+'<option value="'+da.priSize[0]+'x'+da.priSize[1]+'">'+da.priSize[0]+'x'+da.priSize[1]+'</option>';
+								codes+='</select><span id="diy1_locaf"><input id="width1_locaf" type="text" class="intex_locaf" value="'+da.priSize[0]+'">&nbsp;x&nbsp;<input id="height1_locaf" type="text" class="intex_locaf" value="'+da.priSize[1]+'">&nbsp;(px)</span><a id="t_size1_locaf" alt="0" href="javascript:void(0)" onclick="sizeType(this.id,\'size1_locaf\',\'diy1_locaf\')">自定义尺寸</a></p>';
+								codes+='<p class="tit2_locaf"><span id="screenPo_locaf">屏幕位置</span></p>';
+								codes+='<p class="sis_locaf"><select id="gty_locaf" name="gty" onchange="setScrLoca(this.value,\'middle\',\'ver_locaf\')"><option value="top">居上</option><option value="middle">居中</option><option value="bottom">居下</option></select>';
+								codes+='<span class="borp_locaf">边距：<input id="ver_locaf" name="ver" type="text" value="0">(px)</span></p>';
+								codes+='<p class="sis_locaf"><select id="ore_locaf" name="ore" onchange="setScrLoca(this.value,\'center\',\'hor_locaf\')"><option value="left">居左</option><option value="center">居中</option><option value="right">居右</option></select>';
+								codes+='<span class="borp_locaf">边距：<input id="hor_locaf" name="hor" type="text" value="0">(px)</span></p>';
+								codes+='<p class="tit2_locaf">停留时间</p>';
+								codes+='<p class="sis_locaf"><span id="stp1_locaf">[不限]</span><span id="stp2_locaf"><input id="stp_locaf" name="stp" value="-1" type="text">(秒)</span><a id="btn_stp_locaf" href="javascript:void(0)" onclick="">更改</a></p>';
+								codes+='<p class="tit2_locaf"><input id="sll_locaf" name="sll" type="checkbox"><label for="sll_locaf">跟随滚动条</label><a>?</a></p>';
+
+								$('#base_locaf').append(codes);
+								$('#size1_locaf').val(da.priSize[0]+'x'+da.priSize[1]);
+								if(da.isScroll=='on'){
+									$('#sll_locaf').attr('checked',true);
+								}
+								if(da.reTime!='-1'){
+									$('#stp1_locaf').fadeOut('fast',function(){
+										$('#stp2_locaf').fadeIn('fast');
+										$('#btn_stp_locaf').text('不限');
+										$('#stp_locaf').val(da.reTime);
+									});
+								}
+
+								$('#btn_stp_locaf').bind('click',function(){
+									var val=$('#stp_locaf').val();
+									if(val=='-1'){
+										$('#stp1_locaf').fadeOut('fast',function(){
+											$('#stp2_locaf').fadeIn('fast');
+											$('#btn_stp_locaf').text('不限');
+											$('#stp_locaf').val('60');
+										});
+									}else{
+										$('#stp2_locaf').fadeOut('fast',function(){
+											$('#stp1_locaf').fadeIn('fast');
+											$('#btn_stp_locaf').text('更改');
+											$('#stp_locaf').val('-1');
+										});
+									}
+								});
+
+								$('#gty_locaf').val(da.layout.gavity);
+								$('#ver_locaf').val(da.layout.vertical);
+								$('#ore_locaf').val(da.layout.orientation);
+								$('#hor_locaf').val(da.layout.horizontal);
+								$('#width1_locaf').bind('focus',function(){
+									textholder(0,'width1_locaf','宽',$(this).val());
+								});
+
+								$('#width1_locaf').bind('blur',function(){
+									textholder(1,'width1_locaf','宽',$(this).val());
+								});
+
+								$('#height1_locaf').bind('focus',function(){
+									textholder(0,'height1_locaf','高',$(this).val());
+								});
+
+								$('#height1_locaf').bind('blur',function(){
+									textholder(1,'height1_locaf','高',$(this).val());
+								});
+
+		         			}else if(shap=='3' || shap=='4'){
+		         					codes='<p class="tit2_locaf">请设置Crazy广告位的尺寸</p>';
+		         				codes+='<p class="sis_locaf">主画面：<select id="size2_locaf" name="size_locaf">'+siz+'<option value="'+da.priSize[0]+'x'+da.priSize[1]+'">'+da.priSize[0]+'x'+da.priSize[1]+'</option>';
+		         				codes+='</select>';
+								codes+='<span id="diy2_locaf"><input id="width2_locaf" type="text" class="intex_locaf" value="'+da.priSize[0]+'">&nbsp;x&nbsp;';
+								codes+='<input id="height2_locaf" type="text" class="intex_locaf" value="'+da.priSize[1]+'">&nbsp;(px)</span>';
+								codes+='<a id="t_size2_locaf" alt="0" href="javascript:void(0)" onclick="sizeType(this.id,\'size2_locaf\',\'diy2_locaf\')">自定义尺寸</a>';
+								codes+='</p>';
+								codes+='<p class="sis_locaf">副画面：<select id="size3_locaf" name="size_locaf">'+siz+'<option value="'+da.auxSize[0]+'x'+da.auxSize[1]+'">'+da.auxSize[0]+'x'+da.auxSize[1]+'</option>';
+								codes+='</select>';
+								codes+='<span id="diy3_locaf"><input id="width3_locaf" type="text" class="intex_locaf" value="'+da.auxSize[0]+'">&nbsp;x&nbsp;';
+								codes+='<input id="height3_locaf" type="text" class="intex_locaf" value="'+da.auxSize[1]+'">&nbsp;(px)</span>';
+								codes+='<a id="t_size3_locaf" alt="0" href="javascript:void(0)" onclick="sizeType(this.id,\'size3_locaf\',\'diy3_locaf\')">自定义尺寸</a>';
+								codes+='</p>';
+
+								$('#base_locaf').append(codes);
+								$('#size2_locaf').val(da.priSize[0]+'x'+da.priSize[1]);
+								$('#size3_locaf').val(da.auxSize[0]+'x'+da.auxSize[1]);
+								$('#width2_locaf').bind('focus',function(){
+									textholder(0,'width2_locaf','宽',$(this).val());
+								});
+
+								$('#width2_locaf').bind('blur',function(){
+									textholder(1,'width2_locaf','宽',$(this).val());
+								});
+
+								$('#height2_locaf').bind('focus',function(){
+									textholder(0,'height2_locaf','高',$(this).val());
+								});
+
+								$('#height2_locaf').bind('blur',function(){
+									textholder(1,'height2_locaf','高',$(this).val());
+								});
+
+								$('#width3_locaf').bind('focus',function(){
+									textholder(0,'width3_locaf','宽',$(this).val());
+								});
+
+								$('#width3_locaf').bind('blur',function(){
+									textholder(1,'width3_locaf','宽',$(this).val());
+								});
+
+								$('#height3_locaf').bind('focus',function(){
+									textholder(0,'height3_locaf','高',$(this).val());
+								});
+
+								$('#height3_locaf').bind('blur',function(){
+									textholder(1,'height3_locaf','高',$(this).val());
+								});
+		         			}
+		        
+		         		$('#name_locaf').val(rs.data.name);
+		         		$('#remark_locaf').val(desc);
+		         		$('#chan_locaf').val(chan);
+		         		$('#t'+shap+'_locaf').attr('checked',true);
+		         		if(da.isPush=='on'){
+							$('#trust_locaf').attr('checked',true);	
+						}
+
+						$('input[name="spe"]').bind('click',function(){
+							if($(this).val()==shap){
+								$('#sta_locaf').val('no');
+								tips('tt_locaf');
+							}else{
+								$('#sta_locaf').val('yes');
+								tips('tt_locaf','修改广告位形式后，系统将暂停该广告位下的所有广告，您需要到“编辑广告”中重新设置方能启用');
+							}
+							var va=parseInt($(this).val()),name=$(this).attr('title'),co='';
+							co='<p class="tit2_locaf">请设置'+name+'广告位的尺寸</p>';
+							if(va<=2){
+								co+='<p class="sis_locaf"><select id="size1_locaf" name="size_locaf">'+siz;
+								co+='</select><span id="diy1_locaf"><input id="width1_locaf" type="text" class="intex_locaf" value="宽">&nbsp;x&nbsp;<input id="height1_locaf" type="text" class="intex_locaf" value="高">&nbsp;(px)</span><a id="t_size1_locaf" alt="0" href="javascript:void(0)" onclick="sizeType(this.id,\'size1_locaf\',\'diy1_locaf\')">自定义尺寸</a></p>';
+								if(va==2){
+									co+='<p class="tit2_locaf"><span id="screenPo_locaf">屏幕位置</span></p>';
+									co+='<p class="sis_locaf"><select id="gty_locaf" name="gty" onchange="setScrLoca(this.value,\'middle\',\'ver_locaf\')"><option value="top">居上</option><option value="middle">居中</option><option value="bottom">居下</option></select>';
+									co+='<span class="borp_locaf">边距：<input id="ver_locaf" name="ver" type="text" value="0">(px)</span></p>';
+									co+='<p class="sis_locaf"><select id="ore_locaf" name="ore" onchange="setScrLoca(this.value,\'center\',\'hor_locaf\')"><option value="left">居左</option><option value="center">居中</option><option value="right">居右</option></select>';
+									co+='<span class="borp_locaf">边距：<input id="hor_locaf" name="hor" type="text" value="0">(px)</span></p>';
+									co+='<p class="tit2_locaf">停留时间</p>';
+									co+='<p class="sis_locaf"><span id="stp1_locaf">[不限]</span><span id="stp2_locaf"><input id="stp_locaf" name="stp" value="-1" type="text">(秒)</span><a id="btn_stp_locaf" href="javascript:void(0)" onclick="">更改</a></p>';
+									co+='<p class="tit2_locaf"><input id="sll_locaf" name="sll" type="checkbox"><label for="sll_locaf">跟随滚动条</label><a>?</a></p>';
+								}
+							}else if(2<va<=4){
+								co+='<p class="sis_locaf">主画面：<select id="size2_locaf" name="size_locaf">'+siz;
+								co+='</select><span id="diy2_locaf"><input id="width2_locaf" type="text" class="intex_locaf" value="宽">&nbsp;x&nbsp;<input id="height2_locaf" type="text" class="intex_locaf" value="高">&nbsp;(px)</span><a id="t_size2_locaf" alt="0" href="javascript:void(0)" onclick="sizeType(this.id,\'size2_locaf\',\'diy2_locaf\')">自定义尺寸</a></p>';
+
+								co+='<p class="sis_locaf">副画面：<select id="size3_locaf" name="size_locaf">'+siz;
+								co+='</select><span id="diy3_locaf"><input id="width3_locaf" type="text" class="intex_locaf" value="宽">&nbsp;x&nbsp;<input id="height3_locaf" type="text" class="intex_locaf" value="高">&nbsp;(px)</span><a id="t_size3_locaf" alt="0" href="javascript:void(0)" onclick="sizeType(this.id,\'size3_locaf\',\'diy3_locaf\')">自定义尺寸</a></p>';
+
+									
+							}
+
+							$("#base_locaf").empty();
+							$("#base_locaf").append(co);
+
+							$('#btn_stp_locaf').bind('click',function(){
+								var val=$('#stp_locaf').val();
+								if(val=='-1'){
+									$('#stp1_locaf').fadeOut('fast',function(){
+										$('#stp2_locaf').fadeIn('fast');
+										$('#btn_stp_locaf').text('不限');
+										$('#stp_locaf').val('60');
+									});
+								}else{
+									$('#stp2_locaf').fadeOut('fast',function(){
+										$('#stp1_locaf').fadeIn('fast');
+										$('#btn_stp_locaf').text('更改');
+										$('#stp_locaf').val('-1');
+									});
+								}
+							});
+
+							$('#width1_locaf').bind('focus',function(){
+								textholder(0,'width1_locaf','宽',$(this).val());
+							});
+
+							$('#width1_locaf').bind('blur',function(){
+								textholder(1,'width1_locaf','宽',$(this).val());
+							});
+
+							$('#height1_locaf').bind('focus',function(){
+								textholder(0,'height1_locaf','高',$(this).val());
+							});
+
+							$('#height1_locaf').bind('blur',function(){
+								textholder(1,'height1_locaf','高',$(this).val());
+							});
+
+							$('#width2_locaf').bind('focus',function(){
+								textholder(0,'width2_locaf','宽',$(this).val());
+							});
+
+							$('#width2_locaf').bind('blur',function(){
+								textholder(1,'width2_locaf','宽',$(this).val());
+							});
+
+							$('#height2_locaf').bind('focus',function(){
+								textholder(0,'height2_locaf','高',$(this).val());
+							});
+
+							$('#height2_locaf').bind('blur',function(){
+								textholder(1,'height2_locaf','高',$(this).val());
+							});
+
+							$('#width3_locaf').bind('focus',function(){
+								textholder(0,'width3_locaf','宽',$(this).val());
+							});
+
+							$('#width3_locaf').bind('blur',function(){
+								textholder(1,'width3_locaf','宽',$(this).val());
+							});
+
+							$('#height3_locaf').bind('focus',function(){
+								textholder(0,'height3_locaf','高',$(this).val());
+							});
+
+							$('#height3_locaf').bind('blur',function(){
+								textholder(1,'height3_locaf','高',$(this).val());
+							});
+						});
+
+		         		}else{
+		         			alert('获取广告位数据失败');
+		         		}
+		         	},
+		         error:function(){
+						alert('获取广告位数据失败err');
+					}
+		       });
+
 			break;
 	}
 }
@@ -367,7 +777,6 @@ function setScrLoca(val,tex,inp){
 		$('#'+inp).val(0);
 		$('#'+inp).attr('disabled',true);
 	}else{
-		$('#'+inp).val('');
 		$('#'+inp).attr('disabled',false);
 	}
 }
@@ -410,8 +819,7 @@ function textholder(tpy,id,tex,val){
 				$("#"+id).css("color","#999");
 			}
 			break;
-	}
-	
+	}	
 }
 
 
@@ -424,7 +832,7 @@ function getChan(typ,cho){
 	var dat=$('#datas_chan').val();
 	if(dat==""){
 		$.ajax({
-         url:'http://localhost/ad/adseat/chn',
+         url:also_url()+'chn',
          type:"get",
          beforeSend:function(){
          		
@@ -460,10 +868,10 @@ function getChan(typ,cho){
 					chan+='<option value="'+v.chnName+'">'+v.chnName+'</option>';
 				});
 				chan+='<option value="" disabled="disabled">-----</option><option value="add">新建频道</option>';
-				$('#chan_addSi').empty().append(chan);
+				$('#chan_locaf').empty().append(chan);
 				if(cho==1){
 					var lent=dt.data.length-1;
-					$('#chan_addSi').val(dt.data[lent].chnName);
+					$('#chan_locaf').val(dt.data[lent].chnName);
 				}
 				break;
 			case 2:
@@ -482,58 +890,57 @@ function getChan(typ,cho){
 		}
 
 		return chan;
-	}
-
-	
+	}	
 }
 
 /*
-	提交-新增广告位
+	验证-广告位
+	typ：1=新增 2=编辑
 */
-function sub_addLoca(){
+function sub_locaf(typ){
 
-	var name=$('#name_addSi').val(),
-		chan=$('#chan_addSi').val(),
+	var name=$('#name_locaf').val(),
+		chan=$('#chan_locaf').val(),
 		type=$('input[name="spe"]:checked').val();
 
 	if(checkStation(name,1,'广告位名称')==false){
-		tips('name_addSi','请填写广告位名称','name_addSi');
+		tips('name_locaf','请填写广告位名称','name_locaf');
 		return;
 	}else{
-		tips('name_addSi');
+		tips('name_locaf');
 	}
 
 	if(checkStation(type,2)==true){
-		tips('tt_addSi');
+		tips('tt_locaf');
 		if(type<3){
-			if(pushSizes($('#t_size1_addSi').attr('alt'),'size1_addSi','pri','width1_addSi','height1_addSi')==false){
+			if(pushSizes($('#t_size1_locaf').attr('alt'),'size1_locaf','pri','width1_locaf','height1_locaf')==false){
 				return;
 			}
 			if(type==2){
-				if(checkStation($('#ver_addSi').val(),3)==true){
-					tips('screenPo_addSi');
+				if(checkStation($('#ver_locaf').val(),3)==true){
+					tips('screenPo_locaf');
 				}else{
-					tips('screenPo_addSi','边距不能为空且必须是整数','ver_addSi');
+					tips('screenPo_locaf','边距不能为空且必须是整数','ver_locaf');
 					return;
 				}
 
-				if(checkStation($('#hor_addSi').val(),3)==true){
-					tips('screenPo_addSi');
+				if(checkStation($('#hor_locaf').val(),3)==true){
+					tips('screenPo_locaf');
 				}else{
-					tips('screenPo_addSi','边距不能为空且必须是整数','hor_addSi');
+					tips('screenPo_locaf','边距不能为空且必须是整数','hor_locaf');
 					return;
 				}
 
-				if(checkStation($('#stp_addSi').val(),3)==false){
-					tips('btn_stp_addSi','停留时间不能为空且必须是数字','stp_addSi');
+				if(checkStation($('#stp_locaf').val(),3)==false){
+					tips('btn_stp_locaf','停留时间不能为空且必须是数字','stp_locaf');
 					return;
 				}else{
-					tips('btn_stp_addSi');
+					tips('btn_stp_locaf');
 				}
 			}
 		}else if(2<type<=4){
-			if(pushSizes($('#t_size2_addSi').attr('alt'),'size2_addSi','pri','width2_addSi','height2_addSi')==true){
-				if(pushSizes($('#t_size3_addSi').attr('alt'),'size3_addSi','aux','width3_addSi','height3_addSi')==false){
+			if(pushSizes($('#t_size2_locaf').attr('alt'),'size2_locaf','pri','width2_locaf','height2_locaf')==true){
+				if(pushSizes($('#t_size3_locaf').attr('alt'),'size3_locaf','aux','width3_locaf','height3_locaf')==false){
 					return;
 				}
 			}else{
@@ -541,7 +948,7 @@ function sub_addLoca(){
 			}
 		}
 	}else{
-		tips('tt_addSi','请选择广告位形式');
+		tips('tt_locaf','请选择广告位形式');
 		return;
 	}
 
@@ -583,20 +990,23 @@ function sub_addLoca(){
 		return true;
 	}
 
-	subData(1,'form_addSi','http://localhost/ad/adseat/add','save_addSi','cancel_addSi','正在保存...','保存广告位');
-
+	if(typ==1){
+		subData(1,'form_locaf','add','save_locaf','cancel_locaf','正在保存...','保存广告位');
+	}else{
+		subData(3,'form_locaf','upd','save_locaf','cancel_locaf','正在保存...','保存广告位');
+	}
 }
 
 /*
-	提交-新增频道
+	验证-新增频道
 */
-function sub_addCh(){
-	var name=$('#name_addCh').val(),dat=$('#datas_chan').val();
+function sub_chanf(){
+	var name=$('#name_chanf').val(),dat=$('#datas_chan').val();
 	if(checkStation(name,1,'频道名称')==false){
-		tips('name_addCh','请填写频道名称','name_addCh');
+		tips('name_chanf','请填写频道名称','name_chanf');
 		return;
 	}else{
-		tips('name_addCh');
+		tips('name_chanf');
 		if(dat!=""){
 			var isRep=0;
 			dat=eval('('+dat+')');
@@ -606,21 +1016,21 @@ function sub_addCh(){
 				}
 			});
 			if(isRep!=0){
-				tips('name_addCh','频道已存在','name_addCh');
+				tips('name_chanf','频道已存在','name_chanf');
 				return;
 			}else{
-				tips('name_addCh');
+				tips('name_chanf');
 			}
 		}
 	}
 
-	subData(2,'form_addCh','http://localhost/ad/adseat/newchn','save_addCh','cancel_addCh','正在保存...','保存频道');
+	subData(2,'form_chanf','newchn','save_chanf','cancel_chanf','正在保存...','保存频道');
 }
 
 
 /*	
 	提交表单的公用方法
-	typ：1=新增广告位  2=新增频道
+	typ：1=新增广告位  2=新增频道  3=编辑广告位
 	fid：form的id
 	ur：处理页地址
 	bid：提交按钮id
@@ -630,7 +1040,7 @@ function sub_addCh(){
 */
 function subData(typ,fid,ur,bid,cid,ing,wor){
 	$.ajax({
-         url:ur,
+         url:also_url()+ur,
          data:$('#'+fid).serialize(),
          type:"post",
          beforeSend:function(){
@@ -649,6 +1059,9 @@ function subData(typ,fid,ur,bid,cid,ing,wor){
          					$('#datas_chan').val('');
          					getChan(1,1);
          					getChan(2);
+         					break;
+         				case 3:
+         					getNewData(3,$('#eid_locaf').val());
          					break;
      				}
          			also_remove($('#'+bid).attr('sli'),$('#'+bid).attr('loc'));
@@ -670,20 +1083,25 @@ function subData(typ,fid,ur,bid,cid,ing,wor){
 
 /*	
 	新增数据成功后请求最新的一条数据
-	typ：2=广告位（新增成功后）
+	typ：2=广告位（新增成功后）3=广告位（编辑成功后）
 	nid：最新数据的id
 */
 function getNewData(typ,nid){
 	var ur='';
 	switch(typ){
 		case 2:
-			ur='http://localhost/ad/adseat/inf/';
-			getAnum('http://localhost/ad/adseat/cnt/','topic_loca_num1');
+			ur='inf/';
+			getAnum('cnt','topic_loca_num1');
+			break;
+		case 3:
+			ur='inf/';
+			//需要更新正在投放广告位的数据
+			//需要广告位的状态
 			break;
 	}
 
 	$.ajax({
-         url:ur+nid,
+         url:also_url()+ur+nid,
          type:"get",
          beforeSend:function(){
          		//列表loading
@@ -709,14 +1127,15 @@ function getNewData(typ,nid){
 	用于处理出现时有特效的情况
 	typ：1=广告位，2=广告位（新增成功后）
 	cod：html代码
+	eid：被编辑项的id
 */
-function setDataInlist(typ,cod){
+function setDataInlist(typ,cod,eid){
 	switch(typ){
 		case 1:
 			$('#contBox').empty().append(cod); //装载对应分页的内容
 
  			$('a[name="edits_loca"]').bind('click',function(){
-				editCenter(2,$(this).attr('id'));
+				also_filler(2,'main_loca','编辑广告位','main',$(this).attr('alt'));
 			});
 			$('a[name="adJoinLoca"]').bind('click',function(){
 				also_filler(7,'main_loca','新增广告到广告位'+$(this).attr('na'),'main',$(this).attr('alt'));
@@ -730,8 +1149,16 @@ function setDataInlist(typ,cod){
 			$('#contBox div:first').animate({opacity:'1'},1200);
 
 			break;
+		case 3:
+			// $('#'+eid).animate({opacity:'0'},300,function(){
+
+			// });
+			$('#'+eid).fadeOut('slow',function(){
+				$(this).before(cod);
+				$('#'+eid).animate({opacity:'1'},1200);
+				$(this).remove();
+			});
 	}
-	
 }
 
 /*	
@@ -810,9 +1237,7 @@ function tips(dad,tex,foc,col){
 
 	}else{
 		$('#tips_'+dad).remove();
-	}
-	
-		
+	}	
 }
 
 
@@ -868,14 +1293,14 @@ function pageStation(typ){
 	}
 	switch(typ){
 		case 1:
-			ur='http://localhost/ad/adseat/cnt/'+chan+'/'+sta;
-			ul='http://localhost/ad/adseat/index/';
+			ur='cnt/'+chan+'/'+sta;
+			ul='index/';
 			//获取总数，初始化分页方法
 			break;
 	}
 
 	$.ajax({
-         url:ur,
+         url:also_url()+ur,
          type:"get",
          beforeSend:function(){
          		//loading
@@ -904,7 +1329,7 @@ function pageStation(typ){
 
 	function pageselectCallback(page_index,jq){
 		$.ajax({
-	         url:ul+(page_index+1)+'/'+chan+'/'+sta,
+	         url:also_url()+ul+(page_index+1)+'/'+chan+'/'+sta,
 	         type:"get",
 	         beforeSend:function(){
 	         		//loading
@@ -927,11 +1352,11 @@ function pageStation(typ){
 
 /*	
 	 列表数据整理中心
-	 typ：1=广告位，2=广告位（新增成功后）
+	 typ：1=广告位 2=广告位（新增成功后） 3=广告位（编辑成功后）
 	 data：json数据
 */
 function formatData(typ,data){
-	var code='';
+	var code='',eid='';
 	switch(typ){
 		case 1:
 			var shap='',chan='',priSi='',listCla='',pu='';
@@ -961,6 +1386,7 @@ function formatData(typ,data){
 						chan='('+v.chnName+')';
 					}
 
+					var text='';
 					if(v.put==-1){
 						listCla='pla_loca';
 						pu='计划';
@@ -970,22 +1396,23 @@ function formatData(typ,data){
 					}else if(v.put>0){
 						listCla='ing_loca';
 						pu=v.put;
+						text='正在投放';
 					}
 
-					code+='<div class="list_loca '+listCla+'">';
+					code+='<div id="'+v._id+'" class="list_loca '+listCla+'">';
 				   	code+='<div class="list_left_loca">';
-				   	code+='<p class="list_tit_loca">'+v.name+'<span id="list_chan_loca" title="所属频道">'+chan+'</span></p>';
+				   	code+='<p class="list_tit_loca"><a href="#">'+v.name+'</a><span id="list_chan_loca" title="所属频道">'+chan+'</span></p>';
 				   	code+='<p class="list_oth_loca">';
 				   	code+=priSi;
 				   	code+='<span id="list_type_loca" title="形式">'+shap+'</span>';
 				   	code+='</p>';
 				   	code+='</div>';
 				   	code+='<div class="list_state_loca">';
-				   	code+='<p>正在投放</p>';
+				   	code+='<p>'+text+'</p>';
 				   	code+='<p id="list_snum_loca">'+pu+'</p>';
 				   	code+='</div>';
 				   	code+='<div class="list_ops_loca">';
-				   	code+='<a id="'+v._id+'" name="edits_loca" href="javascript:void(0)">编辑</a>';
+				   	code+='<a alt="'+v._id+'" name="edits_loca" href="javascript:void(0)">编辑</a>';
 				   	code+='<a alt="'+v._id+'" na="'+v.name+'" name="adJoinLoca" href="javascript:void(0)">投放广告</a>';
 				   	code+='<a href="javascript:void(0)">查看统计</a>';
 				   	code+='<a alt="'+v._id+'" na="'+v.name+'" name="getJS" href="javascript:void(0)">获取代码</a>';
@@ -994,9 +1421,8 @@ function formatData(typ,data){
 			});
 
 			break;
-
 		case 2:
-			var shap='',chan='',priSi='';
+			var shap='',chan='',priSi='',listCla='',pu='',text='';
 			priSi='<span id="list_size_loca" title="尺寸">'+data.priSize[0]+'x'+data.priSize[1]+'</span>';
 			switch(data.shape){
 				case '1':
@@ -1022,7 +1448,19 @@ function formatData(typ,data){
 				chan='('+data.chnName+')';
 			}
 
-			code+='<div class="list_loca non_loca" style="opacity:0.1;">';
+			if(data.put==-1){
+				listCla='pla_loca';
+				pu='计划';
+			}else if(data.put==0){
+				listCla='non_loca';
+				pu='空闲';
+			}else if(data.put>0){
+				listCla='ing_loca';
+				pu=data.put;
+				text='正在投放';
+			}
+
+			code+='<div id="'+data._id+'" class="list_loca '+listCla+'" style="opacity:0.1;">';
 		   	code+='<div class="list_left_loca">';
 		   	code+='<p class="list_tit_loca">'+data.name+'<span id="list_chan_loca" title="所属频道">'+chan+'</span></p>';
 		   	code+='<p class="list_oth_loca">';
@@ -1031,11 +1469,11 @@ function formatData(typ,data){
 		   	code+='</p>';
 		   	code+='</div>';
 		   	code+='<div class="list_state_loca">';
-		   	code+='<p>正在投放</p>';
-		   	code+='<p id="list_snum_loca">空闲</p>';
+		   	code+='<p>'+text+'</p>';
+		   	code+='<p id="list_snum_loca">'+pu+'</p>';
 		   	code+='</div>';
 		   	code+='<div class="list_ops_loca">';
-		   	code+='<a id="'+data._id+'" name="edits_loca" onclick="editCenter(2,this.id);" href="javascript:void(0)">编辑</a>';
+		   	code+='<a alt="'+data._id+'" name="edits_loca" onclick="also_filler(2,\'main_loca\',\'编辑广告位\',\'main\',\''+data._id+'\');" href="javascript:void(0)">编辑</a>';
 		   	code+='<a alt="'+data._id+'" onclick="also_filler(7,\'main_loca\',\'新增广告到广告位'+data.name+'\',\'main\',this.alt);" name="adJoinLoca" href="javascript:void(0)">投放广告</a>';
 		   	code+='<a href="javascript:void(0)">查看统计</a>';
 		   	code+='<a alt="'+data._id+'" onclick="also_filler(9,\'main_loca\',\''+data.name+'\',\'main\',this.alt);" name="getJS" href="javascript:void(0)">获取代码</a>';
@@ -1043,37 +1481,81 @@ function formatData(typ,data){
 		   	code+='</div>';
 
 			break;
-	}
-				
-	setDataInlist(typ,code);
-}
+		case 3:
+			var shap='',chan='',priSi='',listCla='',pu='',text='';
+			priSi='<span id="list_size_loca" title="尺寸">'+data.priSize[0]+'x'+data.priSize[1]+'</span>';
+			switch(data.shape){
+				case '1':
+					shap='banner';
+					break;
+				case '2':
+					shap='漂浮';
+					break;
+				case '3':
+					shap='Crazy';
+					priSi='';
+					break;
+				case '4':
+					shap='PIP扩展';
+					priSi='';
+					break;
 
+			}
 
-/*	
-	 编辑中心
-	 typ：2=广告位
-	 id：待编辑项的id
-	 
-*/
-function editCenter(typ,id){
-	switch(typ){
-		case 2:
-			also_filler(typ,'main_loca','编辑广告位','main',id);
+			if(data.chnName==0){
+				chan='';
+			}else{
+				chan='('+data.chnName+')';
+			}
+
+			if(data.put==-1){
+				listCla='pla_loca';
+				pu='计划';
+			}else if(data.put==0){
+				listCla='non_loca';
+				pu='空闲';
+			}else if(data.put>0){
+				listCla='ing_loca';
+				pu=data.put;
+				text='正在投放';
+			}
+
+			code+='<div id="'+data._id+'" class="list_loca '+listCla+'" style="opacity:0.1;">';
+		   	code+='<div class="list_left_loca">';
+		   	code+='<p class="list_tit_loca">'+data.name+'<span id="list_chan_loca" title="所属频道">'+chan+'</span></p>';
+		   	code+='<p class="list_oth_loca">';
+		   	code+=priSi;
+		   	code+='<span id="list_type_loca" title="形式">'+shap+'</span>';
+		   	code+='</p>';
+		   	code+='</div>';
+		   	code+='<div class="list_state_loca">';
+		   	code+='<p>'+text+'</p>';
+		   	code+='<p id="list_snum_loca">'+pu+'</p>';
+		   	code+='</div>';
+		   	code+='<div class="list_ops_loca">';
+		   	code+='<a alt="'+data._id+'" name="edits_loca" onclick="also_filler(2,\'main_loca\',\'编辑广告位\',\'main\',\''+data._id+'\');" href="javascript:void(0)">编辑</a>';
+		   	code+='<a alt="'+data._id+'" onclick="also_filler(7,\'main_loca\',\'新增广告到广告位'+data.name+'\',\'main\',this.alt);" name="adJoinLoca" href="javascript:void(0)">投放广告</a>';
+		   	code+='<a href="javascript:void(0)">查看统计</a>';
+		   	code+='<a alt="'+data._id+'" onclick="also_filler(9,\'main_loca\',\''+data.name+'\',\'main\',this.alt);" name="getJS" href="javascript:void(0)">获取代码</a>';
+		   	code+='</div>';
+		   	code+='</div>';
+		   	eid=data._id;
 			break;
 	}
-	
+				
+	setDataInlist(typ,code,eid);
 }
+
 
 
 /*	
 	 当仅需从服务器获取一个数字并添加到页面时 
 	 ur：url
-	 inid：append的元素id
-	 
+	 inid：append的元素id	 
 */
 function getAnum(ur,inid){
 	$.ajax({
-         url:ur,
+         url:also_url()+ur,
          type:"get",
          beforeSend:function(){
          		//loading

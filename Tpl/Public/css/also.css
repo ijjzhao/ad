@@ -208,7 +208,7 @@ body{
 	z-index: 1;
 }
 
-/*page:ads*/
+/*广告列表*/
 
 .main_ad{
 	padding: 30px 0 30px 30px;
@@ -392,7 +392,7 @@ body{
 }
 
 
-/*page:tita*/
+/*广告排期*/
 
 .main_tita{
 	padding: 30px 0 30px 30px;
@@ -459,8 +459,8 @@ body{
 	margin-top: 25px;
 }
 
-/*page:loca*/
 
+/*广告位列表*/
 .main_loca{
 	padding: 30px 0 30px 30px;
 }
@@ -586,15 +586,15 @@ body{
 	margin-left: 10px
 }
 
-.ing_loca .list_tit_loca{
+.ing_loca .list_tit_loca,.ing_loca .list_tit_loca a{
 	color: #507C24
 }
 
-.non_loca .list_tit_loca{
+.non_loca .list_tit_loca,.non_loca .list_tit_loca a{
 	color: #EF9B24
 }
 
-.pla_loca .list_tit_loca{
+.pla_loca .list_tit_loca,.pla_loca .list_tit_loca a{
 	color: #5CA9BE
 }
 
@@ -679,8 +679,7 @@ body{
 }
 
 
-/*also_slider*/
-
+/*滑层*/
 .also_slider{
 	position: fixed;
 	width: 0;
@@ -717,20 +716,20 @@ body{
 	margin: 15px;
 }
 
-/*addSite*/
-.addSi{
-	width: 720px;
+/*广告位表单*/
+.locaf{
+	width: 760px;
 	padding: 20px 0 0 30px;
 }
 
-.addSi .topic_addSi{
+.locaf .topic_locaf{
 	font-weight: 0;
 	font-size: 26px;
 	color: #333;
 	margin-bottom: 20px;
 }
 
-.addSi input[type="text"]{
+.locaf input[type="text"]{
 	color: #999;
 	height: 22px;
 	border: 1px solid #ccc;
@@ -740,40 +739,40 @@ body{
 	line-height: 22px;
 }
 
-.board_addSi{
-	width: 686px;
+.board_locaf{
+	width: 720px;
 	border: 1px solid #EAEAEA;
 	background: #F9F9F9;
 	margin-top: 12px;
 	padding: 18px;
 }
 
-.tit_addSi{
+.tit_locaf{
 	font-size: 18px;
 	color: #333;
 }
 
-.cont_addSi{
+.cont_locaf{
 	margin-top: 18px;
 }
 
-#name_addSi{
+#name_locaf{
 	width: 205px;
 }
 
-#remark_addSi{
+#remark_locaf{
 	width: 420px;
 }
 
-#chan_addSi{
+#chan_locaf{
 	width: 220px;
 }
 
-.tts_addSi{
+.tts_locaf{
 	margin-top: 12px;
 }
 
-.tts_addSi span{
+.tts_locaf span{
 	margin-right: 15px;
 	font-size: 14px;
 }
@@ -785,6 +784,7 @@ body{
 	display: inline-block;
 	background: #ccc;
 	color: #fff;
+	padding: 1px;
 	font-size: 12px;
 	line-height: 14px;
 	text-align: center;
@@ -792,15 +792,15 @@ body{
 }
 
 .also_helper:hover{
-	background: #bbb;
+	background: #aaa;
 }
 
-.tit2_addSi{
+.tit2_locaf{
 	margin-top: 16px;
 	font-size: 14px;
 }
 
-.sis_addSi{
+.sis_locaf{
 	margin-top: 8px;
 	height: 30px;
 	line-height: 30px;
@@ -808,74 +808,74 @@ body{
 }
 
 
-#size1_addSi,#size2_addSi,#size3_addSi{
+#size1_locaf,#size2_locaf,#size3_locaf{
 	width: 220px;
 }
 
-#t_size1_addSi,#t_size2_addSi,#t_size3_addSi{
+#t_size1_locaf,#t_size2_locaf,#t_size3_locaf{
 	font-size: 14px;
 	margin-left: 10px;
 }
 
-#diy1_addSi{
+#diy1_locaf{
 	display: none;
 }
 
-#diy2_addSi{
+#diy2_locaf{
 	display: none;
 }
 
-#diy3_addSi{
+#diy3_locaf{
 	display: none;
 }
 
-#gty_addSi,#ore_addSi{
+#gty_locaf,#ore_locaf{
 	width: 100px;
 }
 
-.borp_addSi{
+.borp_locaf{
 	margin-left: 16px;
 }
 
-#ver_addSi,#hor_addSi{
+#ver_locaf,#hor_locaf{
 	width: 80px;
 	margin-right: 5px;
 }
 
-#stp2_addSi{
+#stp2_locaf{
 	display: none;
 }
 
-#stp_addSi{
+#stp_locaf{
 	width: 80px;
 	margin-right: 5px;
 }
 
-#btn_stp_addSi{
+#btn_stp_locaf{
 	font-size: 14px;
 	margin-left: 5px;
 }
 
-.intex_addSi{
+.intex_locaf{
 	width: 77px;
 }
 
-.tru_addSi{
+.tru_locaf{
 	font-size: 16px;
 }
 
-.tru1_addSi{
+.tru1_locaf{
 	color: #aaa;
 	font-size: 14px;
 	margin-top: 3px;
 	padding-left: 5px;
 }
 
-.btns_addSi{
+.btns_locaf{
 	margin: 50px 0 50px 0;
 }
 
-#save_addSi{
+#save_locaf{
 	width: 180px;
 	height: 50px;
 	line-height: 50px;
@@ -887,21 +887,21 @@ body{
 	cursor: pointer;
 }
 
-.save_addSi_1{
+.save_locaf_1{
 	background: #EF9B24;
 }
 
-.sav_addSi:hover{
+.sav_locaf:hover{
 	box-shadow: 0 2px 6px rgba(0,0,0,.3);
 	transition: all 0.2s ease-out;
 }
 
-.save_addSi_2{
+.save_locaf_2{
 	background: #ccc;
 	cursor: default;
 }
 
-#cancel_addSi{
+#cancel_locaf{
 	margin-left: 30px;
 }
 
@@ -945,21 +945,14 @@ body{
 	max-width:300px;
 	color:#000;
 	background-color:#fff;
-	/**
-	 * - If you set a background-image, border/padding/background-color will be ingnored.
-	 *   You can set any padding to .tip-inner instead if you need.
-	 * - If you want a tiled background-image and border/padding for the tip,
-	 *   set the background-image to .tip-inner instead.
-	 */
 }
 .tip-fff .tip-inner {
 	font:12px/16px arial,helvetica,sans-serif;
 }
 
-/* Configure an arrow image - the script will automatically position it on the correct side of the tip */
 .tip-fff .tip-arrow-top {
 	margin-top:-6px;
-	margin-left:-5px; /* approx. half the width to center it */
+	margin-left:-5px; 
 	top:0;
 	left:50%;
 	width:9px;
@@ -967,7 +960,7 @@ body{
 	background:url(../img/tip-fff_arrows.gif) no-repeat;
 }
 .tip-fff .tip-arrow-right {
-	margin-top:-4px; /* approx. half the height to center it */
+	margin-top:-4px; 
 	margin-left:0;
 	top:50%;
 	left:100%;
@@ -977,7 +970,7 @@ body{
 }
 .tip-fff .tip-arrow-bottom {
 	margin-top:0;
-	margin-left:-5px; /* approx. half the width to center it */
+	margin-left:-5px; 
 	top:100%;
 	left:50%;
 	width:9px;
@@ -989,7 +982,7 @@ body{
 
 .tip-fff .tip-arrow-left {
 	margin-top:-6px;
-	margin-left:-124px; /* approx. half the width to center it */
+	margin-left:-124px; 
 	top:0;
 	left:50%;
 	width:9px;
@@ -997,20 +990,7 @@ body{
 	background:url(../img/tip-fff_arrows.gif) no-repeat;
 }
 
-/*.tip-fff .tip-arrow-left {
-	margin-top:-4px; 
-	margin-left:-6px;
-	top:50%;
-	left:0;
-	width:6px;
-	height:9px;
-	background:url(../img/tip-fff_arrows.gif) no-repeat -27px 0;
-}*/
-
-
-
-
-/*pages*/
+/*分页*/
 .pages_box{
 	margin-top: 20px;
 	text-align: right;
@@ -1045,9 +1025,9 @@ body{
 }
 
 
-/*alsoKey*/
+/*获取代码*/
 .alsoKey{
-	width: 720px;
+	width: 760px;
 	padding: 30px 0 0 30px;
 }
 
@@ -1102,20 +1082,20 @@ body{
 }
 
 
-/*addChan*/
-.addChan{
-	width: 720px;
+/*频道*/
+.chanf{
+	width: 760px;
 	padding: 20px 0 0 30px;
 }
 
-.addChan .topic_addCh{
+.chanf .topic_chanf{
 	font-weight: 0;
 	font-size: 26px;
 	color: #333;
 	margin-bottom: 20px;
 }
 
-.addChan input[type="text"]{
+.chanf input[type="text"]{
 	color: #999;
 	height: 22px;
 	border: 1px solid #ccc;
@@ -1125,8 +1105,8 @@ body{
 	line-height: 22px;
 }
 
-.board_addCh{
-	width: 686px;
+.board_chanf{
+	width: 720px;
 	border: 1px solid #EAEAEA;
 	background: #F9F9F9;
 	margin-top: 10px;
@@ -1134,24 +1114,24 @@ body{
 }
 
 
-.cont_addCh{
+.cont_chanf{
 	margin-top: 16px;
 }
 
-#name_addCh{
+#name_chanf{
 	width: 205px;
 }
 
-#remark_addCh{
+#remark_chanf{
 	width: 420px;
 	margin-bottom: 10px;
 }
 
-.btns_addCh{
+.btns_chanf{
 	margin: 45px 0 50px 0;
 }
 
-#save_addCh{
+#save_chanf{
 	width: 180px;
 	height: 50px;
 	line-height: 50px;
@@ -1163,23 +1143,22 @@ body{
 	cursor: pointer;
 }
 
-.save_addCh_1{
+.save_chanf_1{
 	background: #EF9B24;
 }
 
-.sav_addCh:hover{
+.sav_chanf:hover{
 	box-shadow: 0 2px 6px rgba(0,0,0,.3);
 	transition: all 0.2s ease-out;
 }
 
-.save_addCh_2{
+.save_chanf_2{
 	background: #ccc;
 	cursor: default;
 }
 
 
-#cancel_addCh{
+#cancel_chanf{
 	margin-left: 30px;
 }
 
-/*editSi*/

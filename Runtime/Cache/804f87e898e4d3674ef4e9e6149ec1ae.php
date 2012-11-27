@@ -87,7 +87,7 @@
 		<script type="text/javascript" src="../Public/js/poshytip.min.js"></script>
 		<script type="text/javascript" src="../Public/js/pagination.js"></script>
 		<script type="text/javascript">
-			getAnum('http://localhost/ad/adseat/cnt/','topic_loca_num1');
+			getAnum('cnt','topic_loca_num1');
 			getChan(2);
 			pageStation(1);
 			$('#sele_chan').bind('change',function(){
@@ -99,7 +99,6 @@
 			// 	$('#state_now').val($(this).val());
 			// 	pageStation(1);
 			// });
-
 		</script>
 	</body>
 </html>
