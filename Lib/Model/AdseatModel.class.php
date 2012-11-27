@@ -73,11 +73,19 @@ class AdseatModel extends MongoModel{
 		return $this->db->update($data,$arr);
 	}
 	/**
-	* 根据编号删除站点
+	 根据编号删除站点
+	 没搞懂，这里为毛接收不了参数
 	*/
-	public function delById($id){
+	// public function delBySeatId($seat_id){
+	// 	var_dump($seat_id);
+	// 	$arr['where'] = array(
+	// 		'_id' => new MongoId($seat_id)
+	// 	);
+	// 	// return $this->delete($arr);
+	// }
+	public function delBId($seat_id){
 		$arr['where'] = array(
-			'_id' => new MongoId($id)
+			'_id' => new MongoId($seat_id)
 		);
 		return $this->delete($arr);
 	}

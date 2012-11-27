@@ -149,7 +149,7 @@ class AdseatAction extends SspAction{
 			$seat_id = $_GET['_URL_'][2];//获取广告位ID
 			if($seat_id){
 				$m_adseat = new AdseatModel();//实例化广告位模型对象
-				$rs = $m_adseat->delById($site_id);
+				$rs = $m_adseat->delBId($seat_id);
 				if($rs){
 					$this->ajaxReturn('','删除成功',1);
 				}else{

@@ -663,7 +663,8 @@ body{
 	height: 90px;
 	position: absolute;
 	right: 0;
-	margin:34px 15px 0 0;
+	margin:0 15px 0 0;
+	line-height: 90px;
 	text-align: right;
 	display: none;
 }
@@ -730,7 +731,7 @@ body{
 }
 
 .locaf input[type="text"]{
-	color: #999;
+	color: #333;
 	height: 22px;
 	border: 1px solid #ccc;
 	padding:3px;
@@ -800,13 +801,16 @@ body{
 	font-size: 14px;
 }
 
+.sp_locaf{
+	display: none;
+}
+
 .sis_locaf{
 	margin-top: 8px;
 	height: 30px;
 	line-height: 30px;
 	font-size: 14px;
 }
-
 
 #size1_locaf,#size2_locaf,#size3_locaf{
 	width: 220px;
@@ -903,6 +907,25 @@ body{
 
 #cancel_locaf{
 	margin-left: 30px;
+}
+
+#dele_locaf{
+	float: right;
+	margin: 14px 5px 0 0;
+	background: #aaa;
+	height: 26px;
+	padding: 0 10px;
+	line-height: 26px;
+	display: inline-block;
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#dele_locaf:hover{
+	opacity: .9
 }
 
 /*also_tips*/
@@ -1096,7 +1119,7 @@ body{
 }
 
 .chanf input[type="text"]{
-	color: #999;
+	color: #333;
 	height: 22px;
 	border: 1px solid #ccc;
 	padding:3px;
