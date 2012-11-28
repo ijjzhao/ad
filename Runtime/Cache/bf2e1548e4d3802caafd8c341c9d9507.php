@@ -4,8 +4,7 @@
 		<meta charset="utf-8">
 		<title>广告位 - Adnets</title>
 		<link rel="stylesheet" href="Tpl__PUBLIC__/img/favicon.ico">
-		<link rel="stylesheet" href="Tpl__PUBLIC__/css/also.css">
-		<link rel="stylesheet" href="../Public/css/also.css">
+		<link rel="stylesheet" href="__PUBLIC__/css/also.css">	
 	</head>
 	<body>
 		<div class="menu">
