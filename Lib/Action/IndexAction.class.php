@@ -18,6 +18,7 @@ class IndexAction extends SspAction {
     * 广告位页面
     */
     public function loca(){
+        // $this->redirect('adseat/cnt');
     	$this->display('loca');
     }
 }

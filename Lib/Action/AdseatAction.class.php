@@ -75,13 +75,13 @@ class AdseatAction extends SspAction{
 				if($rs['ok']){
 					$this->ajaxReturn($rs['id'],'添加成功',1);
 				}else{
-					$this->ajaxReturn('','添加失败',0);
+					$this->ajaxReturn(null,'添加失败',0);
 				}
 			}else{
-				$this->ajaxReturn('','信息不完整',0);
+				$this->ajaxReturn(null,'信息不完整',0);
 			}
 		}else{
-			$this->ajaxReturn('','请求错误',0);
+			$this->ajaxReturn(null,'请求错误',0);
 		}
 	}
 	/**
@@ -169,7 +169,6 @@ class AdseatAction extends SspAction{
 			$chn = $chn == 'all' ? null : $chn;
 			$put = $_GET['_URL_'][3];//根据投放状态筛选
 			$put = $put == 'all' ? null : $put;
-			$m_adseat = new AdseatModel();
 			$op = array();
 			// if($put != null && $put == 0){//查询空闲的
 			// 	$op['adnum'] = 0;
@@ -179,7 +178,9 @@ class AdseatAction extends SspAction{
 			if($chn){//筛选频道
 				$op['chnName'] = $chn;
 			}
-			$count = $m_adseat->adcount($this->getWebSiteId(),$op);
+			$site_id = $this->getWebSiteId();
+			$m_adseat = new AdseatModel();//若在这个实例化后再实例化，对象会有问题，对象调用方法的过程中，中间不能有其他对象的实例
+			$count = $m_adseat->adcount($site_id,$op);
 			$this->ajaxReturn($count,'广告位数量',1);
 		}
 	}

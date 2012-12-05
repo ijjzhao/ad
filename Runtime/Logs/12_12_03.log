@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [ 2012-12-03T11:15:45+08:00 ] 127.0.0.1 /ad/s/lgn
 INFO: [ route_check ] --START--
 INFO: Run CheckRoute Behavior [ RunTime:0.023547s ]
@@ -9298,4 +9299,964 @@ SQL: alsogood.getCollection(adseat) [ RunTime:0.000019s ]
 SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","chnName","priSize","desc"]).sort({"_id":-1}).limit(5) [ RunTime:0.000057s ]
 NOTIC: [2] Invalid argument supplied for foreach() D:\Program Files\wamp\www\ad\Lib\Model\AdseatModel.class.php 第 48 行.
 NOTIC: [2] Invalid argument supplied for foreach() D:\Program Files\wamp\www\ad\Lib\Action\AdseatAction.class.php 第 34 行.
+=======
+[ 2012-12-03T16:35:46+08:00 ] 127.0.0.1 /ad/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000179s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000265s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000609s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000245s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027163s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.028094s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.028279s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.028388s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.028469s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000516s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.028650s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000123s ]
+
+[ 2012-12-03T16:35:47+08:00 ] 127.0.0.1 /ad/adseat/cnt
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000129s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000172s ]
+NOTIC: [8] Undefined offset: 2 /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 168 行.
+NOTIC: [8] Undefined offset: 3 /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 170 行.
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000029s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 552 行.
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}}).count() [ RunTime:0.001030s ]
+
+[ 2012-12-03T16:35:47+08:00 ] 127.0.0.1 /ad/adseat/cnt/all/all
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000106s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000172s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000026s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 552 行.
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}}).count() [ RunTime:0.000602s ]
+
+[ 2012-12-03T16:35:47+08:00 ] 127.0.0.1 /ad/adseat/chn
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000202s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000215s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000114s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 433 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.website.find({"_id":{"$id":"509a04be96838cb770a61bd2"},"channel.state":1},["channel","channel.chnName","channel.desc"]) [ RunTime:0.000457s ]
+
+[ 2012-12-03T16:35:47+08:00 ] 127.0.0.1 /ad/adseat/index/1/all/all
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000091s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000170s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+SQL: alsogood.getCollection(website) [ RunTime:0.000024s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 513 行.
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 516 行.
+SQL: alsogood.website.findOne({"uid":{"$id":"509a041296838cb770a61bd0"}}) [ RunTime:0.000347s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000019s ]
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","chnName","priSize","desc"]).sort({"_id":-1}).limit(5) [ RunTime:0.000063s ]
+NOTIC: [8] Undefined index: auxSize /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 35 行.
+NOTIC: [8] Undefined index: auxSize /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 35 行.
+NOTIC: [8] Undefined index: auxSize /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 35 行.
+NOTIC: [8] Undefined index: auxSize /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 35 行.
+NOTIC: [8] Undefined index: auxSize /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 35 行.
+
+[ 2012-12-03T16:35:55+08:00 ] 127.0.0.1 /ad/material
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000065s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000213s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+
+[ 2012-12-03T16:42:22+08:00 ] 127.0.0.1 /ad/material
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000085s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000137s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.034032s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000258s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.034319s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001991s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.036363s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.036532s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.036669s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.036767s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000586s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.037024s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000163s ]
+
+[ 2012-12-03T16:42:38+08:00 ] 127.0.0.1 /ad/material
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000074s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000127s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000660s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000148s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000861s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001767s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.002647s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.002755s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.002834s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.002890s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000348s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.003038s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000094s ]
+
+[ 2012-12-03T16:46:47+08:00 ] 127.0.0.1 /ad/material
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000058s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003197s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000120s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.003337s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001372s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.004768s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.004877s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.004973s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.005042s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000419s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.005244s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000137s ]
+
+[ 2012-12-03T16:46:48+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000207s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000264s ]
+
+[ 2012-12-03T16:48:35+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000061s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+
+[ 2012-12-03T16:48:40+08:00 ] 127.0.0.1 /ad/material
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000072s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000619s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000107s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000753s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001519s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.002311s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.002423s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.002519s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.002590s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000401s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.002743s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000107s ]
+
+[ 2012-12-03T16:48:50+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000133s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000163s ]
+
+[ 2012-12-03T17:14:47+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000105s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000171s ]
+
+[ 2012-12-03T17:14:59+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000072s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000246s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+
+[ 2012-12-03T17:15:33+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000062s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000212s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+
+[ 2012-12-03T17:15:33+08:00 ] 127.0.0.1 /ad/material/upload
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-03T17:17:01+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000105s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000138s ]
+
+[ 2012-12-03T17:17:01+08:00 ] 127.0.0.1 /ad/material/upload
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-03T17:17:20+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000098s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+
+[ 2012-12-03T17:17:20+08:00 ] 127.0.0.1 /ad/material/upload
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-03T17:17:28+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000096s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000164s ]
+
+[ 2012-12-03T17:17:28+08:00 ] 127.0.0.1 /ad/material/upload
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-03T17:24:03+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000072s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000095s ]
+
+[ 2012-12-03T17:24:03+08:00 ] 127.0.0.1 /ad/material/upload
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-03T17:24:08+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000059s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000097s ]
+
+[ 2012-12-03T17:24:08+08:00 ] 127.0.0.1 /ad/material/upload
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-03T17:24:26+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000129s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000124s ]
+
+[ 2012-12-03T17:24:26+08:00 ] 127.0.0.1 /ad/material/upload
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-03T17:28:39+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000080s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000114s ]
+
+[ 2012-12-03T17:28:39+08:00 ] 127.0.0.1 /ad/material/upload
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-03T17:32:38+08:00 ] 192.168.11.2 /ad/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000115s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000197s ]
+
+[ 2012-12-03T17:32:38+08:00 ] 192.168.11.2 /ad/s/lgn
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000144s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000143s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000759s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000198s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.001000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030467s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031553s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.031771s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031963s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.032119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000763s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.032381s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000164s ]
+
+[ 2012-12-03T17:32:39+08:00 ] 192.168.11.2 /ad/s/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000108s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000173s ]
+SQL: alsogood.getCollection(user) [ RunTime:0.000026s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 513 行.
+SQL: alsogood.user.findOne({"email":"shiba@da.com","psd":"96e79218965eb72c92a549dd5a330112","state":1},["email","name","url"]) [ RunTime:0.000601s ]
+
+[ 2012-12-03T17:32:39+08:00 ] 192.168.11.2 /ad/index/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000086s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000135s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000748s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000217s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.001005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043201s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.044271s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.044513s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.044653s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.044746s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000674s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.045014s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000155s ]
+
+[ 2012-12-03T17:32:49+08:00 ] 192.168.11.2 /ad/material
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000105s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000193s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000171s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000923s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000146s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.001118s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001869s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.003024s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.003155s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.003263s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.003339s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000460s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.003565s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000208s ]
+
+[ 2012-12-03T17:32:53+08:00 ] 192.168.11.2 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000105s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000194s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000171s ]
+
+[ 2012-12-03T17:32:53+08:00 ] 192.168.11.2 /ad/material/upload
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-03T17:36:25+08:00 ] 192.168.11.2 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000107s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000201s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000171s ]
+
+[ 2012-12-03T17:36:25+08:00 ] 192.168.11.2 /ad/material/upload
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-03T17:36:30+08:00 ] 192.168.11.2 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000142s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000147s ]
+
+[ 2012-12-03T17:36:30+08:00 ] 192.168.11.2 /ad/material/upload
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-03T17:36:36+08:00 ] 192.168.11.2 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000111s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000177s ]
+
+[ 2012-12-03T17:36:36+08:00 ] 192.168.11.2 /ad/material/upload
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-03T17:36:44+08:00 ] 192.168.11.2 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000107s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000201s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000172s ]
+
+[ 2012-12-03T17:36:50+08:00 ] 192.168.11.2 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000148s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000147s ]
+
+[ 2012-12-03T17:36:50+08:00 ] 192.168.11.2 /ad/material/upload
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-03T17:37:01+08:00 ] 192.168.11.2 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000106s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000171s ]
+
+[ 2012-12-03T17:37:01+08:00 ] 192.168.11.2 /ad/material/upload
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-03T17:42:26+08:00 ] 192.168.11.2 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000106s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000171s ]
+
+[ 2012-12-03T17:42:26+08:00 ] 192.168.11.2 /ad/material/upload
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-03T17:43:01+08:00 ] 192.168.11.2 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000107s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000201s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000170s ]
+
+[ 2012-12-03T17:43:01+08:00 ] 192.168.11.2 /ad/material/upload
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-03T17:43:42+08:00 ] 192.168.11.2 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000131s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000185s ]
+
+[ 2012-12-03T17:44:34+08:00 ] 192.168.11.2 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000106s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000167s ]
+
+[ 2012-12-03T17:56:18+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000072s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000246s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000117s ]
+
+[ 2012-12-03T17:57:35+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000105s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000170s ]
+
+[ 2012-12-03T18:23:16+08:00 ] 192.168.11.2 /ad/material
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000105s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000214s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.001014s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000228s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.001284s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002033s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.003355s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.003494s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.003602s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.003678s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000469s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.003882s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000130s ]
+
+[ 2012-12-03T18:23:58+08:00 ] 192.168.11.2 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000085s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000136s ]
+
+[ 2012-12-03T18:26:31+08:00 ] 192.168.11.2 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000105s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000171s ]
+
+[ 2012-12-03T18:26:31+08:00 ] 192.168.11.2 /ad/material/upload
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-03T18:28:03+08:00 ] 127.0.0.1 /ad/material
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000106s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000199s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000173s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000976s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000118s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.001132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001666s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.002842s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.002973s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.003081s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.003157s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000460s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.003359s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000127s ]
+
+[ 2012-12-03T18:28:09+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000058s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000104s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+
+[ 2012-12-03T18:28:09+08:00 ] 127.0.0.1 /ad/material/upload
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-03T18:30:22+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000109s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000174s ]
+
+[ 2012-12-03T18:30:22+08:00 ] 127.0.0.1 /ad/material/upload
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-03T18:31:27+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000084s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000148s ]
+NOTIC: [8] Undefined variable: rs /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 25 行.
+
+[ 2012-12-03T18:43:41+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000107s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000188s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000176s ]
+
+[ 2012-12-03T18:46:27+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000105s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000169s ]
+
+[ 2012-12-03T18:50:12+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000107s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000188s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000266s ]
+
+[ 2012-12-03T18:50:29+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000063s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+
+[ 2012-12-03T18:50:35+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000063s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000103s ]
+
+[ 2012-12-03T19:07:11+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000108s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000172s ]
+
+[ 2012-12-03T19:07:58+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000101s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000204s ]
+
+[ 2012-12-03T19:09:08+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000072s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000137s ]
+
+[ 2012-12-03T19:09:08+08:00 ] 127.0.0.1 /ad/material/upload
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-03T19:09:17+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000074s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+
+[ 2012-12-03T19:09:42+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000092s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000170s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000092s ]
+
+[ 2012-12-03T19:10:20+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000085s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000136s ]
+
+[ 2012-12-03T19:10:23+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000094s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000151s ]
+
+[ 2012-12-03T19:11:34+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000086s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000145s ]
+
+[ 2012-12-03T19:11:40+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000083s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000143s ]
+
+[ 2012-12-03T19:11:43+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000085s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000141s ]
+
+[ 2012-12-03T19:11:52+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000090s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000165s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000220s ]
+
+[ 2012-12-03T19:14:20+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000063s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000210s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000096s ]
+NOTIC: [2] fopen(/tmp/test.jpg) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 18 行.
+
+[ 2012-12-03T19:14:29+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000083s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+NOTIC: [2] fopen(/a.jpg) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 18 行.
+
+[ 2012-12-03T19:14:30+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000071s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000222s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000106s ]
+NOTIC: [2] fopen(/a.jpg) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 18 行.
+
+[ 2012-12-03T19:15:28+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000072s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000112s ]
+NOTIC: [2] fopen(/a.jpg) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 18 行.
+
+[ 2012-12-03T19:15:30+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000070s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000212s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+NOTIC: [2] fopen(/a.jpg) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 18 行.
+
+[ 2012-12-03T19:15:33+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000084s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000148s ]
+NOTIC: [2] fopen(/a.jpg) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 18 行.
+
+[ 2012-12-03T19:16:07+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000107s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000199s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000171s ]
+NOTIC: [2] fopen(/a.jpg) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 18 行.
+
+[ 2012-12-03T19:17:35+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000086s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000137s ]
+NOTIC: [2] fopen(/a.jpg) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 18 行.
+
+[ 2012-12-03T19:17:54+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000071s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+NOTIC: [8] Use of undefined constant __PUBLIC__ - assumed '__PUBLIC__' /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 20 行.
+
+[ 2012-12-03T19:18:12+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000082s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+
+[ 2012-12-03T19:18:13+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000072s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000229s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000101s ]
+
+[ 2012-12-03T19:25:08+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000072s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000232s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000121s ]
+NOTIC: [2] fopen(Tpl/Public/a.jpg) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 18 行.
+
+[ 2012-12-03T19:25:12+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000084s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000136s ]
+NOTIC: [2] fopen(Tpl/Public/a.jpg) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 18 行.
+
+[ 2012-12-03T19:34:51+08:00 ] 127.0.0.1 /ad/material/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000106s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000174s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004467s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000154s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004651s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001598s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.006311s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.006493s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.006645s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.006736s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000606s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.006962s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000151s ]
+
+[ 2012-12-03T19:34:59+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000105s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000171s ]
+
+[ 2012-12-03T19:37:12+08:00 ] ERR: [4] syntax error, unexpected ';' /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 24 行.
+[ 2012-12-03T19:37:27+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000059s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000087s ]
+NOTIC: [2] fopen(/Applications/MAMP/tmp/php/phpHsP965/163logo.gif) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 23 行.
+>>>>>>> 素材添加
 
