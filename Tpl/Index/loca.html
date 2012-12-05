@@ -93,9 +93,9 @@
 			</div>
 		</div>
 		<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
-		<script type="text/javascript" src="__PUBLIC__/js/also.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/js/poshytip.min.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/js/pagination.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/also.js"></script>
 		<script type="text/javascript">
 			loading(0);
 			getAnum('adseat/cnt','topic_num1');

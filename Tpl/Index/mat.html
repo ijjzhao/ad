@@ -6,6 +6,7 @@
 		<title>素材库 - Adnets</title>
 		<link rel="shortcut icon" href="__PUBLIC__/img/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="__PUBLIC__/css/also.css" type="text/css">
+		<link rel="stylesheet" href="__PUBLIC__/css/jquery.miniColors.css" type="text/css">
 	</head>
 	<body>
 		<div class="menu">
@@ -207,9 +208,10 @@
 			</div>
 		</div>
 		<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
-		<script type="text/javascript" src="__PUBLIC__/js/also.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/js/poshytip.min.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/js/pagination.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/miniColors.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/also.js"></script>
 		<script type="text/javascript">
 			//loading(0);
 			//getAnum(1,'adseat/cnt','topic_loca_num1');
