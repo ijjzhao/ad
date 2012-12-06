@@ -90,9 +90,7 @@ class MaterialAction extends SspAction{
 			$post_keys = array('mid');//客服端必须要提交的key
 			if($this->postKeyExist($post_keys)){//验证key是否存在
 				$typ = $_POST['tpe'];//获取素材的类型
-				if($typ == 'p' || $typ == 'f'){
-					$save['file']['genre'] = $typ;
-				}
+				$update['genre'] = $typ;
 				$key_arr = $this->materialKeyInfo($typ);//获取定义的key
 				$read_arr = $this->readArrayExist($key_arr,$_POST);//读取post中的值
 				$update = array_merge_recursive($read_arr,$update);//数组追加
@@ -115,9 +113,7 @@ class MaterialAction extends SspAction{
 			$post_keys = array('mna','lnk','nwn','tpe');//客服端必须要提交的key
 			if($this->postKeyExist($post_keys)){//验证key是否存在
 				$typ = $_POST['tpe'];//获取素材的类型
-				if($typ == 'p' || $typ == 'f'){
-					$save['file']['genre'] = $typ;
-				}
+				$save['genre'] = $typ;
 				$save['site'] = $this->getWebSiteId();//现有数据直接存储
 				//获取定义的key
 				$key_arr = $this->materialKeyInfo($typ);
