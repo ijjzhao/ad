@@ -15,8 +15,7 @@ class MaterialAction extends SspAction{
 	* index处理器
 	*/
 	public function index(){
-		
-		// $this->display();
+		$this->display();
 	}
 	/**
 	* 获取素材列表
@@ -27,7 +26,7 @@ class MaterialAction extends SspAction{
 			if (!is_numeric($page)) {
 				$page = 1;
 			}
-			$limit = 1;
+			$limit = 5;
 			$material_model = new MaterialModel();
 			$m_list = $material_model->selectBySiteIdWithPage($this->getWebSiteId(),$page,$limit);
 			// $material_info_arr = array();
@@ -165,31 +164,35 @@ class MaterialAction extends SspAction{
 	public function upload(){
 		if($this->isPost() && !empty($_FILES['fle']['name'])){//验证提交方式
 			$file_info = $_FILES['fle'];
-			$file_name = re_fileName($file_info['name']);//重命名文件
-			$upyun_path = '/'.$this->getUsr('id').'/'.$file_name;//设置在upyun上的文件路径
-			$file_manager = new FileAction($file_name);//创建文件处理器
-			if($file_manager->upload_file($file_info['tmp_name'])){//进行文件的上传
-				$fh = $file_manager->read_file();//读取文件的流
-				$upyun = $this->creatUpyun($file_info['type']);//创建upyun图片空间
-				$up = $upyun->writeFile($upyun_path,$fh,true);//上传文件
-				$return_arr = array(
-					'name' => $upyun_path,
-					'url' => $this->upyun_flash_domain,
-				);
-				if(is_img($file_info['type'])){//如果是图片类型，获取额外的信息
-					$return_arr['url'] = $this->upyun_img_domain;
-					$return_arr['width'] = $upyun->getWritedFileInfo('x-upyun-width');
-					$return_arr['height'] = $upyun->getWritedFileInfo('x-upyun-height');
-					$return_arr['frames'] = $upyun->getWritedFileInfo('x-upyun-frames');
-					$return_arr['type'] = $upyun->getWritedFileInfo('x-upyun-file-type');
+			if($file_info['size'] <= 5242880){//限制为5M
+				$file_name = re_fileName($file_info['name']);//重命名文件
+				$upyun_path = '/'.$this->getUsr('id').'/'.$file_name;//设置在upyun上的文件路径
+				$file_manager = new FileAction($file_name);//创建文件处理器
+				if($file_manager->upload_file($file_info['tmp_name'])){//进行文件的上传
+					$fh = $file_manager->read_file();//读取文件的流
+					$upyun = $this->creatUpyun($file_info['type']);//创建upyun图片空间
+					$up = $upyun->writeFile($upyun_path,$fh,true);//上传文件
+					$return_arr = array(
+						'name' => $upyun_path,
+						'url' => $this->upyun_flash_domain,
+					);
+					if(is_img($file_info['type'])){//如果是图片类型，获取额外的信息
+						$return_arr['url'] = $this->upyun_img_domain;
+						$return_arr['width'] = $upyun->getWritedFileInfo('x-upyun-width');
+						$return_arr['height'] = $upyun->getWritedFileInfo('x-upyun-height');
+						$return_arr['frames'] = $upyun->getWritedFileInfo('x-upyun-frames');
+						$return_arr['type'] = $upyun->getWritedFileInfo('x-upyun-file-type');
+					}
+					$file_manager->close_read();//关闭文件流
+					$file_manager->del_file();//删除上传文件
 				}
-				$file_manager->close_read();//关闭文件流
-				$file_manager->del_file();//删除上传文件
-			}
-			if($return_arr){
-				$this->ajaxReturn($return_arr,'上传成功',1);
+				if($return_arr){
+					$this->ajaxReturn($return_arr,'上传成功',1);
+				}else{
+					$this->ajaxReturn(null,'上传失败',0);
+				}
 			}else{
-				$this->ajaxReturn(null,'上传失败',0);
+				$this->ajaxReturn(null,'图片太大了',0);
 			}
 		}
 	}
