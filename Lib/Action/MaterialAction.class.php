@@ -90,6 +90,7 @@ class MaterialAction extends SspAction{
 			if($this->postKeyExist($post_keys)){//验证key是否存在
 				$typ = $_POST['tpe'];//获取素材的类型
 				$update['genre'] = $typ;
+				$save['isNewWin'] = empty($_POST['nwm']) ? 'off' : 'on';
 				$key_arr = $this->materialKeyInfo($typ);//获取定义的key
 				$read_arr = $this->readArrayExist($key_arr,$_POST);//读取post中的值
 				$update = array_merge_recursive($read_arr,$update);//数组追加
@@ -109,11 +110,12 @@ class MaterialAction extends SspAction{
 	*/
 	public function newmal(){
 		if($this->isPost()){
-			$post_keys = array('mna','lnk','nwn','tpe');//客服端必须要提交的key
+			$post_keys = array('mna','tpe');//客服端必须要提交的key
 			if($this->postKeyExist($post_keys)){//验证key是否存在
 				$typ = $_POST['tpe'];//获取素材的类型
 				$save['genre'] = $typ;
 				$save['site'] = $this->getWebSiteId();//现有数据直接存储
+				$save['isNewWin'] = empty($_POST['nwm']) ? 'off' : 'on';
 				//获取定义的key
 				$key_arr = $this->materialKeyInfo($typ);
 				$read_arr = $this->readArray($key_arr,$_POST);//读取post中的值
@@ -136,7 +138,7 @@ class MaterialAction extends SspAction{
 	*/
 	private function materialKeyInfo($typ){
 		$arr = array(
-			'name' => 'mna','link' => 'lnk','code' => 'cde','isNewWin' => 'nwn',
+			'name' => 'mna','link' => 'lnk','code' => 'cde',
 		);
 		switch ($typ) {//判断素材类型，定义取值的格式
 			case 'p':
@@ -192,7 +194,7 @@ class MaterialAction extends SspAction{
 					$this->ajaxReturn(null,'上传失败',0);
 				}
 			}else{
-				$this->ajaxReturn(null,'图片太大了',0);
+				$this->ajaxReturn(null,'big',0);
 			}
 		}
 	}
