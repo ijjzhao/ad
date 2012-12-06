@@ -30,7 +30,7 @@ class MaterialModel extends MongoModel{
 			'site' => new MongoId($siteId),
 			'state' => 1,
 		);
-		return $this->db->select($arr);
+		return $this->order('_id desc')->select($arr);
 	}
 	/**
 	* 统计当前站点下的素材数量

@@ -29,9 +29,15 @@ class MaterialAction extends SspAction{
 			}
 			$limit = 1;
 			$material_model = new MaterialModel();
-			$rs = $material_model->selectBySiteIdWithPage($this->getWebSiteId(),$page,$limit);
+			$m_list = $material_model->selectBySiteIdWithPage($this->getWebSiteId(),$page,$limit);
+			// $material_info_arr = array();
+			// foreach ($m_list as $v) {
+			// 	array_push($material_info_arr, $v);
+			// }
 			$rs['page'] = $page;
 			$rs['limit'] = $limit;
+			// $rs['sea'] = $material_info_arr;
+			$rs['sea'] = $m_list;
 			$this->ajaxReturn($rs,'素材列表',1);
 		}
 	}
