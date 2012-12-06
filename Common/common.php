@@ -17,7 +17,7 @@ function re_fileName($fileName){
 */
 function is_img($type){
 	$img = false;
-	$imgs = array('image/gif','image/jpeg','image/pjpeg','image/png');
+	$imgs = array('image/gif','gif','image/jpeg','jpg','image/pjpeg','image/png','png');
 	foreach ($imgs as $k => $v) {
 		if($type == $v){
 			$img = true;
@@ -39,4 +39,15 @@ function is_flash($type){
 		}
 	}
 	return $flash;
+}
+/**
+* 获取文件的后缀类型
+*/
+function get_file_type($fileName){
+	$file_info = explode('.', $fileName);
+	$count = count($file_info);
+	if($count > 1){
+		$file_type = $file_info[$count - 1];
+	}
+	return $file_type;
 }

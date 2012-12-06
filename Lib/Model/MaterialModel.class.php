@@ -27,7 +27,8 @@ class MaterialModel extends MongoModel{
 			'limit' => $limit,
 		);
 		$arr['where'] = array(
-			'site' => new MongoId($siteId)
+			'site' => new MongoId($siteId),
+			'state' => 1,
 		);
 		return $this->db->select($arr);
 	}
@@ -36,7 +37,35 @@ class MaterialModel extends MongoModel{
 	* $siteId 站点编号
 	*/
 	public function mCount($siteId){
-		$arr['where'] = array('site' => new MongoId($siteId));
+		$arr['where'] = array('site' => new MongoId($siteId),'state' => 1);
 		return $this->db->count($arr);
+	}
+	/**
+	* 根据编号查找广告位信息
+	* $seatId 广告位编号
+	*/
+	public function findById($mId){
+		$arr['where'] = array('_id' => new MongoId($mId),'state' => 1);
+		$rs = $this->db->find($arr);
+		return $rs;
+	}
+	/**
+	* 修改素材的状态
+	*/
+	public function updateState($mId,$state){
+		$arr['where'] = array('_id' => new MongoId($mId));
+		$data = array(
+			'state' => $state
+		);
+		return $this->db->update($data,$arr);
+	}
+	/**
+	* 素材修改
+	* $data 需要修改的数据
+	* $mId 素材ID
+	*/
+	public function upMaterialById($data,$mId){
+		$arr['where'] = array('_id' => new MongoId($mId));
+		return $this->db->update($data,$arr);
 	}
 }

@@ -5,7 +5,7 @@
 	<body>
 		<form action="<?php echo U('material/upload');?>" method="POST" enctype="multipart/form-data">
 			<h3>选择图片:</h3>
-			<input type="file" name="file"/>
+			<input type="file" name="fle"/>
 			<p><input type="submit" value="上 传"/></p>
 		</form>
 	</body>

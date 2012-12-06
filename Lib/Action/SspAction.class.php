@@ -100,6 +100,24 @@ class SspAction extends Action{
 		}
 		return $read_arr;
 	}
+	/**
+	* 读取指定数组中，指定key的值,只有存在对应值的时候，才进行存储，，忽略null的内容
+	* @param $keys 读取的值和存放的值
+	* @param $arr 需要读取的数组
+	* @return 返回$keys格式的新数组
+	*/
+	protected function readArrayExist($keys,$arr){
+		foreach ($keys as $k => $v) {			
+			if(is_array($v)){
+				$read_arr[$k] = $this->readArrayExist($v,$arr);
+			}else{
+				if(!empty($arr[$v])){
+					$read_arr[$k] = htmlspecialchars($arr[$v]);//字符转义
+				}
+			}
+		}
+		return $read_arr;
+	}
     /**
     * 退出
     * Time:2012-11-09 19:37

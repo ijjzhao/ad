@@ -35,12 +35,71 @@ class MaterialAction extends SspAction{
 			$this->ajaxReturn($rs,'素材列表',1);
 		}
 	}
+	/**
+	*根据ID查找素材的详细信息
+	*/
+	public function inf(){
+		if($this->isGet()){
+			$mater_id = trim($_GET['_URL_'][2]);//获取素材编号
+			if($mater_id){
+				$material_model = new MaterialModel();
+				$rs = $material_model->findById($mater_id);
+			}
+			if($rs){
+				$this->ajaxReturn($rs,'素材信息',1);
+			}else{
+				$this->ajaxReturn(null,'查找错误',0);
+			}
+		}
+	}
+	/**
+	* 统计当前站点下有多少素材
+	*/
 	public function cnt(){
 		if($this->isGet() || $this->isPost()){
 			$material_model = new MaterialModel();
 			$rs = $material_model->mCount($this->getWebSiteId());
 			$this->ajaxReturn($rs,'素材数量',1);
 		}
+	}
+	/**
+	* 删除素材信息(这里的删除，只是改变其状态)
+	*/
+	public function del(){
+		if($this->isGet()){
+			$mater_id = trim($_GET['_URL_'][2]);//获取素材编号
+			if($mater_id){
+				$material_model = new MaterialModel();
+				$rs = $material_model->updateState($mater_id,0);
+			}
+			if($rs){
+				$this->ajaxReturn($rs,'删除成功',1);
+			}else{
+				$this->ajaxReturn(null,'删除失败',0);
+			}
+		}
+	}
+	public function upd(){
+		if($this->isPost()){
+			$post_keys = array('mid');//客服端必须要提交的key
+			if($this->postKeyExist($post_keys)){//验证key是否存在
+				$typ = $_POST['tpe'];//获取素材的类型
+				if($typ == 'p' || $typ == 'f'){
+					$save['file']['genre'] = $typ;
+				}
+				$key_arr = $this->materialKeyInfo($typ);//获取定义的key
+				$read_arr = $this->readArrayExist($key_arr,$_POST);//读取post中的值
+				$update = array_merge_recursive($read_arr,$update);//数组追加
+				//实例化素材模型对象
+				$material_model = new MaterialModel();
+				$rs = $material_model->upMaterialById($update,$_POST['mid']);
+				if($rs){
+					$this->ajaxReturn(null,'修改成功',1);
+				}else{
+					$this->ajaxReturn(null,'修改失败',0);
+				}
+			}
+		}	
 	}
 	/**
 	* 添加新的素材信息
@@ -50,36 +109,13 @@ class MaterialAction extends SspAction{
 			$post_keys = array('mna','lnk','nwn','tpe');//客服端必须要提交的key
 			if($this->postKeyExist($post_keys)){//验证key是否存在
 				$typ = $_POST['tpe'];//获取素材的类型
-				$arr = array(
-					'name' => 'mna','link' => 'lnk','code' => 'cde','isNewWin' => 'nwn',
-				);//定义读取数据的格式
-				$save['site'] = $this->getWebSiteId();//存储的数据
-				switch ($typ) {//判断素材类型，定义取值的格式
-					case 'p':
-					case 'f':
-						$arr['file'] = array(
-							'resUrl' => 'url', 'width' => 'wth','height' => 'hht','resDesc' => 'mes',
-						);
-						$save['file']['genre'] = $typ;
-						break;
-					case 'w':
-						$arr['words'] = array(
-							'content' => 'tnt',
-							'style' => array('size' => 'sze','color' => 'clr','face' => 'fce'),
-							'overStyle' => array('color' => 'oclr','face' => 'ofce'),
-						);
-						break;
-					case 's':
-						$arr['script'] = 'spt';
-						break;
-				}			
-				// $_POST = array(
-				// 	'mna' => '我哈哈',
-				// 	'lnk' => 'www.baidu.com',
-				// 	'nwn' => 'off',
-				// 	'spt' => '<script>alert("123");</script>'
-				// );	
-				$read_arr = $this->readArray($arr,$_POST);//读取post中的值
+				if($typ == 'p' || $typ == 'f'){
+					$save['file']['genre'] = $typ;
+				}
+				$save['site'] = $this->getWebSiteId();//现有数据直接存储
+				//获取定义的key
+				$key_arr = $this->materialKeyInfo($typ);
+				$read_arr = $this->readArray($key_arr,$_POST);//读取post中的值
 				$save = array_merge_recursive($read_arr,$save);//数组追加
 				//实例化素材模型对象
 				$material_model = new MaterialModel();
@@ -95,6 +131,33 @@ class MaterialAction extends SspAction{
 		}
 	}
 	/**
+	* 定义存储素材的key，或获取提交数据中的key
+	*/
+	private function materialKeyInfo($typ){
+		$arr = array(
+			'name' => 'mna','link' => 'lnk','code' => 'cde','isNewWin' => 'nwn',
+		);
+		switch ($typ) {//判断素材类型，定义取值的格式
+			case 'p':
+			case 'f':
+				$arr['file'] = array(
+					'resUrl' => 'mna','domain'=> 'url', 'width' => 'wth','height' => 'hht','resDesc' => 'mes',
+				);
+				break;
+			case 'w':
+				$arr['words'] = array(
+					'content' => 'tnt',
+					'style' => array('size' => 'sze','color' => 'clr','face' => 'fce'),
+					'overStyle' => array('color' => 'oclr','face' => 'ofce'),
+				);
+				break;
+			case 's':
+				$arr['script'] = 'spt';
+				break;
+		}	
+		return $arr;	
+	}
+	/**
 	* 图片上次的处理
 	*/
 	public function upload(){
@@ -103,23 +166,23 @@ class MaterialAction extends SspAction{
 			$file_name = re_fileName($file_info['name']);//重命名文件
 			$upyun_path = '/'.$this->getUsr('id').'/'.$file_name;//设置在upyun上的文件路径
 			$file_manager = new FileAction($file_name);//创建文件处理器
-			//验证上传文件的类型
-			if(is_img($file_info['type'])){
-				if($file_manager->upload_file($file_info['tmp_name'])){//进行文件的上传
-					$fh = $file_manager->read_file();//读取文件的流
-					$return_arr = $this->upLoadImg($upyun_path,$fh);//上传图片到又拍云并获取到返回信息
-					$file_manager->close_read();//关闭文件流
-					$file_manager->del_file();//删除上传文件
+			if($file_manager->upload_file($file_info['tmp_name'])){//进行文件的上传
+				$fh = $file_manager->read_file();//读取文件的流
+				$upyun = $this->creatUpyun($file_info['type']);//创建upyun图片空间
+				$up = $upyun->writeFile($upyun_path,$fh,true);//上传文件
+				$return_arr = array(
+					'name' => $upyun_path,
+					'url' => $this->upyun_flash_domain,
+				);
+				if(is_img($file_info['type'])){//如果是图片类型，获取额外的信息
+					$return_arr['url'] = $this->upyun_img_domain;
+					$return_arr['width'] = $upyun->getWritedFileInfo('x-upyun-width');
+					$return_arr['height'] = $upyun->getWritedFileInfo('x-upyun-height');
+					$return_arr['frames'] = $upyun->getWritedFileInfo('x-upyun-frames');
+					$return_arr['type'] = $upyun->getWritedFileInfo('x-upyun-file-type');
 				}
-			}else if(is_flash($file_info['type'])){
-				if($file_manager->upload_file($file_info['tmp_name'])){//进行文件的上传
-					$fh = $file_manager->read_file();//读取文件的流
-					$return_arr = $this->upLoadFlash($upyun_path,$fh);//上传flash到又拍云并获取到返回信息
-					$file_manager->close_read();//关闭文件流
-					$file_manager->del_file();//删除上传文件
-				}
-			}else{
-				$this->ajaxReturn(null,'非法文件',0);	
+				$file_manager->close_read();//关闭文件流
+				$file_manager->del_file();//删除上传文件
 			}
 			if($return_arr){
 				$this->ajaxReturn($return_arr,'上传成功',1);
@@ -129,35 +192,35 @@ class MaterialAction extends SspAction{
 		}
 	}
 	/**
-	* 上传图片文件的处理
-	* @param $upyun_path 在upyun上的文件路径
-	* @param $fh 文件流
+	* 根据文件类型创建对于的upyun空间
+	* @param $type 资源文件的类型
 	*/
-	private function upLoadImg($upyun_path,$fh){
-		$upyun = new UpyunAction($this->upyun_img_bucket,$this->upyun_user,$this->upyun_pass);//实例化图片空间的upyun接口对象
-		$up = $upyun->writeFile($upyun_path,$fh,true);//上传文件
-		$arr = array(
-			'name' => $upyun_path,
-			'url' => $this->upyun_img_domain,
-			'width' => $upyun->getWritedFileInfo('x-upyun-width'),
-			'height' => $upyun->getWritedFileInfo('x-upyun-height'),
-			'frames' => $upyun->getWritedFileInfo('x-upyun-frames'),
-			'type' => $upyun->getWritedFileInfo('x-upyun-file-type')
-		);
-		return $arr;
+	private function creatUpyun($type){
+		if(is_img($type)){			
+			$upyun = new UpyunAction($this->upyun_img_bucket,$this->upyun_user,$this->upyun_pass);//实例化图片空间的upyun接口对象
+		}else{
+			$upyun = new UpyunAction($this->upyun_flash_bucket,$this->upyun_user,$this->upyun_pass);//实例化文件空间的upyun接口对象
+		}
+		return $upyun;
 	}
 	/**
-	* 上传flash文件的处理
-	* @param $upyun_path 在upyun上的文件路径
-	* @param $fh 文件流
+	* 删除上传文件
 	*/
-	private function upLoadFlash($upyun_path,$fh){
-		$upyun = new UpyunAction($this->upyun_flash_bucket,$this->upyun_user,$this->upyun_pass);//实例化文件空间的upyun接口对象
-		$up = $upyun->writeFile('/'.$upyun_path,$fh,true);//上传文件
-		$arr = array(
-			'name' => $upyun_path,
-			'url' => $this->upyun_flash_domain,
-		);
-		return $arr;
+	public function deload(){
+		// $file_name = '/509a041296838cb770a61bd0/9655c6a395bb8f926c67eee3240da400.jpg';
+		if($this->isPost()){
+			$file_name = $_POST['mna'];
+			if($file_name){
+				$file_type = get_file_type($file_name);//获取文件的类型
+				//根据文件类型创建，upyun对象
+				$upyun = $this->creatUpyun($file_type);
+				$rs = $upyun->deleteFile($file_name);//删除文件
+			}
+			if($rs){
+				$this->ajaxReturn(null,'删除成功',1);
+			}else{
+				$this->ajaxReturn(null,'删除失败',0);
+			}
+		}
 	}
 }
