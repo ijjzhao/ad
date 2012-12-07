@@ -97,19 +97,23 @@
 		<script type="text/javascript" src="__PUBLIC__/js/pagination.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/js/also.js"></script>
 		<script type="text/javascript">
-			loading(0);
-			getAnum('adseat/cnt','topic_num1');
-			getChan(2);
-			pageStation(1);
-			$('#sele_chan').bind('change',function(){
-				$('#chan_now').val($(this).val());
-				pageStation(1);
-			});
 
-			// $('#sele_state').bind('change',function(){
-			// 	$('#state_now').val($(this).val());
-			// 	pageStation(1);
-			// });
+			$(document).ready(function(){
+			  	loading(0);
+			  	getAnum('adseat/cnt','topic_num1');
+				getChan(2);
+				pageStation(1);
+				$('#sele_chan').bind('change',function(){
+					$('#chan_now').val($(this).val());
+					pageStation(1);
+				});
+
+				// $('#sele_state').bind('change',function(){
+				// 	$('#state_now').val($(this).val());
+				// 	pageStation(1);
+				// });
+			})
+						
 		</script>
 	</body>
 </html>
