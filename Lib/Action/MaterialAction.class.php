@@ -7,8 +7,8 @@
 class MaterialAction extends SspAction{
 	private $upyun_img_bucket = 'material';//又拍云图片空间名称
 	private $upyun_img_domain = 'http://material.b0.upaiyun.com';//图片url域名
-	private $upyun_flash_bucket = 'filesytem';//又拍云文件类型空间名称
-	private $upyun_flash_domain = 'http://filesytem.b0.upaiyun.com';
+	private $upyun_flash_bucket = 'filesystem';//又拍云文件类型空间名称
+	private $upyun_flash_domain = 'http://filesystem.b0.upaiyun.com';
 	private $upyun_user = 'test';//又拍云操作员帐号
 	private $upyun_pass = '11111111';//又拍云操作员密码
 	/**
@@ -144,7 +144,7 @@ class MaterialAction extends SspAction{
 			case 'p':
 			case 'f':
 				$arr['file'] = array(
-					'resUrl' => 'mna','domain'=> 'url', 'width' => 'wth','height' => 'hht','resDesc' => 'mes',
+					'resUrl' => 'upna','domain'=> 'url', 'width' => 'wth','height' => 'hht','resDesc' => 'mes',
 				);
 				break;
 			case 'w':
@@ -187,6 +187,9 @@ class MaterialAction extends SspAction{
 					}
 					$file_manager->close_read();//关闭文件流
 					$file_manager->del_file();//删除上传文件
+					if(!$up){
+						$return_arr = null;
+					}
 				}
 				if($return_arr){
 					$this->ajaxReturn($return_arr,'上传成功',1);
