@@ -15,6 +15,7 @@ class MaterialAction extends SspAction{
 	* index处理器
 	*/
 	public function index(){
+		$this->assign('m','mater');
 		$this->display();
 	}
 	/**

@@ -19,6 +19,7 @@ class IndexAction extends SspAction {
     */
     public function loca(){
         // $this->redirect('adseat/cnt');
+        $this->assign('m','loca');
     	$this->display('loca');
     }
 }

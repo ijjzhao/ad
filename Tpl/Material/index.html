@@ -1,12 +1,73 @@
-<html>
-	<head>
-		<title>测试又拍云</title>
-	</head>
-	<body>
-		<form action="{:U('material/upload')}" method="POST" enctype="multipart/form-data">
-			<h3>选择图片:</h3>
-			<input type="file" name="fle"/>
-			<p><input type="submit" value="上 传"/></p>
-		</form>
+<include file="./Tpl/Comm/header.html"/>
+		<link rel="shortcut icon" href="__PUBLIC__/img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="__PUBLIC__/css/also.css" type="text/css">
+		<link rel="stylesheet" href="__PUBLIC__/css/jquery.miniColors.css" type="text/css">
+<include file="./Tpl/Comm/menu.html"/>
+		<div id="main">
+			<div class="board">
+				<div class="main_mat" id="main_mat">
+					<span id="loading_list" alt='0' gone='2' name='con_mat'></span>
+					<div class="null_list">
+						<span class="null_mat"></span>
+						<span class="null_text">素材库是空的</span>
+						<span class="null_ps">您可以现在添加一些素材，也可以在新增广告时直接添加</span>
+						<a href="javascript:void(0)" onclick="also_filler(5,'main_mat','新增素材','main')" class="null_add">新增一个素材</a>
+					</div>
+					<div id='con_mat'>
+						<div class="topic_mat">
+							<h2>共有<span id="topic_num1" class="topic_mat_num1"></span>个素材</h2>
+							<a href="javascript:void(0)" onclick="also_filler(5,'main_mat','新增素材','main')" class="add_mat">新增素材</a>
+							<div class="filter_mat">
+								<select id="sele_types">
+									<option value="all">所有类型</option>
+									<option value="1">图片</option>
+									<option value="2">flash</option>
+									<option value="3">代码</option>
+									<option value="4">文字</option>
+								</select>
+								<input id="datas_size" type="hidden">
+								<input id="size_now" type="hidden">
+								<select id="sele_sizes">
+									<option value="all">所有尺寸</option>
+									<option value="1">468x60</option>
+									<option value="2">666x90</option>
+									<option value="3">777x80</option>
+								</select>
+								<input id="state_now" type="hidden">
+							</div>
+						</div>
+						<div id="contBox" class="cont_mat"></div>
+						<span class="filter">没有符合条件的素材</span>
+						<div class="pages_box">
+							<div id="loading_pgs"><span class="load_pgs"></span></div>
+							<div id="pgs_box" class="pagination"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/poshytip.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/pagination.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/miniColors.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/ajaxupload.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/also.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			loading(0);
+			getAnum('material/cnt','topic_num1');
+			pageStation(3);
+
+			// $('#sele_chan').bind('change',function(){
+			// 	$('#chan_now').val($(this).val());
+			// 	pageStation(1);
+			// });
+
+			// $('#sele_state').bind('change',function(){
+			// 	$('#state_now').val($(this).val());
+			// 	pageStation(1);
+			// });
+		});
+		</script>
 	</body>
 </html>

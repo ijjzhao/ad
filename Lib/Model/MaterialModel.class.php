@@ -68,4 +68,10 @@ class MaterialModel extends MongoModel{
 		$arr['where'] = array('_id' => new MongoId($mId));
 		return $this->db->update($data,$arr);
 	}
+	/**
+	* 获取素材不同尺寸列表
+	*/
+	public function groupSize($siteId){
+
+	}
 }
