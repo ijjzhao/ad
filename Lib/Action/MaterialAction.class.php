@@ -171,25 +171,34 @@ class MaterialAction extends SspAction{
 				$upyun_path = '/'.$this->getUsr('id').'/'.$file_name;//设置在upyun上的文件路径
 				$file_manager = new FileAction($file_name);//创建文件处理器
 				if($file_manager->upload_file($file_info['tmp_name'])){//进行文件的上传
-					$fh = $file_manager->read_file();//读取文件的流
-					$upyun = $this->creatUpyun($file_info['type']);//创建upyun图片空间
+					$fh = $file_manager->open_file();//打开文件
+					$file_type = $file_info['type'];//获取图片的类型
+					//要在上传前读取flash信息
+					if(is_flash($file_type)){
+						$rd = $file_manager->read_file();//读取文件信息
+						$flash_action = new FlashAction();//创建flash处理对象
+						$flash_info = $flash_action->getswfinfo($fh,$rd);//读取flash的宽高
+					}
+					//创建upyun图片空间
+					$upyun = $this->creatUpyun($file_type);
 					$up = $upyun->writeFile($upyun_path,$fh,true);//上传文件
-					$return_arr = array(
-						'name' => $upyun_path,
-						'url' => $this->upyun_flash_domain,
-					);
-					if(is_img($file_info['type'])){//如果是图片类型，获取额外的信息
-						$return_arr['url'] = $this->upyun_img_domain;
-						$return_arr['width'] = $upyun->getWritedFileInfo('x-upyun-width');
-						$return_arr['height'] = $upyun->getWritedFileInfo('x-upyun-height');
-						$return_arr['frames'] = $upyun->getWritedFileInfo('x-upyun-frames');
-						$return_arr['type'] = $upyun->getWritedFileInfo('x-upyun-file-type');
+					if($up){
+						$return_arr = array(
+							'name' => $upyun_path,
+							'url' => $this->upyun_flash_domain,
+						);
+						if(is_img($file_type)){//如果是图片类型，获取额外的信息
+							$return_arr['url'] = $this->upyun_img_domain;
+							$return_arr['width'] = $upyun->getWritedFileInfo('x-upyun-width');
+							$return_arr['height'] = $upyun->getWritedFileInfo('x-upyun-height');
+							$return_arr['frames'] = $upyun->getWritedFileInfo('x-upyun-frames');
+							$return_arr['type'] = $upyun->getWritedFileInfo('x-upyun-file-type');
+						}else if(is_flash($file_type)){//如果是flash文件，就读取其信息
+							$return_arr = array_merge($return_arr,$flash_info);
+						}
 					}
 					$file_manager->close_read();//关闭文件流
 					$file_manager->del_file();//删除上传文件
-					if(!$up){
-						$return_arr = null;
-					}
 				}
 				if($return_arr){
 					$this->ajaxReturn($return_arr,'上传成功',1);

@@ -103,3 +103,453 @@ INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000294s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000145s ]
 NOTIC: [2] strlen() expects parameter 1 to be string, resource given /Users/adnetsalso/Sites/ad/Lib/Action/UpyunAction.class.php 第 79 行.
 
+[ 2012-12-07T15:31:11+08:00 ] 127.0.0.1 /ad/material
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000073s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000122s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.066565s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000175s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.066787s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040638s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.107450s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.107556s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.107633s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.107690s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000370s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.107889s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000129s ]
+
+[ 2012-12-07T15:35:43+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000084s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000133s ]
+NOTIC: [8] Undefined variable: filename /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 22 行.
+NOTIC: [2] fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 22 行.
+NOTIC: [2] gzuncompress() [<a href='function.gzuncompress'>function.gzuncompress</a>]: data error /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 30 行.
+NOTIC: [8] Undefined offset: 8 /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 41 行.
+NOTIC: [8] Undefined variable: bgcolor /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 92 行.
+NOTIC: [8] Undefined variable: version /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 93 行.
+NOTIC: [8] Undefined variable: framerate /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 94 行.
+NOTIC: [8] Undefined variable: framecount /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 95 行.
+NOTIC: [8] Undefined variable: up /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 195 行.
+
+[ 2012-12-07T15:39:26+08:00 ] 127.0.0.1 /ad/material
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000343s ]
+INFO: [ route_check ] --END-- [ RunTime:0.018634s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.017698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000730s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.042688s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000976s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.061533s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047130s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.090483s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.090736s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.090934s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.091078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000878s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.091446s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000464s ]
+
+[ 2012-12-07T15:39:33+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000089s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000143s ]
+NOTIC: [8] Undefined variable: fh /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 177 行.
+NOTIC: [8] Undefined variable: return_arr /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 204 行.
+
+[ 2012-12-07T15:41:28+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000167s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000162s ]
+NOTIC: [8] Undefined variable: file_path /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 178 行.
+NOTIC: [8] Undefined variable: filename /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 22 行.
+NOTIC: [2] fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 22 行.
+NOTIC: [2] gzuncompress() [<a href='function.gzuncompress'>function.gzuncompress</a>]: data error /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 30 行.
+NOTIC: [8] Undefined offset: 8 /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 41 行.
+NOTIC: [8] Undefined variable: bgcolor /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 92 行.
+NOTIC: [8] Undefined variable: version /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 93 行.
+NOTIC: [8] Undefined variable: framerate /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 94 行.
+NOTIC: [8] Undefined variable: framecount /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 95 行.
+NOTIC: [8] Undefined variable: return_arr /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 205 行.
+
+[ 2012-12-07T15:43:07+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000082s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000086s ]
+NOTIC: [8] Undefined variable: file_path /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 178 行.
+NOTIC: [8] Undefined variable: filename /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 23 行.
+NOTIC: [2] fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 23 行.
+NOTIC: [2] gzuncompress() [<a href='function.gzuncompress'>function.gzuncompress</a>]: data error /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 33 行.
+NOTIC: [8] Undefined offset: 8 /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 44 行.
+NOTIC: [8] Undefined variable: bgcolor /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 95 行.
+NOTIC: [8] Undefined variable: version /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 96 行.
+NOTIC: [8] Undefined variable: framerate /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 97 行.
+NOTIC: [8] Undefined variable: framecount /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 98 行.
+NOTIC: [8] Undefined variable: return_arr /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 205 行.
+
+[ 2012-12-07T15:45:27+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000077s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000095s ]
+NOTIC: [8] Undefined variable: file_path /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 178 行.
+NOTIC: [2] fopen() expects parameter 1 to be string, resource given /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 21 行.
+NOTIC: [2] filesize() expects parameter 1 to be string, resource given /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 25 行.
+NOTIC: [2] fread() expects parameter 1 to be resource, boolean given /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 25 行.
+NOTIC: [2] gzuncompress() [<a href='function.gzuncompress'>function.gzuncompress</a>]: data error /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 35 行.
+NOTIC: [8] Undefined offset: 8 /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 46 行.
+NOTIC: [8] Undefined variable: bgcolor /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 97 行.
+NOTIC: [8] Undefined variable: version /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 98 行.
+NOTIC: [8] Undefined variable: framerate /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 99 行.
+NOTIC: [8] Undefined variable: framecount /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 100 行.
+NOTIC: [2] fclose() expects parameter 1 to be resource, boolean given /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 42 行.
+NOTIC: [8] Undefined variable: return_arr /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 205 行.
+
+[ 2012-12-07T15:49:02+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000082s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8] Undefined variable: filename /Users/adnetsalso/Sites/ad/Lib/Action/FileAction.class.php 第 32 行.
+NOTIC: [2] fread() [<a href='function.fread'>function.fread</a>]: Length parameter must be greater than 0 /Users/adnetsalso/Sites/ad/Lib/Action/FileAction.class.php 第 32 行.
+NOTIC: [8] Undefined variable: return_arr /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 207 行.
+
+[ 2012-12-07T15:49:47+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000065s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000210s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+NOTIC: [8] Undefined variable: return_arr /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 207 行.
+
+[ 2012-12-07T15:51:53+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000099s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000145s ]
+NOTIC: [8] Undefined variable: bgcolor /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 97 行.
+NOTIC: [8] Undefined variable: version /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 98 行.
+NOTIC: [8] Undefined variable: framerate /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 99 行.
+NOTIC: [8] Undefined variable: framecount /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 100 行.
+NOTIC: [8] Undefined variable: return_arr /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 211 行.
+
+[ 2012-12-07T15:52:13+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000094s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.032539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000195s ]
+NOTIC: [8] Undefined variable: bgcolor /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 97 行.
+NOTIC: [8] Undefined variable: version /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 98 行.
+NOTIC: [8] Undefined variable: framerate /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 99 行.
+NOTIC: [8] Undefined variable: framecount /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 100 行.
+NOTIC: [8] Undefined variable: return_arr /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 211 行.
+
+[ 2012-12-07T15:53:30+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000087s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.017622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000139s ]
+NOTIC: [8] Undefined variable: bgcolor /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 97 行.
+NOTIC: [8] Undefined variable: version /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 98 行.
+NOTIC: [8] Undefined variable: framerate /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 99 行.
+NOTIC: [8] Undefined variable: framecount /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 100 行.
+NOTIC: [8] Undefined variable: return_arr /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 212 行.
+
+[ 2012-12-07T15:55:05+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000066s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000213s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000094s ]
+NOTIC: [8] Undefined variable: bgcolor /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 97 行.
+NOTIC: [8] Undefined variable: version /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 98 行.
+NOTIC: [8] Undefined variable: framerate /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 99 行.
+NOTIC: [8] Undefined variable: framecount /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 100 行.
+NOTIC: [8] Undefined variable: return_arr /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 212 行.
+
+[ 2012-12-07T15:55:43+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.007274s ]
+INFO: [ route_check ] --END-- [ RunTime:0.007468s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000227s ]
+NOTIC: [8] Undefined variable: bgcolor /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 96 行.
+NOTIC: [8] Undefined variable: bgcolor /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 97 行.
+NOTIC: [8] Undefined variable: version /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 98 行.
+NOTIC: [8] Undefined variable: framerate /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 99 行.
+NOTIC: [8] Undefined variable: framecount /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 100 行.
+NOTIC: [8] Undefined variable: return_arr /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 212 行.
+
+[ 2012-12-07T15:56:01+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000093s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000137s ]
+NOTIC: [8] Undefined variable: bgcolor /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 97 行.
+NOTIC: [8] Undefined variable: version /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 98 行.
+NOTIC: [8] Undefined variable: framerate /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 99 行.
+NOTIC: [8] Undefined variable: framecount /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 100 行.
+NOTIC: [8] Undefined variable: return_arr /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 212 行.
+
+[ 2012-12-07T16:01:24+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000087s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Undefined variable: framecount /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 81 行.
+NOTIC: [8] Undefined variable: bgcolor /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 82 行.
+NOTIC: [8] Undefined variable: version /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 83 行.
+NOTIC: [8] Undefined variable: framerate /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 84 行.
+NOTIC: [8] Undefined variable: framecount /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 85 行.
+NOTIC: [8] Undefined variable: return_arr /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 212 行.
+
+[ 2012-12-07T16:05:17+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000066s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000222s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000117s ]
+NOTIC: [8] Undefined variable: framecount /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 61 行.
+NOTIC: [8] Undefined variable: return_arr /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 212 行.
+
+[ 2012-12-07T16:05:44+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000090s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000125s ]
+NOTIC: [8] Undefined variable: framecount /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 61 行.
+NOTIC: [8] Undefined variable: return_arr /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 212 行.
+
+[ 2012-12-07T16:05:48+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000076s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000174s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8] Undefined variable: framecount /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 61 行.
+NOTIC: [8] Undefined variable: return_arr /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 212 行.
+
+[ 2012-12-07T16:06:14+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000061s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000087s ]
+NOTIC: [8] Undefined variable: return_arr /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 212 行.
+
+[ 2012-12-07T17:23:45+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000116s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000199s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000167s ]
+NOTIC: [2] strlen() expects parameter 1 to be string, resource given /Users/adnetsalso/Sites/ad/Lib/Action/UpyunAction.class.php 第 79 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 8 行.
+NOTIC: [2] gzuncompress() [<a href='function.gzuncompress'>function.gzuncompress</a>]: data error /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 14 行.
+NOTIC: [8] Undefined offset: 8 /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 24 行.
+
+[ 2012-12-07T17:24:52+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000087s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000144s ]
+NOTIC: [2] strlen() expects parameter 1 to be string, resource given /Users/adnetsalso/Sites/ad/Lib/Action/UpyunAction.class.php 第 79 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 8 行.
+NOTIC: [2] gzuncompress() [<a href='function.gzuncompress'>function.gzuncompress</a>]: data error /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 14 行.
+NOTIC: [8] Undefined offset: 8 /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 24 行.
+
+[ 2012-12-07T17:25:17+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000072s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000207s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000118s ]
+NOTIC: [2] strlen() expects parameter 1 to be string, resource given /Users/adnetsalso/Sites/ad/Lib/Action/UpyunAction.class.php 第 79 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 8 行.
+NOTIC: [2] gzuncompress() [<a href='function.gzuncompress'>function.gzuncompress</a>]: data error /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 14 行.
+NOTIC: [8] Undefined offset: 8 /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 24 行.
+
+[ 2012-12-07T17:26:53+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000066s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000212s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000094s ]
+
+[ 2012-12-07T17:27:09+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000110s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000191s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000167s ]
+
+[ 2012-12-07T17:27:41+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000076s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000109s ]
+
+[ 2012-12-07T17:28:15+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000061s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000087s ]
+
+[ 2012-12-07T17:29:33+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000063s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000205s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000087s ]
+NOTIC: [2] strlen() expects parameter 1 to be string, resource given /Users/adnetsalso/Sites/ad/Lib/Action/UpyunAction.class.php 第 79 行.
+NOTIC: [8] Uninitialized string offset: 0 /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 8 行.
+NOTIC: [2] gzuncompress() [<a href='function.gzuncompress'>function.gzuncompress</a>]: data error /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 14 行.
+NOTIC: [8] Undefined offset: 8 /Users/adnetsalso/Sites/ad/Lib/Action/FlashAction.class.php 第 24 行.
+
+[ 2012-12-07T17:29:53+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000066s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000209s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+
+[ 2012-12-07T17:32:13+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000105s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000181s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000150s ]
+
+[ 2012-12-07T17:32:34+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000061s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000088s ]
+NOTIC: [2] strlen() expects parameter 1 to be string, resource given /Users/adnetsalso/Sites/ad/Lib/Action/UpyunAction.class.php 第 79 行.
+
+[ 2012-12-07T17:32:43+08:00 ] 127.0.0.1 /ad/material
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000061s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000092s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000691s ]
+INFO: [ view_template ] --END-- [ RunTime:0.048488s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.049220s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029993s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.079242s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.079422s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.079562s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.079669s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000583s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.079869s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000142s ]
+
+[ 2012-12-07T17:32:55+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000107s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000162s ]
+NOTIC: [2] strlen() expects parameter 1 to be string, resource given /Users/adnetsalso/Sites/ad/Lib/Action/UpyunAction.class.php 第 79 行.
+
+[ 2012-12-07T17:33:38+08:00 ] 127.0.0.1 /ad/material
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000080s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000125s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.048946s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000145s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.049119s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023597s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.072821s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.073073s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.073302s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.073425s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000816s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.073688s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000158s ]
+
+[ 2012-12-07T17:33:47+08:00 ] 127.0.0.1 /ad/material/upload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000109s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000148s ]
+NOTIC: [2] strlen() expects parameter 1 to be string, resource given /Users/adnetsalso/Sites/ad/Lib/Action/UpyunAction.class.php 第 79 行.
+
