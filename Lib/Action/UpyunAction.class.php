@@ -68,7 +68,9 @@ class UpYunAction extends Action{
 	* return 请求返回字符串，失败返回 null （打开 debug 状态下遇到错误将中止程序执行）
 	*/
 	private function HttpAction($method, $uri, $datas, $output_file = null){
-		// unset($this->tmp_infos);		
+		if($method != 'PUT'){//zjs添加，若在上传unset这个，变量里面赋值会有点问题，得不到宽高
+			unset($this->tmp_infos);		
+		}
 		$uri = "/{$this->bucketname}{$uri}";
 		$process = curl_init("http://{$this->api_domain}{$uri}");
 		$headers = array('Expect:');

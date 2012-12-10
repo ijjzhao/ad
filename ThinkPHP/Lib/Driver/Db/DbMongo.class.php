@@ -537,7 +537,7 @@ class DbMongo extends Db{
     /**
      +----------------------------------------------------------
      * 统计记录数
-     +----------------------------------------------------------
+     +--------------------------    --------------------------------
      * @access public
      +----------------------------------------------------------
      * @param array $options 表达式
@@ -567,9 +567,15 @@ class DbMongo extends Db{
             throw_exception($e->getMessage());
         }
     }
-
+    /**
+    * 分组查询 (2012-12-10 18:22 zjs添加)
+    * $keys 要分组的列
+    * $initial 分组计算的初始值
+    * $reduce 分组计算的方法
+    * $options 其他查询条件
+    */
     public function group($keys,$initial,$reduce,$options=array()){
-        $this->_collection->group($keys,$initial,$reduce,$options);
+       return $this->_collection->group($keys,$initial,$reduce,$options);
     }
 
     /**

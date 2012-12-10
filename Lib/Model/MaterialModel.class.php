@@ -30,7 +30,8 @@ class MaterialModel extends MongoModel{
 			'site' => new MongoId($siteId),
 			'state' => 1,
 		);
-		return $this->order('_id desc')->select($arr);
+		$rs = $this->order('_id desc')->select($arr);
+		return $rs;
 	}
 	/**
 	* 统计当前站点下的素材数量
@@ -46,7 +47,8 @@ class MaterialModel extends MongoModel{
 	*/
 	public function findById($mId){
 		$arr['where'] = array('_id' => new MongoId($mId),'state' => 1);
-		$rs = $this->db->find($arr);
+		$rs = $this->find($arr);
+		$rs['site'] = $rs['site']->__toString();//将mongo对象转为字符串
 		return $rs;
 	}
 	/**
@@ -72,6 +74,19 @@ class MaterialModel extends MongoModel{
 	* 获取素材不同尺寸列表
 	*/
 	public function groupSize($siteId){
-
+		$keys = array('file.width' => true,'file.height' => true);//要分组的列
+		$options = array('site' => new MongoId($siteId));//分组条件
+		$initial = array('w' => 0,'h' => 0);//分组计算初始化的值
+		$reduce = 'function(obj,prev){prev.w = obj.file.width;prev.h = obj.file.height;}';//分组计算的方法
+		$rs =  $this->db->group($keys,$initial,$reduce,$options);
+		$size_arr = $rs['retval'];
+		$size_rs = array();//提取查询的结果集
+		foreach ($size_arr as $k => $v) {
+			$size_rs[$k] = array(
+				'w' => $v['w'],
+				'h' => $v['h']
+			);
+		}
+		return $size_rs;
 	}
 }

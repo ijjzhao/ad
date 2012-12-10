@@ -15,6 +15,9 @@ class MaterialAction extends SspAction{
 	* index处理器
 	*/
 	public function index(){
+		// $material_model = new MaterialModel();
+		// $rs = $material_model->groupSize($this->getWebSiteId());
+		// print_r($rs);
 		$this->assign('m','mater');
 		$this->display();
 	}
@@ -30,13 +33,8 @@ class MaterialAction extends SspAction{
 			$limit = 5;
 			$material_model = new MaterialModel();
 			$m_list = $material_model->selectBySiteIdWithPage($this->getWebSiteId(),$page,$limit);
-			// $material_info_arr = array();
-			// foreach ($m_list as $v) {
-			// 	array_push($material_info_arr, $v);
-			// }
 			$rs['page'] = $page;
 			$rs['limit'] = $limit;
-			// $rs['sea'] = $material_info_arr;
 			$rs['sea'] = $m_list;
 			$this->ajaxReturn($rs,'素材列表',1);
 		}
@@ -85,6 +83,9 @@ class MaterialAction extends SspAction{
 			}
 		}
 	}
+	/**
+	* 
+	*/
 	public function upd(){
 		if($this->isPost()){
 			$post_keys = array('mid');//客服端必须要提交的key
@@ -121,6 +122,10 @@ class MaterialAction extends SspAction{
 				$key_arr = $this->materialKeyInfo($typ);
 				$read_arr = $this->readArray($key_arr,$_POST);//读取post中的值
 				$save = array_merge_recursive($read_arr,$save);//数组追加
+				if(isset($save['file']['resDesc'])){
+					$resDesc = $save['file']['resDesc'] ;
+					$save['file']['resDesc'] = $resDesc == '图片描述' ? null : $resDesc;
+				}
 				//实例化素材模型对象
 				$material_model = new MaterialModel();
 				$rs = $material_model->newMater($save);
@@ -227,7 +232,6 @@ class MaterialAction extends SspAction{
 	* 删除上传文件
 	*/
 	public function deload(){
-		// $file_name = '/509a041296838cb770a61bd0/9655c6a395bb8f926c67eee3240da400.jpg';
 		if($this->isPost()){
 			$file_name = $_POST['mna'];
 			if($file_name){
@@ -242,5 +246,13 @@ class MaterialAction extends SspAction{
 				$this->ajaxReturn(null,'删除失败',0);
 			}
 		}
+	}
+	/**
+	* 获取素材的尺寸列表
+	*/
+	public function size(){
+		$material_model = new MaterialModel();
+		$rs = $material_model->groupSize($this->getWebSiteId());
+		$this->ajaxReturn($rs,'上传失败',0);			
 	}
 }
