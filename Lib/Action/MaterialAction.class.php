@@ -15,9 +15,6 @@ class MaterialAction extends SspAction{
 	* index处理器
 	*/
 	public function index(){
-		// $material_model = new MaterialModel();
-		// $rs = $material_model->groupSize($this->getWebSiteId());
-		// print_r($rs);
 		$this->assign('m','mater');
 		$this->display();
 	}
@@ -27,12 +24,14 @@ class MaterialAction extends SspAction{
 	public function lst(){
 		if($this->isGet()){
 			$page = $_GET['_URL_'][2];//获取查询的页数
+			$mater_type = $this->getMaterType($_GET['_URL_'][3]);//根据类型筛选
+			$mater_size = $this->getMaterSize($_GET['_URL_'][4]);//获取筛选的尺寸
 			if (!is_numeric($page)) {
 				$page = 1;
 			}
 			$limit = 5;
 			$material_model = new MaterialModel();
-			$m_list = $material_model->selectBySiteIdWithPage($this->getWebSiteId(),$page,$limit);
+			$m_list = $material_model->selectBySiteIdWithPage($this->getWebSiteId(),$mater_type,$mater_size,$page,$limit);
 			$rs['page'] = $page;
 			$rs['limit'] = $limit;
 			$rs['sea'] = $m_list;
@@ -60,11 +59,30 @@ class MaterialAction extends SspAction{
 	* 统计当前站点下有多少素材
 	*/
 	public function cnt(){
-		if($this->isGet() || $this->isPost()){
+		if($this->isGet()){
+			$mater_type = $this->getMaterType($_GET['_URL_'][2]);//根据类型筛选
+			$mater_size = $this->getMaterSize($_GET['_URL_'][3]);//获取筛选的尺寸
 			$material_model = new MaterialModel();
-			$rs = $material_model->mCount($this->getWebSiteId());
+			$rs = $material_model->mCount($this->getWebSiteId(),$mater_type,$mater_size);
 			$this->ajaxReturn($rs,'素材数量',1);
 		}
+	}
+	/**
+	* 处理接收的类型参数
+	*/
+	private function getMaterType($type){
+		$mater_type = strtolower(trim($type));//根据类型筛选
+		$mater_type = empty($mater_type) ? 'all' : $mater_type;
+		return $mater_type;
+	}
+	/**
+	* 处理接收的尺寸
+	*/
+	private function getMaterSize($size){
+		$mater_size = strtolower(trim($size));
+		$mater_size = explode('x', $mater_size);
+		$mater_size = count($mater_size) == 2 ? $mater_size : null;
+		return $mater_size;
 	}
 	/**
 	* 删除素材信息(这里的删除，只是改变其状态)
@@ -84,7 +102,7 @@ class MaterialAction extends SspAction{
 		}
 	}
 	/**
-	* 
+	* 修改素材的信息
 	*/
 	public function upd(){
 		if($this->isPost()){
@@ -96,9 +114,13 @@ class MaterialAction extends SspAction{
 				$key_arr = $this->materialKeyInfo($typ);//获取定义的key
 				$read_arr = $this->readArrayExist($key_arr,$_POST);//读取post中的值
 				$update = array_merge_recursive($read_arr,$update);//数组追加
+				if(isset($update['file']['resDesc'])){
+					$resDesc = $update['file']['resDesc'] ;
+					$update['file']['resDesc'] = $resDesc == '图片描述' ? null : $resDesc;
+				}
 				//实例化素材模型对象
 				$material_model = new MaterialModel();
-				$rs = $material_model->upMaterialById($update,$_POST['mid']);
+				$rs = $material_model->upMaterialById($update,$update,$_POST['mid']);
 				if($rs){
 					$this->ajaxReturn(null,'修改成功',1);
 				}else{
@@ -126,7 +148,7 @@ class MaterialAction extends SspAction{
 					$resDesc = $save['file']['resDesc'] ;
 					$save['file']['resDesc'] = $resDesc == '图片描述' ? null : $resDesc;
 				}
-				//实例化素材模型对象
+				//实例化素材模型对象 
 				$material_model = new MaterialModel();
 				$rs = $material_model->newMater($save);
 				if($rs['ok']){

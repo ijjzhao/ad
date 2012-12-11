@@ -20,8 +20,10 @@ class MaterialModel extends MongoModel{
 	* @param $siteId 所属站点ID
 	* @param $page 当前查询的页数
 	* @param $limit 每页查询的条数
+	* @param $type 筛选的类型
+	* @param $size 
 	*/
-	public function selectBySiteIdWithPage($siteId,$page=1,$limit=10){
+	public function selectBySiteIdWithPage($siteId,$type,$size=null,$page=1,$limit=10){
 		$arr = array(
 			'page' => $page,
 			'limit' => $limit,
@@ -30,15 +32,31 @@ class MaterialModel extends MongoModel{
 			'site' => new MongoId($siteId),
 			'state' => 1,
 		);
+		if($type != 'all'){
+			$arr['where']['genre'] = $type;
+		}
+		if($size){
+			$arr['where']['file.width'] = $size[0];
+			$arr['where']['file.height'] = $size[1];
+		}
 		$rs = $this->order('_id desc')->select($arr);
 		return $rs;
 	}
 	/**
 	* 统计当前站点下的素材数量
 	* $siteId 站点编号
+	* $type 根据类型筛选
+	* $size 根据素材尺寸筛选
 	*/
-	public function mCount($siteId){
+	public function mCount($siteId,$type,$size=null){
 		$arr['where'] = array('site' => new MongoId($siteId),'state' => 1);
+		if($type != 'all'){
+			$arr['where']['genre'] = $type;
+		}
+		if($size){
+			$arr['where']['file.width'] = $size[0];
+			$arr['where']['file.height'] = $size[1];
+		}
 		return $this->db->count($arr);
 	}
 	/**
