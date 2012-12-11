@@ -16,13 +16,13 @@
 					<div class="null_list">
 						<span class="null_loca"></span>
 						<span class="null_text">还没有广告位</span>
-						<a href="javascript:void(0)" onclick="also_filler(1,'main_loca','新增广告位','main')" class="null_add">添加一个广告位</a>
+						<a href="javascript:void(0)" onclick="also_slider(1,'also_slider_locaf','main_loca','新增广告位','main')" class="null_add">添加一个广告位</a>
 					</div>
 					<div id='con_loca'>
 						<div class="topic_loca">
 							<h2>共有<span id="topic_num1" class="topic_loca_num1"></span>个广告位，<span id="topic_num2" class="topic_loca_num2">6</span>个正在投放</h2>
 							<a href="tita.html" class="timetable_loca">查看广告排期</a>
-							<a href="javascript:void(0)" onclick="also_filler(1,'main_loca','新增广告位','main')" class="addLoca_loca">新增广告位</a>
+							<a href="javascript:void(0)" onclick="also_slider(1,'also_slider_locaf','main_loca','新增广告位','main')" class="addLoca_loca">新增广告位</a>
 							<div class="filter_loca">
 								<select id="sele_chan"></select>
 								<input id="datas_chan" type="hidden">
@@ -57,8 +57,8 @@
 			  	getAnum('adseat/cnt','topic_num1');
 				getChan(2);
 				pageStation(1);
-				$('#sele_chan').bind('change',function(){
-					$('#chan_now').val($(this).val());
+				$('#sele_chan').on('change',function(event){
+					$('#chan_now').val(event.target.value);
 					pageStation(1);
 				});
 

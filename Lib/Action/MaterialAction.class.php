@@ -110,7 +110,7 @@ class MaterialAction extends SspAction{
 			if($this->postKeyExist($post_keys)){//验证key是否存在
 				$typ = $_POST['tpe'];//获取素材的类型
 				$update['genre'] = $typ;
-				$save['isNewWin'] = empty($_POST['nwm']) ? 'off' : 'on';
+				$save['isNewWin'] = empty($_POST['nwn']) ? 'off' : 'on';
 				$key_arr = $this->materialKeyInfo($typ);//获取定义的key
 				$read_arr = $this->readArrayExist($key_arr,$_POST);//读取post中的值
 				$update = array_merge_recursive($read_arr,$update);//数组追加
@@ -120,7 +120,7 @@ class MaterialAction extends SspAction{
 				}
 				//实例化素材模型对象
 				$material_model = new MaterialModel();
-				$rs = $material_model->upMaterialById($update,$update,$_POST['mid']);
+				$rs = $material_model->upMaterialById($update,$_POST['mid']);
 				if($rs){
 					$this->ajaxReturn(null,'修改成功',1);
 				}else{
@@ -139,7 +139,7 @@ class MaterialAction extends SspAction{
 				$typ = $_POST['tpe'];//获取素材的类型
 				$save['genre'] = $typ;
 				$save['site'] = $this->getWebSiteId();//现有数据直接存储
-				$save['isNewWin'] = empty($_POST['nwm']) ? 'off' : 'on';
+				$save['isNewWin'] = empty($_POST['nwn']) ? 'off' : 'on';
 				//获取定义的key
 				$key_arr = $this->materialKeyInfo($typ);
 				$read_arr = $this->readArray($key_arr,$_POST);//读取post中的值
@@ -176,14 +176,14 @@ class MaterialAction extends SspAction{
 				);
 				break;
 			case 'w':
-				$arr['words'] = array(
+				$arr['file'] = array(
 					'content' => 'tnt',
 					'style' => array('size' => 'sze','color' => 'clr','face' => 'fce'),
 					'overStyle' => array('color' => 'oclr','face' => 'ofce'),
 				);
 				break;
 			case 's':
-				$arr['script'] = 'spt';
+				$arr['file'] = 'spt';
 				break;
 		}	
 		return $arr;	

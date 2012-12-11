@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="__PUBLIC__/css/also.css" type="text/css">
 	</head>
 	<body>
-		<div class="menu">
+				<div class="menu">
 			<div class="logo"><a href="#"><img src="__PUBLIC__/img/logo.png" alt="Adnets 广告管理系统"></a></div>
 			<div class="navbar">
 				<a href="#" class="nav">
@@ -17,13 +17,17 @@
 					<p>广告</p>
 				</a>
 				
-				<a class="nav n_on">
+				<a href="<?php echo U('index/index');?>" class="nav 
+				<?php if(($m==loca)): ?>n_on<?php endif; ?>
+				">
 					<span class="nav_arrow"></span>
 					<span class="nav_loca" alt="广告位"></span>
 					<p>广告位</p>
 				</a>
 
-				<a href="mat.html" class="nav">
+				<a href="<?php echo u('material/index');?>" class="nav 
+				<?php if(($m==mater)): ?>n_on<?php endif; ?>
+				">
 					<span class="nav_arrow"></span>
 					<span class="nav_mat" alt="素材库"></span>
 					<p>素材库</p>
@@ -62,13 +66,13 @@
 					<div class="null_list">
 						<span class="null_loca"></span>
 						<span class="null_text">还没有广告位</span>
-						<a href="javascript:void(0)" onclick="also_filler(1,'main_loca','新增广告位','main')" class="null_add">添加一个广告位</a>
+						<a href="javascript:void(0)" onclick="also_slider(1,'also_slider_locaf','main_loca','新增广告位','main')" class="null_add">添加一个广告位</a>
 					</div>
 					<div id='con_loca'>
 						<div class="topic_loca">
 							<h2>共有<span id="topic_num1" class="topic_loca_num1"></span>个广告位，<span id="topic_num2" class="topic_loca_num2">6</span>个正在投放</h2>
 							<a href="tita.html" class="timetable_loca">查看广告排期</a>
-							<a href="javascript:void(0)" onclick="also_filler(1,'main_loca','新增广告位','main')" class="addLoca_loca">新增广告位</a>
+							<a href="javascript:void(0)" onclick="also_slider(1,'also_slider_locaf','main_loca','新增广告位','main')" class="addLoca_loca">新增广告位</a>
 							<div class="filter_loca">
 								<select id="sele_chan"></select>
 								<input id="datas_chan" type="hidden">
@@ -97,19 +101,19 @@
 		<script type="text/javascript" src="__PUBLIC__/js/pagination.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/js/also.js"></script>
 		<script type="text/javascript">
-			loading(0);
-			getAnum('adseat/cnt','topic_num1');
-			getChan(2);
-			pageStation(1);
-			$('#sele_chan').bind('change',function(){
-				$('#chan_now').val($(this).val());
-				pageStation(1);
-			});
 
-			// $('#sele_state').bind('change',function(){
-			// 	$('#state_now').val($(this).val());
-			// 	pageStation(1);
-			// });
+			$(document).ready(function(){
+			  	loading(0);
+			  	getAnum('adseat/cnt','topic_num1');
+				getChan(2);
+				pageStation(1);
+				$('#sele_chan').on('change',function(event){
+					$('#chan_now').val(event.target.value);
+					pageStation(1);
+				});
+
+			})
+						
 		</script>
 	</body>
 </html>
