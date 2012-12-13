@@ -10580,3 +10580,46 @@ SQL: alsogood.getCollection(adseat) [ RunTime:0.000020s ]
 SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["name","shape","chnName","priSize","desc"]).sort({"_id":-1}).limit(5) [ RunTime:0.000051s ]
 NOTIC: [8] Undefined index: auxSize D:\Program Files\wamp\www\ad\Lib\Action\AdseatAction.class.php 第 35 行.
 
+[ 2012-12-11T20:24:53+08:00 ] 127.0.0.1 /ad/material/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001081s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001157s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003140s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000818s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant loca - assumed 'loca' D:\Program Files\wamp\www\ad\Runtime\Cache\73e217e20082e64836b83fb10de5607c.php 第 22 行.
+NOTIC: [8] Use of undefined constant mater - assumed 'mater' D:\Program Files\wamp\www\ad\Runtime\Cache\73e217e20082e64836b83fb10de5607c.php 第 30 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007791s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.011828s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.012259s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.012700s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.013003s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001688s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.013568s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000555s ]
+
+[ 2012-12-11T20:24:54+08:00 ] ERR: (ThinkException) Unknown error
+[ 2012-12-11T20:24:54+08:00 ] 127.0.0.1 /ad/material/cnt
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000732s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000814s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+NOTIC: [8] Undefined offset: 2 D:\Program Files\wamp\www\ad\Lib\Action\MaterialAction.class.php 第 63 行.
+NOTIC: [8] Undefined offset: 3 D:\Program Files\wamp\www\ad\Lib\Action\MaterialAction.class.php 第 64 行.
+NOTIC: [8] Undefined index: file D:\Program Files\wamp\www\ad\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index: line D:\Program Files\wamp\www\ad\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class MaterialAction could not be converted to string D:\Program Files\wamp\www\ad\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index: class D:\Program Files\wamp\www\ad\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\Program Files\wamp\www\ad\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class D:\Program Files\wamp\www\ad\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\Program Files\wamp\www\ad\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+

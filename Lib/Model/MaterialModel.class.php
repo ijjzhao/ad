@@ -53,7 +53,7 @@ class MaterialModel extends MongoModel{
 		if($type != 'all'){
 			$arr['where']['genre'] = $type;
 		}
-		if($size){
+		if($size && $size != 'all'){
 			$arr['where']['file.width'] = $size[0];
 			$arr['where']['file.height'] = $size[1];
 		}
@@ -93,16 +93,17 @@ class MaterialModel extends MongoModel{
 	*/
 	public function groupSize($siteId){
 		$keys = array('file.width' => true,'file.height' => true);//要分组的列
-		$options = array('site' => new MongoId($siteId));//分组条件
+		$options = array('site' => new MongoId($siteId) , 'state' => 1 );//分组条件
 		$initial = array('w' => 0,'h' => 0);//分组计算初始化的值
-		$reduce = 'function(obj,prev){prev.w = obj.file.width;prev.h = obj.file.height;}';//分组计算的方法
+		// $reduce = 'function(obj,prev){prev.w = obj.file.width;prev.h = obj.file.height;}';//分组计算的方法
+		$reduce = 'function(obj,prev){prev.w = 1;prev.h = 1;}';//分组计算的方法
 		$rs =  $this->db->group($keys,$initial,$reduce,$options);
 		$size_arr = $rs['retval'];
 		$size_rs = array();//提取查询的结果集
 		foreach ($size_arr as $k => $v) {
 			$size_rs[$k] = array(
-				'w' => $v['w'],
-				'h' => $v['h']
+				'w' => $v['file.width'],
+				'h' => $v['file.height']
 			);
 		}
 		return $size_rs;

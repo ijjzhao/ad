@@ -77,6 +77,8 @@ class MaterialAction extends SspAction{
 	}
 	/**
 	* 处理接收的尺寸
+	查询所有，参数为：all
+	查询没有尺寸的，参数为：nq
 	*/
 	private function getMaterSize($size){
 		$mater_size = strtolower(trim($size));
@@ -275,6 +277,6 @@ class MaterialAction extends SspAction{
 	public function size(){
 		$material_model = new MaterialModel();
 		$rs = $material_model->groupSize($this->getWebSiteId());
-		$this->ajaxReturn($rs,'上传失败',0);			
+		$this->ajaxReturn($rs,'获取尺寸数据失败',1);			
 	}
 }
