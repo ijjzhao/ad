@@ -35,10 +35,11 @@ class MaterialModel extends MongoModel{
 		if($type != 'all'){
 			$arr['where']['genre'] = $type;
 		}
-		// $arr['where'] = array('file.width' => array('exists' => 0));
-		if($size){
+		if(is_array($size)){//根据尺寸筛选
 			$arr['where']['file.width'] = $size[0];
 			$arr['where']['file.height'] = $size[1];
+		}else if(is_string($size) && $size == 'np'){//筛选没有尺寸的素材
+			$arr['where'] = array('file.width' => array('exists' ,0));
 		}
 		$rs = $this->order('_id desc')->select($arr);
 		return $rs;

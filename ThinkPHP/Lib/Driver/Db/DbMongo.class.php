@@ -837,9 +837,6 @@ class DbMongo extends Db{
      */
     protected function parseWhereItem($key,$val) {
         $query   = array();
-        // var_dump($key);
-        // echo "val=";
-        // print_r($val);
         if(is_array($val)) {
             if(is_string($val[0])) {
                 $con  =  strtolower($val[0]);

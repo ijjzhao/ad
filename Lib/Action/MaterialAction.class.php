@@ -35,7 +35,6 @@ class MaterialAction extends SspAction{
 			$rs['page'] = $page;
 			$rs['limit'] = $limit;
 			$rs['sea'] = $m_list;
-			// print_r($rs);
 			$this->ajaxReturn($rs,'素材列表',1);
 		}
 	}
@@ -83,6 +82,8 @@ class MaterialAction extends SspAction{
 		$mater_size = strtolower(trim($size));
 		if($mater_size == 'all'){
 			$mater_size = null;
+		}else if($mater_size == 'np'){
+
 		}else{
 			$mater_size = explode('x', $mater_size);
 			$mater_size = count($mater_size) == 2 ? $mater_size : null;
