@@ -123,8 +123,8 @@ class MaterialModel extends MongoModel{
 			$width = $v['file.width'];
 			$height = $v['file.height'];
 			$count =  $v['count'];
-			if($width && $height){
-				$size_rs[$k] = array('w' => $width,'h' => $height);
+			if($width && $height && $count){
+				$size_rs[$k] = array('w' => $width,'h' => $height,'c' => $count);
 			}
 		}
 		return $size_rs;
