@@ -3,9 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=1280">
-		<title>广告位 - Adnets</title>
+		<title>素材库 - Adnets</title>
 		<link rel="shortcut icon" href="__PUBLIC__/img/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="__PUBLIC__/css/also.css" type="text/css">
+		<link rel="stylesheet" href="__PUBLIC__/css/jquery.miniColors.css" type="text/css">
 	</head>
 	<body>
 				<div class="menu">
@@ -63,59 +64,63 @@
 		</div>
 		<div id="main">
 			<div class="board">
-				<div class="main_loca" id="main_loca">
-					<span id="loading_list" alt='0' gone='4' name='con_loca'></span>
+				<div class="main_mat" id="main_mat">
+					<span id="loading_list" alt='0' gone='3' name='con_mat'></span>
 					<div class="null_list">
-						<span class="null_loca"></span>
-						<span class="null_text">还没有广告位</span>
-						<a href="javascript:void(0)" onclick="also_slider(1,'also_slider_locaf','main_loca','新增广告位','main')" class="null_add">添加一个广告位</a>
+						<span class="null_mat"></span>
+						<span class="null_text">素材库是空的</span>
+						<span class="null_ps">您可以现在添加一些素材，也可以在新增广告时直接添加</span>
+						<a href="javascript:void(0)" onclick="also_slider(5,'also_slider_mat','main_mat','新增素材','main')" class="null_add">新增一个素材</a>
 					</div>
-					<div id='con_loca'>
-						<div class="topic_loca">
-							<h2>共有<span id="topic_num1" class="topic_loca_num1"></span>个广告位，<span id="topic_num2" class="topic_loca_num2">6</span>个正在投放</h2>
-							<a href="tita.html" class="timetable_loca">查看广告排期</a>
-							<a href="javascript:void(0)" onclick="also_slider(1,'also_slider_locaf','main_loca','新增广告位','main')" class="addLoca_loca">新增广告位</a>
-							<div class="filter_loca">
-								<select id="sele_chan"></select>
-								<input id="datas_chan" type="hidden">
-								<input id="chan_now" type="hidden">
-								<select id="sele_state">
-									<option value="all">全部状态</option>
-									<option value="1">正在投放</option>
-									<option value="0">空闲</option>
-									<option value="-1">计划</option>
+					<div id='con_mat'>
+						<div class="topic_mat">
+							<h2>共有<span id="topic_num1" class="topic_mat_num1"></span>个素材</h2>
+							<a href="javascript:void(0)" onclick="also_slider(5,'also_slider_mat','main_mat','新增素材','main')" class="add_mat">新增素材</a>
+							<div class="filter_mat">
+								<select id="sele_types">
+									<option value="all">所有类型</option>
+									<option value="p">图片</option>
+									<option value="f">flash</option>
+									<option value="w">文字</option>
+									<option value="s">代码</option>
 								</select>
+								<input id="datas_size" type="hidden">
+								<input id="size_now" type="hidden">
+								<select id="sele_sizes"></select>
 							</div>
 						</div>
-
-						<div id="contBox" class="cont_loca"></div>
-						<span class="filter">没有符合条件的广告位</span>
+						<div id="contBox" class="cont_mat"></div>
+						<span class="filter">没有符合条件的素材</span>
 						<div class="pages_box">
 							<div id="loading_pgs"><span class="load_pgs"></span></div>
 							<div id="pgs_box" class="pagination"></div>
 						</div>
-					</div>	
+					</div>
 				</div>
 			</div>
 		</div>
 		<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/js/poshytip.min.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/js/pagination.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/miniColors.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/ajaxupload.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/js/also.js"></script>
 		<script type="text/javascript">
-
-			$(document).ready(function(){
-			  	loading(0);
-			  	getAnum('adseat/cnt','topic_num1');
-				getChan(2);
-				pageStation(1);
-				$('#sele_chan').on('change',function(event){
-					$('#chan_now').val(event.target.value);
-					pageStation(1);
-				});
-
-			})
-						
+		$(document).ready(function(){
+			loading(0);
+			getAnum('material/cnt','topic_num1');
+			getMatSize();
+			pageStation(3);
+			
+			$('#sele_types').on('change',function(){
+				pageStation(3);
+			});
+			
+			$('#sele_sizes').on('change',function(event){
+				$('#size_now').val(event.target.value);
+				pageStation(3);
+			});
+		});
 		</script>
 	</body>
 </html>

@@ -39,7 +39,6 @@ class AdseatAction extends SspAction{
 				}
 				$return_arr['sea'] = $seat_info_arr;			//设置要输出的频道信息
 			}
-				// print_r($return_arr);
 			$this->ajaxReturn($return_arr,'广告位列表',1);
 		}else{
 			$this->ajaxReturn('','请求错误',0);

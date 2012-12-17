@@ -11,15 +11,27 @@ class IndexAction extends SspAction {
 	* Author: zjs
 	*/
     public function index(){
-        // echo $_GET['name'];
-    	$this->loca();
+        $this->ad();
+    }
+    /**
+    * 广告页面
+    */
+    public function ad(){
+        $this->assign('m','ad');
+        $this->display('ad');
     }
     /**
     * 广告位页面
     */
     public function loca(){
-        // $this->redirect('adseat/cnt');
         $this->assign('m','loca');
     	$this->display('loca');
+    }
+    /**
+    * 素材页面
+    */
+    public function mater(){
+        $this->assign('m','mater');
+        $this->display('mater');
     }
 }

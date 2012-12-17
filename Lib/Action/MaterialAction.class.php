@@ -14,10 +14,10 @@ class MaterialAction extends SspAction{
 	/**
 	* index处理器
 	*/
-	public function index(){
-		$this->assign('m','mater');
-		$this->display();
-	}
+	// public function index(){
+	// 	$this->assign('m','mater');
+	// 	$this->display();
+	// }
 	/**
 	* 获取素材列表
 	*/
