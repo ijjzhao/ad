@@ -4,13 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=1280">
 		<title>素材库 - Adnets</title>
-	
 		<link rel="shortcut icon" href="__PUBLIC__/img/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="__PUBLIC__/css/also.css" type="text/css">
 		<link rel="stylesheet" href="__PUBLIC__/css/jquery.miniColors.css" type="text/css">
-</head>
+	</head>
 	<body>
-		<div class="menu">
+				<div class="menu">
 			<div class="logo"><a href="#"><img src="__PUBLIC__/img/logo.png" alt="Adnets 广告管理系统"></a></div>
 			<div class="navbar">
 				<a href="#" class="nav">

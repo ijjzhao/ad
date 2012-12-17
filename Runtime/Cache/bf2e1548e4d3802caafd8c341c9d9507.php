@@ -3,13 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=1280">
-		<title>素材库 - Adnets</title>
-	
+		<title>广告位 - Adnets</title>
 		<link rel="shortcut icon" href="__PUBLIC__/img/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="__PUBLIC__/css/also.css" type="text/css">
-</head>
+	</head>
 	<body>
-		<div class="menu">
+				<div class="menu">
 			<div class="logo"><a href="#"><img src="__PUBLIC__/img/logo.png" alt="Adnets 广告管理系统"></a></div>
 			<div class="navbar">
 				<a href="#" class="nav">
@@ -113,10 +112,6 @@
 					pageStation(1);
 				});
 
-				// $('#sele_state').bind('change',function(){
-				// 	$('#state_now').val($(this).val());
-				// 	pageStation(1);
-				// });
 			})
 						
 		</script>
