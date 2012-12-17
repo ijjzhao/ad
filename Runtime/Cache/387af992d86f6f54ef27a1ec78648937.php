@@ -63,34 +63,28 @@
 		<div id="main">
 			<div class="board">
 				<div class="main_mat" id="main_mat">
-					<span id="loading_list" alt='0' gone='2' name='con_mat'></span>
+					<span id="loading_list" alt='0' gone='3' name='con_mat'></span>
 					<div class="null_list">
 						<span class="null_mat"></span>
 						<span class="null_text">素材库是空的</span>
 						<span class="null_ps">您可以现在添加一些素材，也可以在新增广告时直接添加</span>
-						<a href="javascript:void(0)" onclick="also_filler(5,'main_mat','新增素材','main')" class="null_add">新增一个素材</a>
+						<a href="javascript:void(0)" onclick="also_slider(5,'also_slider_mat','main_mat','新增素材','main')" class="null_add">新增一个素材</a>
 					</div>
 					<div id='con_mat'>
 						<div class="topic_mat">
 							<h2>共有<span id="topic_num1" class="topic_mat_num1"></span>个素材</h2>
-							<a href="javascript:void(0)" onclick="also_filler(5,'main_mat','新增素材','main')" class="add_mat">新增素材</a>
+							<a href="javascript:void(0)" onclick="also_slider(5,'also_slider_mat','main_mat','新增素材','main')" class="add_mat">新增素材</a>
 							<div class="filter_mat">
 								<select id="sele_types">
 									<option value="all">所有类型</option>
-									<option value="1">图片</option>
-									<option value="2">flash</option>
-									<option value="3">代码</option>
-									<option value="4">文字</option>
+									<option value="p">图片</option>
+									<option value="f">flash</option>
+									<option value="w">文字</option>
+									<option value="s">代码</option>
 								</select>
 								<input id="datas_size" type="hidden">
 								<input id="size_now" type="hidden">
-								<select id="sele_sizes">
-									<option value="all">所有尺寸</option>
-									<option value="1">468x60</option>
-									<option value="2">666x90</option>
-									<option value="3">777x80</option>
-								</select>
-								<input id="state_now" type="hidden">
+								<select id="sele_sizes"></select>
 							</div>
 						</div>
 						<div id="contBox" class="cont_mat"></div>
@@ -113,17 +107,17 @@
 		$(document).ready(function(){
 			loading(0);
 			getAnum('material/cnt','topic_num1');
+			getMatSize();
 			pageStation(3);
-
-			// $('#sele_chan').bind('change',function(){
-			// 	$('#chan_now').val($(this).val());
-			// 	pageStation(1);
-			// });
-
-			// $('#sele_state').bind('change',function(){
-			// 	$('#state_now').val($(this).val());
-			// 	pageStation(1);
-			// });
+			
+			$('#sele_types').on('change',function(){
+				pageStation(3);
+			});
+			
+			$('#sele_sizes').on('change',function(event){
+				$('#size_now').val(event.target.value);
+				pageStation(3);
+			});
 		});
 		</script>
 	</body>
