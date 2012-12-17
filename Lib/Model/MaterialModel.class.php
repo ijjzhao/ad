@@ -100,39 +100,33 @@ class MaterialModel extends MongoModel{
 	public function groupSize($siteId){
 		$keys = array('file.width' => true,'file.height' => true);//要分组的列
 		$options = array('site' => new MongoId($siteId) , 'state' => 1 );//分组条件
-		$initial = array('w' => 0,'h' => 0);//分组计算初始化的值
-		// $reduce = 'function(obj,prev){prev.w = obj.file.width;prev.h = obj.file.height;}';//分组计算的方法
-		$reduce = 'function(obj,prev){prev.w = 1;prev.h = 1;}';//分组计算的方法
+		$initial = array('count' => 0);//分组计算初始化的值
+		$reduce = 'function(obj,prev){prev.count += 1;}';//分组计算的方法
 		$rs =  $this->db->group($keys,$initial,$reduce,$options);
 		$size_arr = $rs['retval'];
+		//将结果集进行冒泡排序
+		$count_arr = count($size_arr);
+		for ($i=0; $i < $count_arr; $i++) {
+			for ($j=0; $j < $count_arr; $j++) {
+				$temp = $size_arr[$i];
+				$i_cnt = $temp['count'];
+				$j_cnt = $size_arr[$j]['count'];
+				if($i_cnt > $j_cnt){
+					$temp = $size_arr[$j];
+					$size_arr[$j] = $size_arr[$i];
+					$size_arr[$i] = $temp;
+				}
+			}
+		}
 		$size_rs = array();//提取查询的结果集
 		foreach ($size_arr as $k => $v) {
 			$width = $v['file.width'];
 			$height = $v['file.height'];
+			$count =  $v['count'];
 			if($width && $height){
 				$size_rs[$k] = array('w' => $width,'h' => $height);
 			}
 		}
 		return $size_rs;
 	}
-
-// 	/**
-// 	* 获取素材不同尺寸列表
-// 	*/
-// 	public function groupSize($siteId){
-// 		$keys = array('file.width' => true,'file.height' => true);//要分组的列
-// 		$options = array('site' => new MongoId($siteId));//分组条件
-// 		$initial = array('w' => 0,'h' => 0);//分组计算初始化的值
-// 		$reduce = 'function(obj,prev){prev.w = obj.file.width;prev.h = obj.file.height;}';//分组计算的方法
-// 		$rs =  $this->db->group($keys,$initial,$reduce,$options);
-// 		$size_arr = $rs['retval'];
-// 		$size_rs = array();//提取查询的结果集
-// 		foreach ($size_arr as $k => $v) {
-// 			$size_rs[$k] = array(
-// 				'w' => $v['w'],
-// 				'h' => $v['h']
-// 			);
-// 		}
-// 		return $size_rs;
-// 	}
 }

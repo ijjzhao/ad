@@ -10607,3 +10607,487 @@ NOTIC: [8] Undefined index: auxSize /Users/adnetsalso/Sites/ad/Lib/Action/Adseat
 NOTIC: [8] Undefined index: auxSize /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 35 行.
 NOTIC: [8] Undefined index: auxSize /Users/adnetsalso/Sites/ad/Lib/Action/AdseatAction.class.php 第 35 行.
 
+[ 2012-12-17T14:05:41+08:00 ] 127.0.0.1 /ad/index/mater
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000063s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000573s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000089s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant ad - assumed 'ad' /Users/adnetsalso/Sites/ad/Runtime/Cache/a407a640a3f22811ffcb9cca9c42d4aa.php 第 16 行.
+NOTIC: [8] Use of undefined constant loca - assumed 'loca' /Users/adnetsalso/Sites/ad/Runtime/Cache/a407a640a3f22811ffcb9cca9c42d4aa.php 第 24 行.
+NOTIC: [8] Use of undefined constant mater - assumed 'mater' /Users/adnetsalso/Sites/ad/Runtime/Cache/a407a640a3f22811ffcb9cca9c42d4aa.php 第 32 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000690s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002941s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.003658s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.003800s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.003876s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.003927s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000374s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.004083s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000131s ]
+
+[ 2012-12-17T14:05:41+08:00 ] 127.0.0.1 /ad/material/cnt
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000112s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000159s ]
+NOTIC: [8] Undefined offset: 2 /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 63 行.
+NOTIC: [8] Undefined offset: 3 /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 64 行.
+SQL: alsogood.getCollection(material) [ RunTime:0.000058s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 552 行.
+SQL: alsogood.material.find({"site":{"$id":"509a04be96838cb770a61bd2"},"state":1}).count() [ RunTime:0.000538s ]
+
+[ 2012-12-17T14:05:41+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000106s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000167s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000029s ]
+
+[ 2012-12-17T14:05:41+08:00 ] 127.0.0.1 /ad/material/cnt/all/null
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000112s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000191s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000133s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000029s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 552 行.
+SQL: alsogood.material.find({"site":{"$id":"509a04be96838cb770a61bd2"},"state":1}).count() [ RunTime:0.000338s ]
+
+[ 2012-12-17T14:05:42+08:00 ] 127.0.0.1 /ad/material/lst/1/all/null
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000103s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000097s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000024s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 436 行.
+SQL: alsogood.material.find({"site":{"$id":"509a04be96838cb770a61bd2"},"state":1}).sort({"_id":-1}).limit(5) [ RunTime:0.000075s ]
+
+[ 2012-12-17T14:05:42+08:00 ] 127.0.0.1 /ad/index/mater
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000060s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000176s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000532s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000089s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant ad - assumed 'ad' /Users/adnetsalso/Sites/ad/Runtime/Cache/a407a640a3f22811ffcb9cca9c42d4aa.php 第 16 行.
+NOTIC: [8] Use of undefined constant loca - assumed 'loca' /Users/adnetsalso/Sites/ad/Runtime/Cache/a407a640a3f22811ffcb9cca9c42d4aa.php 第 24 行.
+NOTIC: [8] Use of undefined constant mater - assumed 'mater' /Users/adnetsalso/Sites/ad/Runtime/Cache/a407a640a3f22811ffcb9cca9c42d4aa.php 第 32 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000648s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002928s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.003604s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.003750s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.003825s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.003875s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000375s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.004014s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000081s ]
+
+[ 2012-12-17T14:05:42+08:00 ] 127.0.0.1 /ad/material/cnt
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000112s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000188s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000142s ]
+NOTIC: [8] Undefined offset: 2 /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 63 行.
+NOTIC: [8] Undefined offset: 3 /Users/adnetsalso/Sites/ad/Lib/Action/MaterialAction.class.php 第 64 行.
+SQL: alsogood.getCollection(material) [ RunTime:0.000028s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 552 行.
+SQL: alsogood.material.find({"site":{"$id":"509a04be96838cb770a61bd2"},"state":1}).count() [ RunTime:0.000303s ]
+
+[ 2012-12-17T14:05:42+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000118s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000163s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000027s ]
+
+[ 2012-12-17T14:05:42+08:00 ] 127.0.0.1 /ad/material/cnt/all/null
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000128s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000216s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000188s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000030s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 552 行.
+SQL: alsogood.material.find({"site":{"$id":"509a04be96838cb770a61bd2"},"state":1}).count() [ RunTime:0.000484s ]
+
+[ 2012-12-17T14:05:42+08:00 ] 127.0.0.1 /ad/material/lst/1/all/null
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000125s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000110s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000024s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 436 行.
+SQL: alsogood.material.find({"site":{"$id":"509a04be96838cb770a61bd2"},"state":1}).sort({"_id":-1}).limit(5) [ RunTime:0.000077s ]
+
+[ 2012-12-17T14:05:44+08:00 ] 127.0.0.1 /ad/material/cnt/all/477x210
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000086s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000130s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000031s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 552 行.
+SQL: alsogood.material.find({"site":{"$id":"509a04be96838cb770a61bd2"},"state":1,"file.width":"477","file.height":"210"}).count() [ RunTime:0.000463s ]
+
+[ 2012-12-17T14:05:44+08:00 ] 127.0.0.1 /ad/material/lst/1/all/477x210
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000062s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000215s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000094s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000019s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 436 行.
+SQL: alsogood.material.find({"site":{"$id":"509a04be96838cb770a61bd2"},"state":1,"file.width":"477","file.height":"210"}).sort({"_id":-1}).limit(5) [ RunTime:0.000078s ]
+
+[ 2012-12-17T14:05:46+08:00 ] 127.0.0.1 /ad/material/cnt/all/all
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000110s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000153s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000024s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 552 行.
+SQL: alsogood.material.find({"site":{"$id":"509a04be96838cb770a61bd2"},"state":1}).count() [ RunTime:0.000290s ]
+
+[ 2012-12-17T14:05:46+08:00 ] 127.0.0.1 /ad/material/lst/1/all/all
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000093s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000163s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000026s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 436 行.
+SQL: alsogood.material.find({"site":{"$id":"509a04be96838cb770a61bd2"},"state":1}).sort({"_id":-1}).limit(5) [ RunTime:0.000087s ]
+
+[ 2012-12-17T14:05:53+08:00 ] 127.0.0.1 /ad/material/lst/2/all/all
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000067s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000028s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 436 行.
+SQL: alsogood.material.find({"site":{"$id":"509a04be96838cb770a61bd2"},"state":1}).sort({"_id":-1}).skip(5).limit(5) [ RunTime:0.000052s ]
+
+[ 2012-12-17T14:05:56+08:00 ] 127.0.0.1 /ad/material/lst/1/all/all
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000081s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000170s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000030s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 436 行.
+SQL: alsogood.material.find({"site":{"$id":"509a04be96838cb770a61bd2"},"state":1}).sort({"_id":-1}).limit(5) [ RunTime:0.000128s ]
+
+[ 2012-12-17T14:06:29+08:00 ] 127.0.0.1 /ad/material/cnt/all/477x210
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000119s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000194s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000041s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 552 行.
+SQL: alsogood.material.find({"site":{"$id":"509a04be96838cb770a61bd2"},"state":1,"file.width":"477","file.height":"210"}).count() [ RunTime:0.000698s ]
+
+[ 2012-12-17T14:06:29+08:00 ] 127.0.0.1 /ad/material/lst/1/all/477x210
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000068s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000220s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000094s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000023s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 436 行.
+SQL: alsogood.material.find({"site":{"$id":"509a04be96838cb770a61bd2"},"state":1,"file.width":"477","file.height":"210"}).sort({"_id":-1}).limit(5) [ RunTime:0.000067s ]
+
+[ 2012-12-17T14:06:31+08:00 ] 127.0.0.1 /ad/material/cnt/all/all
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000080s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000168s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000018s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 552 行.
+SQL: alsogood.material.find({"site":{"$id":"509a04be96838cb770a61bd2"},"state":1}).count() [ RunTime:0.000255s ]
+
+[ 2012-12-17T14:06:31+08:00 ] 127.0.0.1 /ad/material/lst/1/all/all
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000070s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000225s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000097s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000017s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 436 行.
+SQL: alsogood.material.find({"site":{"$id":"509a04be96838cb770a61bd2"},"state":1}).sort({"_id":-1}).limit(5) [ RunTime:0.000073s ]
+
+[ 2012-12-17T14:09:05+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000062s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000026s ]
+
+[ 2012-12-17T14:14:44+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000065s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000096s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000026s ]
+NOTIC: [8] Undefined index: retval /Users/adnetsalso/Sites/ad/Lib/Model/MaterialModel.class.php 第 108 行.
+NOTIC: [2] Invalid argument supplied for foreach() /Users/adnetsalso/Sites/ad/Lib/Model/MaterialModel.class.php 第 110 行.
+
+[ 2012-12-17T14:15:00+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000094s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000170s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000019s ]
+
+[ 2012-12-17T14:35:26+08:00 ] ERR: [4] syntax error, unexpected T_IF, expecting T_VARIABLE or '$' /Users/adnetsalso/Sites/ad/Lib/Model/MaterialModel.class.php 第 113 行.
+[ 2012-12-17T14:35:26+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000067s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000212s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000097s ]
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-17T14:35:57+08:00 ] ERR: [4] syntax error, unexpected T_IF, expecting T_VARIABLE or '$' /Users/adnetsalso/Sites/ad/Lib/Model/MaterialModel.class.php 第 113 行.
+[ 2012-12-17T14:35:57+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000067s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000151s ]
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-17T14:36:13+08:00 ] ERR: [4] syntax error, unexpected T_IF, expecting T_VARIABLE or '$' /Users/adnetsalso/Sites/ad/Lib/Model/MaterialModel.class.php 第 113 行.
+[ 2012-12-17T14:36:13+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000068s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000098s ]
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-17T14:36:28+08:00 ] ERR: [4] syntax error, unexpected T_IF, expecting T_VARIABLE or '$' /Users/adnetsalso/Sites/ad/Lib/Model/MaterialModel.class.php 第 113 行.
+[ 2012-12-17T14:36:28+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000179s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000222s ]
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 39 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Common/functions.php 第 38 行.
+
+[ 2012-12-17T14:37:25+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000066s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000146s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000025s ]
+
+[ 2012-12-17T14:37:46+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000064s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000109s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000016s ]
+
+[ 2012-12-17T14:37:59+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000076s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000109s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000023s ]
+
+[ 2012-12-17T14:39:24+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000065s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000136s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000024s ]
+
+[ 2012-12-17T14:39:38+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000065s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000094s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000026s ]
+
+[ 2012-12-17T14:40:10+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000066s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000092s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000023s ]
+
+[ 2012-12-17T14:40:31+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000079s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000110s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000024s ]
+
+[ 2012-12-17T14:41:06+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000065s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000095s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000017s ]
+
+[ 2012-12-17T14:41:59+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000110s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000169s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000023s ]
+
+[ 2012-12-17T14:42:09+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000074s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000238s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000108s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000018s ]
+
+[ 2012-12-17T14:50:35+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000090s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000134s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000018s ]
+
+[ 2012-12-17T15:09:47+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000112s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000222s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000153s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000024s ]
+
+[ 2012-12-17T15:09:59+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000067s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000213s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000094s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000018s ]
+
+[ 2012-12-17T15:10:16+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000105s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000159s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000017s ]
+
+[ 2012-12-17T15:10:39+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000065s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000207s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000094s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000031s ]
+
+[ 2012-12-17T15:11:01+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000061s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000086s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000023s ]
+
+[ 2012-12-17T15:11:46+08:00 ] 127.0.0.1 /ad/material/size
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000069s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000096s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000017s ]
+
