@@ -11,7 +11,7 @@ class IndexAction extends SspAction {
 	* Author: zjs
 	*/
     public function index(){
-        $this->ad();
+        // $this->ad();
     }
     /**
     * 广告页面

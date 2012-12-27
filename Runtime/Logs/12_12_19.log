@@ -1,0 +1,300 @@
+[ 2012-12-19T10:14:57+08:00 ] ERR: (ThinkException) 非法操作:index
+[ 2012-12-19T10:14:57+08:00 ] 127.0.0.1 /ad/material
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000090s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: file /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index: line /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class MaterialAction could not be converted to string /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+
+[ 2012-12-19T11:00:48+08:00 ] 127.0.0.1 /ad/bill/newd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000113s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000170s ]
+NOTIC: [8] Use of undefined constant cpd - assumed 'cpd' /Users/adnetsalso/Sites/ad/Lib/Action/BillAction.class.php 第 62 行.
+
+[ 2012-12-19T11:00:51+08:00 ] 127.0.0.1 /ad/bill/newd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000098s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000179s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000151s ]
+NOTIC: [8] Use of undefined constant cpd - assumed 'cpd' /Users/adnetsalso/Sites/ad/Lib/Action/BillAction.class.php 第 62 行.
+
+[ 2012-12-19T13:35:58+08:00 ] ERR: [1] Cannot use object of type BillModel as array /Users/adnetsalso/Sites/ad/Lib/Model/BillModel.class.php 第 14 行.
+[ 2012-12-19T13:38:21+08:00 ] ERR: [1] Cannot use object of type BillModel as array /Users/adnetsalso/Sites/ad/Lib/Model/BillModel.class.php 第 14 行.
+[ 2012-12-19T13:38:52+08:00 ] 127.0.0.1 /ad/bill/newd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000088s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000129s ]
+NOTIC: [8] Use of undefined constant cpd - assumed 'cpd' /Users/adnetsalso/Sites/ad/Lib/Action/BillAction.class.php 第 61 行.
+SQL: alsogood.getCollection(bill) [ RunTime:0.000024s ]
+
+[ 2012-12-19T13:39:15+08:00 ] 127.0.0.1 /ad/bill/newd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000113s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000199s ]
+NOTIC: [8] Use of undefined constant cpd - assumed 'cpd' /Users/adnetsalso/Sites/ad/Lib/Action/BillAction.class.php 第 61 行.
+SQL: alsogood.getCollection(bill) [ RunTime:0.000029s ]
+
+[ 2012-12-19T13:43:41+08:00 ] 127.0.0.1 /ad/bill/newd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000141s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000174s ]
+NOTIC: [8] Use of undefined constant cpd - assumed 'cpd' /Users/adnetsalso/Sites/ad/Lib/Action/BillAction.class.php 第 61 行.
+SQL: alsogood.getCollection(bill) [ RunTime:0.000030s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 227 行.
+SQL: alsogood.bill.insert({"name":"\u5e7f\u544a\u6d4b\u8bd5","priority":2,"state":"w","desc":"\u7237\u662f\u5907\u6ce8","orders":{"oId":{"$id":"50d1540df8894ec408020000"},"name":"\u7237\u53ea\u662f\u4e00\u4e2a\u4e2a\u8ba2\u5355"},"seat":{"sId":{"$id":"50d1540df8894ec408030000"},"name":"\u7237\u662f\u4e2a\u5e7f\u544a\u4f4d"},"maters":[{"mId":{"$id":"50c1c3a0f8894e594a0d0000"},"name":"\u897f\u897f","link":"","file":{"resUrl":"\/509a041296838cb770a61bd0\/7edb9ae75f00acd1241bba2356bd61b6.gif","domain":"http:\/\/material.b0.upaiyun.com","width":"270","height":"129"},"genre":"p","priority":1}],"put":{"startTime":{"sec":1355241600,"usec":0},"stopTime":{"sec":1355587200,"usec":0},"inter":[[{"sec":1355371200,"usec":0},{"sec":1355376600,"usec":0}],[{"sec":1355486400,"usec":0},{"sec":1355506200,"usec":0}]]},"billing":{"type":"cpd","price":28.9,"number":3,"limit":10},"dir":{"system":"","regionDir":"","whileDir":""},"time":{"sec":1355895821,"usec":0}}) [ RunTime:0.059995s ]
+
+[ 2012-12-19T14:35:54+08:00 ] 127.0.0.1 /ad/bill
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000079s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000114s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given /Users/adnetsalso/Sites/ad/Lib/Action/BillAction.class.php 第 14 行.
+
+[ 2012-12-19T14:36:03+08:00 ] 127.0.0.1 /ad/bill
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000078s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000110s ]
+
+[ 2012-12-19T14:36:29+08:00 ] 127.0.0.1 /ad/bill
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000110s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000165s ]
+
+[ 2012-12-19T14:50:11+08:00 ] 127.0.0.1 /ad/bill
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000112s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000169s ]
+
+[ 2012-12-19T15:05:18+08:00 ] 127.0.0.1 /ad/bill
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000091s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000133s ]
+
+[ 2012-12-19T15:42:28+08:00 ] 127.0.0.1 /ad/bill/newd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000112s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000226s ]
+SQL: alsogood.getCollection(bill) [ RunTime:0.000022s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 227 行.
+SQL: alsogood.bill.insert({"name":"\u5e7f\u544a\u6d4b\u8bd5","priority":2,"state":"w","desc":"\u7237\u662f\u5907\u6ce8","orders":{"oId":{"$id":"50d16fe4f8894ee902020000"},"name":"\u7237\u53ea\u662f\u4e00\u4e2a\u4e2a\u8ba2\u5355"},"seat":{"sId":{"$id":"50d16fe4f8894ee902030000"},"name":"\u7237\u662f\u4e2a\u5e7f\u544a\u4f4d"},"maters":[{"mId":{"$id":"50c1c3a0f8894e594a0d0000"},"name":"\u897f\u897f","link":"","file":{"resUrl":"\/509a041296838cb770a61bd0\/7edb9ae75f00acd1241bba2356bd61b6.gif","domain":"http:\/\/material.b0.upaiyun.com","width":"270","height":"129"},"genre":"p","priority":1}],"put":{"startTime":{"sec":1355241600,"usec":0},"stopTime":{"sec":1355587200,"usec":0},"inter":[[{"sec":1355371200,"usec":0},{"sec":1355376600,"usec":0}],[{"sec":1355486400,"usec":0},{"sec":1355506200,"usec":0}]]},"billing":{"type":"cpd","price":28.9,"number":3,"limit":10},"dir":{"system":1,"regionDir":1,"whileDir":1},"time":{"sec":1355902948,"usec":0}}) [ RunTime:0.000587s ]
+
+[ 2012-12-19T15:55:53+08:00 ] 127.0.0.1 /ad/bill/newd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000065s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000259s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000104s ]
+SQL: alsogood.getCollection(bill) [ RunTime:0.000028s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 227 行.
+SQL: alsogood.bill.insert({"name":"\u5e7f\u544a\u6d4b\u8bd5","priority":2,"state":"w","desc":"\u7237\u662f\u5907\u6ce8","orders":{"oId":{"$id":"50d17309f8894ec308040000"},"name":"\u7237\u53ea\u662f\u4e00\u4e2a\u4e2a\u8ba2\u5355"},"seat":{"sId":{"$id":"50d17309f8894ec308050000"},"name":"\u7237\u662f\u4e2a\u5e7f\u544a\u4f4d"},"maters":[{"mId":{"$id":"50c1c3a0f8894e594a0d0000"},"name":"\u897f\u897f","link":"","file":{"resUrl":"\/509a041296838cb770a61bd0\/7edb9ae75f00acd1241bba2356bd61b6.gif","domain":"http:\/\/material.b0.upaiyun.com","width":"270","height":"129"},"genre":"p","priority":1}],"put":{"startTime":{"sec":1355241600,"usec":0},"stopTime":{"sec":1355587200,"usec":0},"inter":[[{"sec":1355371200,"usec":0},{"sec":1355376600,"usec":0}],[{"sec":1355486400,"usec":0},{"sec":1355506200,"usec":0}]]},"billing":{"type":"cpd","price":28.9,"number":3,"limit":10},"dir":{"system":1,"regionDir":1,"whileDir":1},"time":{"sec":1355903753,"usec":0}}) [ RunTime:0.000529s ]
+
+[ 2012-12-19T16:13:42+08:00 ] 127.0.0.1 /ad/bill/lst
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000096s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000151s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000018s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 433 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["_id"]) [ RunTime:0.000044s ]
+
+[ 2012-12-19T16:14:16+08:00 ] 127.0.0.1 /ad/bill/lst
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000090s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000165s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000135s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000027s ]
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["_id"]) [ RunTime:0.000073s ]
+
+[ 2012-12-19T16:20:19+08:00 ] 127.0.0.1 /ad/bill/lst
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000112s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000170s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000037s ]
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["_id"]) [ RunTime:0.000098s ]
+
+[ 2012-12-19T16:20:30+08:00 ] 127.0.0.1 /ad/bill/lst
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000066s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000092s ]
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000017s ]
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["_id"]) [ RunTime:0.000047s ]
+
+[ 2012-12-19T16:37:28+08:00 ] 127.0.0.1 /ad/bill
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000066s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000096s ]
+
+[ 2012-12-19T16:57:06+08:00 ] ERR: [4] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' /Users/adnetsalso/Sites/ad/Lib/Action/BillAction.class.php 第 41 行.
+[ 2012-12-19T16:57:23+08:00 ] 127.0.0.1 /ad/bill
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000066s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+
+[ 2012-12-19T16:58:47+08:00 ] 127.0.0.1 /ad/bill
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000075s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000109s ]
+
+[ 2012-12-19T16:58:48+08:00 ] 127.0.0.1 /ad/bill
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000067s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000191s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+
+[ 2012-12-19T16:58:54+08:00 ] 127.0.0.1 /ad/bill
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000093s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000130s ]
+
+[ 2012-12-19T16:59:24+08:00 ] 127.0.0.1 /ad/bill
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000066s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000150s ]
+
+[ 2012-12-19T17:08:28+08:00 ] 127.0.0.1 /ad/bill
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000111s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000170s ]
+
+[ 2012-12-19T17:08:48+08:00 ] 127.0.0.1 /ad/bill
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000061s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000086s ]
+
+[ 2012-12-19T17:09:39+08:00 ] 127.0.0.1 /ad/bill
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000113s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000166s ]
+
+[ 2012-12-19T17:09:57+08:00 ] 127.0.0.1 /ad/bill
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000074s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000237s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000128s ]
+
+[ 2012-12-19T17:43:04+08:00 ] 127.0.0.1 /ad/bill/newd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000105s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000137s ]
+
+[ 2012-12-19T18:00:17+08:00 ] 127.0.0.1 /ad/bill
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000074s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+
+[ 2012-12-19T18:00:28+08:00 ] 127.0.0.1 /ad/bill
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000074s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+
+[ 2012-12-19T18:05:17+08:00 ] 127.0.0.1 /ad/bill
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000065s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000210s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+
+[ 2012-12-19T18:12:03+08:00 ] 127.0.0.1 /ad/bill/newd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000077s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+

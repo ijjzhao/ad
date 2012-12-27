@@ -76,6 +76,15 @@ class MaterialModel extends MongoModel{
 		return $rs;
 	}
 	/**
+	* 广告部分需要用到的素材信息
+	*  @param $mId 素材ID
+	*/
+	public function findToAdById($mId){
+		$arr['where'] = array('_id' => new MongoId($mId),'state' => 1);
+		$arr['field'] = array('name','link','file','genre','code');//指定需要查找的字段
+		return $this->find($arr);
+	}
+	/**
 	* 修改素材的状态
 	*/
 	public function updateState($mId,$state){
@@ -86,7 +95,7 @@ class MaterialModel extends MongoModel{
 		return $this->db->update($data,$arr);
 	}
 	/**
-	* 素材修改
+	* 素材修改  
 	* $data 需要修改的数据
 	* $mId 素材ID
 	*/

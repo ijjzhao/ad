@@ -16,6 +16,17 @@ class AdseatModel extends MongoModel{
 		return $this->db->select($arr);
 	}
 	/**
+	* 根据站点id查找广告位Id
+	* $siteId 站点编号
+	*/
+	public function selectIdBySid($siteId){
+		$arr['where'] = array(
+			'website' => new MongoId($siteId)
+		);
+		$arr['field'] = array('_id');//指定查找的字段
+		return $this->select($arr);
+	}
+	/**
 	* 新增广告位
 	* $arr 新增广告位的信息数组
 	*/

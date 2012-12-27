@@ -1,0 +1,374 @@
+[ 2012-12-27T11:47:45+08:00 ] 127.0.0.1 /ad/bill/lst
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000137s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.017605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+NOTIC: [8] Undefined offset: 2 /Users/adnetsalso/Sites/ad/Lib/Action/BillAction.class.php 第 199 行.
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000045s ]
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["_id"]) [ RunTime:0.000713s ]
+SQL: alsogood.getCollection(bill) [ RunTime:0.000027s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 436 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.bill.find({"seat":{"$in":["509ca84af8894e3873000000","509ca88ef8894e7585000000","509ca90df8894e7485000000","509ca936f8894e758a000000","509ca986f8894e7585010000","509ca9b0f8894e7485010000","509ca9f3f8894e0f73000000","509cb2eff8894e7485020000","50a1e96af8894ec319000000","50a1e9bef8894e6c54000000","50a1f3b3f8894e6217000000","50a200a6f8894e525d000000","50a2212ef8894ee45d010000","50a25386f8894eb970010000","50a35cd0f8894ea89e000000","50a49ad3f8894e6ad9000000","50ac67f9f8894e9950010000"]}}).limit(10) [ RunTime:0.000084s ]
+
+[ 2012-12-27T11:47:51+08:00 ] 127.0.0.1 /ad/bill/lst
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000077s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000236s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000108s ]
+NOTIC: [8] Undefined offset: 2 /Users/adnetsalso/Sites/ad/Lib/Action/BillAction.class.php 第 199 行.
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000018s ]
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["_id"]) [ RunTime:0.000078s ]
+SQL: alsogood.getCollection(bill) [ RunTime:0.000023s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 436 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.bill.find({"seat":{"$in":["509ca84af8894e3873000000","509ca88ef8894e7585000000","509ca90df8894e7485000000","509ca936f8894e758a000000","509ca986f8894e7585010000","509ca9b0f8894e7485010000","509ca9f3f8894e0f73000000","509cb2eff8894e7485020000","50a1e96af8894ec319000000","50a1e9bef8894e6c54000000","50a1f3b3f8894e6217000000","50a200a6f8894e525d000000","50a2212ef8894ee45d010000","50a25386f8894eb970010000","50a35cd0f8894ea89e000000","50a49ad3f8894e6ad9000000","50ac67f9f8894e9950010000"]}}).limit(10) [ RunTime:0.000048s ]
+
+[ 2012-12-27T14:30:04+08:00 ] 127.0.0.1 /ad/bill/lst
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000108s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000141s ]
+NOTIC: [8] Undefined offset: 2 /Users/adnetsalso/Sites/ad/Lib/Action/BillAction.class.php 第 192 行.
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000018s ]
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["_id"]) [ RunTime:0.000046s ]
+SQL: alsogood.getCollection(bill) [ RunTime:0.000013s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 436 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.bill.find({"seat":{"$in":["509ca84af8894e3873000000","509ca88ef8894e7585000000","509ca90df8894e7485000000","509ca936f8894e758a000000","509ca986f8894e7585010000","509ca9b0f8894e7485010000","509ca9f3f8894e0f73000000","509cb2eff8894e7485020000","50a1e96af8894ec319000000","50a1e9bef8894e6c54000000","50a1f3b3f8894e6217000000","50a200a6f8894e525d000000","50a2212ef8894ee45d010000","50a25386f8894eb970010000","50a35cd0f8894ea89e000000","50a49ad3f8894e6ad9000000","50ac67f9f8894e9950010000"]}}).limit(10) [ RunTime:0.000050s ]
+
+[ 2012-12-27T15:02:05+08:00 ] 127.0.0.1 /ad/bill/inf
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000067s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000139s ]
+NOTIC: [8] Undefined offset: 2 /Users/adnetsalso/Sites/ad/Lib/Action/BillAction.class.php 第 217 行.
+SQL: alsogood.getCollection(bill) [ RunTime:0.000027s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 516 行.
+SQL: alsogood.bill.findOne({"_id":{"$id":"50dbf26df8894eb084000000"}}) [ RunTime:0.000204s ]
+
+[ 2012-12-27T15:03:08+08:00 ] 127.0.0.1 /ad/bill/inf/50d9729ef8894e5367030000
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000067s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000225s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000102s ]
+SQL: alsogood.getCollection(bill) [ RunTime:0.000018s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 516 行.
+SQL: alsogood.bill.findOne({"_id":{"$id":"50d9729ef8894e5367030000"}}) [ RunTime:0.000226s ]
+
+[ 2012-12-27T15:51:36+08:00 ] ERR: [4] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' /Users/adnetsalso/Sites/ad/Lib/Action/BillAction.class.php 第 245 行.
+[ 2012-12-27T15:51:53+08:00 ] 127.0.0.1 /ad/bill/upd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000091s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000107s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000209s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c323f8894ee0be040000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000463s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c33ff8894e474f000000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000337s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c3a0f8894e594a0d0000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000337s ]
+
+[ 2012-12-27T15:57:21+08:00 ] 127.0.0.1 /ad/bill/upd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000126s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000215s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000159s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000153s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c323f8894ee0be040000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000360s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c33ff8894e474f000000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000288s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c3a0f8894e594a0d0000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000351s ]
+
+[ 2012-12-27T15:57:46+08:00 ] 127.0.0.1 /ad/bill/upd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000095s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000036s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c323f8894ee0be040000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000347s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c33ff8894e474f000000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000313s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c3a0f8894e594a0d0000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000339s ]
+
+[ 2012-12-27T15:57:52+08:00 ] 127.0.0.1 /ad/bill/inf/50d9729ef8894e5367030000
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000067s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.027838s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000171s ]
+SQL: alsogood.getCollection(bill) [ RunTime:0.000018s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 516 行.
+SQL: alsogood.bill.findOne({"_id":{"$id":"50d9729ef8894e5367030000"}}) [ RunTime:0.000233s ]
+
+[ 2012-12-27T15:58:08+08:00 ] 127.0.0.1 /ad/bill/inf/50d9729ef8894e5367030000
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000064s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000086s ]
+SQL: alsogood.getCollection(bill) [ RunTime:0.000023s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 516 行.
+SQL: alsogood.bill.findOne({"_id":{"$id":"50d9729ef8894e5367030000"}}) [ RunTime:0.000482s ]
+
+[ 2012-12-27T15:58:28+08:00 ] 127.0.0.1 /ad/bill/lst
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000097s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000166s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000095s ]
+NOTIC: [8] Undefined offset: 2 /Users/adnetsalso/Sites/ad/Lib/Action/BillAction.class.php 第 192 行.
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000024s ]
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["_id"]) [ RunTime:0.000062s ]
+SQL: alsogood.getCollection(bill) [ RunTime:0.000026s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 436 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.bill.find({"seat":{"$in":["509ca84af8894e3873000000","509ca88ef8894e7585000000","509ca90df8894e7485000000","509ca936f8894e758a000000","509ca986f8894e7585010000","509ca9b0f8894e7485010000","509ca9f3f8894e0f73000000","509cb2eff8894e7485020000","50a1e96af8894ec319000000","50a1e9bef8894e6c54000000","50a1f3b3f8894e6217000000","50a200a6f8894e525d000000","50a2212ef8894ee45d010000","50a25386f8894eb970010000","50a35cd0f8894ea89e000000","50a49ad3f8894e6ad9000000","50ac67f9f8894e9950010000"]}}).limit(10) [ RunTime:0.000047s ]
+
+[ 2012-12-27T15:58:53+08:00 ] 127.0.0.1 /ad/bill/lst
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000077s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000086s ]
+NOTIC: [8] Undefined offset: 2 /Users/adnetsalso/Sites/ad/Lib/Action/BillAction.class.php 第 192 行.
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000025s ]
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["_id"]) [ RunTime:0.000103s ]
+SQL: alsogood.getCollection(bill) [ RunTime:0.000013s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 436 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.bill.find({"seat":{"$in":["509ca84af8894e3873000000","509ca88ef8894e7585000000","509ca90df8894e7485000000","509ca936f8894e758a000000","509ca986f8894e7585010000","509ca9b0f8894e7485010000","509ca9f3f8894e0f73000000","509cb2eff8894e7485020000","50a1e96af8894ec319000000","50a1e9bef8894e6c54000000","50a1f3b3f8894e6217000000","50a200a6f8894e525d000000","50a2212ef8894ee45d010000","50a25386f8894eb970010000","50a35cd0f8894ea89e000000","50a49ad3f8894e6ad9000000","50ac67f9f8894e9950010000"]}}).limit(10) [ RunTime:0.000051s ]
+
+[ 2012-12-27T15:58:56+08:00 ] 127.0.0.1 /ad/bill/lst
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000095s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000170s ]
+NOTIC: [8] Undefined offset: 2 /Users/adnetsalso/Sites/ad/Lib/Action/BillAction.class.php 第 192 行.
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000028s ]
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["_id"]) [ RunTime:0.000067s ]
+SQL: alsogood.getCollection(bill) [ RunTime:0.000032s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 436 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.bill.find({"seat":{"$in":["509ca84af8894e3873000000","509ca88ef8894e7585000000","509ca90df8894e7485000000","509ca936f8894e758a000000","509ca986f8894e7585010000","509ca9b0f8894e7485010000","509ca9f3f8894e0f73000000","509cb2eff8894e7485020000","50a1e96af8894ec319000000","50a1e9bef8894e6c54000000","50a1f3b3f8894e6217000000","50a200a6f8894e525d000000","50a2212ef8894ee45d010000","50a25386f8894eb970010000","50a35cd0f8894ea89e000000","50a49ad3f8894e6ad9000000","50ac67f9f8894e9950010000"]}}).limit(10) [ RunTime:0.000097s ]
+
+[ 2012-12-27T15:59:09+08:00 ] 127.0.0.1 /ad/bill/lst
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000071s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000124s ]
+NOTIC: [8] Undefined offset: 2 /Users/adnetsalso/Sites/ad/Lib/Action/BillAction.class.php 第 192 行.
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000018s ]
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["_id"]) [ RunTime:0.000098s ]
+SQL: alsogood.getCollection(bill) [ RunTime:0.000029s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 436 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.bill.find({"seat":{"$in":["509ca84af8894e3873000000","509ca88ef8894e7585000000","509ca90df8894e7485000000","509ca936f8894e758a000000","509ca986f8894e7585010000","509ca9b0f8894e7485010000","509ca9f3f8894e0f73000000","509cb2eff8894e7485020000","50a1e96af8894ec319000000","50a1e9bef8894e6c54000000","50a1f3b3f8894e6217000000","50a200a6f8894e525d000000","50a2212ef8894ee45d010000","50a25386f8894eb970010000","50a35cd0f8894ea89e000000","50a49ad3f8894e6ad9000000","50ac67f9f8894e9950010000"]}}).limit(10) [ RunTime:0.000054s ]
+
+[ 2012-12-27T16:04:42+08:00 ] 127.0.0.1 /ad/bill/upd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000065s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000204s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000017s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c323f8894ee0be040000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000340s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c33ff8894e474f000000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000254s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c3a0f8894e594a0d0000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000217s ]
+
+[ 2012-12-27T16:04:55+08:00 ] 127.0.0.1 /ad/bill/upd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000066s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000209s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000035s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c323f8894ee0be040000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000505s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c33ff8894e474f000000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000385s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c3a0f8894e594a0d0000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000318s ]
+NOTIC: [8] Undefined index: rgn /Users/adnetsalso/Sites/ad/Lib/Action/BillAction.class.php 第 280 行.
+
+[ 2012-12-27T16:04:58+08:00 ] 127.0.0.1 /ad/bill/upd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000068s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000185s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000095s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000020s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c323f8894ee0be040000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000455s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c33ff8894e474f000000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000363s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c3a0f8894e594a0d0000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000330s ]
+NOTIC: [8] Undefined index: rgn /Users/adnetsalso/Sites/ad/Lib/Action/BillAction.class.php 第 280 行.
+
+[ 2012-12-27T16:05:26+08:00 ] 127.0.0.1 /ad/bill/lst
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000111s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000116s ]
+NOTIC: [8] Undefined offset: 2 /Users/adnetsalso/Sites/ad/Lib/Action/BillAction.class.php 第 192 行.
+SQL: alsogood.getCollection(adseat) [ RunTime:0.000016s ]
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.adseat.find({"website":{"$id":"509a04be96838cb770a61bd2"}},["_id"]) [ RunTime:0.000046s ]
+SQL: alsogood.getCollection(bill) [ RunTime:0.000019s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 436 行.
+NOTIC: [8] Undefined index: order /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 447 行.
+SQL: alsogood.bill.find({"seat":{"$in":["509ca84af8894e3873000000","509ca88ef8894e7585000000","509ca90df8894e7485000000","509ca936f8894e758a000000","509ca986f8894e7585010000","509ca9b0f8894e7485010000","509ca9f3f8894e0f73000000","509cb2eff8894e7485020000","50a1e96af8894ec319000000","50a1e9bef8894e6c54000000","50a1f3b3f8894e6217000000","50a200a6f8894e525d000000","50a2212ef8894ee45d010000","50a25386f8894eb970010000","50a35cd0f8894ea89e000000","50a49ad3f8894e6ad9000000","50ac67f9f8894e9950010000"]}}).limit(10) [ RunTime:0.000062s ]
+
+[ 2012-12-27T16:05:39+08:00 ] 127.0.0.1 /ad/bill/inf/50dabc8cf8894eab84000000
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000065s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000092s ]
+SQL: alsogood.getCollection(bill) [ RunTime:0.000023s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 516 行.
+SQL: alsogood.bill.findOne({"_id":{"$id":"50dabc8cf8894eab84000000"}}) [ RunTime:0.000355s ]
+
+[ 2012-12-27T16:11:32+08:00 ] 127.0.0.1 /ad/bill/upd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000061s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000086s ]
+SQL: alsogood.getCollection(material) [ RunTime:0.000026s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c323f8894ee0be040000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000346s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c33ff8894e474f000000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000227s ]
+SQL: alsogood.material.findOne({"_id":{"$id":"50c1c3a0f8894e594a0d0000"},"state":1},["name","link","file","genre","code"]) [ RunTime:0.000216s ]
+NOTIC: [8] Undefined index: rgn /Users/adnetsalso/Sites/ad/Lib/Action/BillAction.class.php 第 280 行.
+SQL: alsogood.getCollection(bill) [ RunTime:0.000022s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 327 行.
+NOTIC: [8] Undefined offset: 0 /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 658 行.
+NOTIC: [8] Undefined offset: 0 /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 658 行.
+NOTIC: [8] Undefined offset: 0 /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 658 行.
+SQL: alsogood.bill.update({"_id":{"$id":"50dabc8cf8894eab84000000"}},{"$set":{"name":"\u5509\u5509\u554a\u54ce\u5466","desc":"\u5566\u5566\u5566 \u5fb7\u739b\u897f\u4e9a","order":"50a1f3b3f8894e6217000000","priority":"1","seat":"509ca88ef8894e7585000000","billing":{"type":"m","price":"1.5","number":"150","limit":"10"},"put":{"pyp":"p","time":[{"sec":1355932800,"usec":0},{"sec":1356883200,"usec":0},{"sec":1355932800,"usec":0},{"sec":1356105600,"usec":0},{"sec":1356364800,"usec":0},{"sec":1356883200,"usec":0}]},"mater":[{"_id":"50c1c323f8894ee0be040000","name":"\u54c7\u54c8\u54c8\u54c8","link":"","code":"","file":{"resUrl":"\/509a041296838cb770a61bd0\/07d73bda801c7863ae6f97b67c58b52e.jpg","domain":"http:\/\/material.b0.upaiyun.com","width":"477","height":"210","resDesc":"\u56fe\u7247\u63cf\u8ff0"},"genre":"p"},{"_id":"50c1c33ff8894e474f000000","name":"\u62dc\u8bfb","link":"","code":"","file":{"resUrl":"\/509a041296838cb770a61bd0\/54af4e57c774289448f83a8e461f814d.gif","domain":"http:\/\/material.b0.upaiyun.com","width":"270","height":"129","resDesc":"\u56fe\u7247\u63cf\u8ff0"},"genre":"p"},{"_id":"50c1c3a0f8894e594a0d0000","name":"\u897f\u897f","link":"","code":"","file":{"resUrl":"\/509a041296838cb770a61bd0\/7edb9ae75f00acd1241bba2356bd61b6.gif","domain":"http:\/\/material.b0.upaiyun.com","width":"270","height":"129","resDesc":"\u56fe\u7247\u63cf\u8ff0"},"genre":"p"}],"dir":{"whileDir":1,"regionDir":{"isShow":1,"reg":null},"system":["w","m","l"]}}}) [ RunTime:0.000238s ]
+
+[ 2012-12-27T16:11:37+08:00 ] 127.0.0.1 /ad/bill/inf/50dabc8cf8894eab84000000
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000062s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000174s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000086s ]
+SQL: alsogood.getCollection(bill) [ RunTime:0.000024s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 516 行.
+SQL: alsogood.bill.findOne({"_id":{"$id":"50dabc8cf8894eab84000000"}}) [ RunTime:0.000257s ]
+
+[ 2012-12-27T16:32:08+08:00 ] 127.0.0.1 /ad/bill/upd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000099s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000165s ]
+NOTIC: [8] Undefined variable: read_arr /Users/adnetsalso/Sites/ad/Lib/Action/SspAction.class.php 第 119 行.
+SQL: alsogood.getCollection(bill) [ RunTime:0.000057s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 327 行.
+NOTIC: [8] Undefined offset: 0 /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 658 行.
+SQL: alsogood.bill.update({"_id":{"$id":"50dabc8cf8894eab84000000"}},{"$set":{"priority":"1","billing":null,"dir":{"system":[1]}}}) [ RunTime:0.023607s ]
+
+[ 2012-12-27T16:32:16+08:00 ] 127.0.0.1 /ad/bill/inf/50dabc8cf8894eab84000000
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000078s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000166s ]
+SQL: alsogood.getCollection(bill) [ RunTime:0.000049s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 516 行.
+SQL: alsogood.bill.findOne({"_id":{"$id":"50dabc8cf8894eab84000000"}}) [ RunTime:0.000414s ]
+
+[ 2012-12-27T16:33:11+08:00 ] 127.0.0.1 /ad/bill/upd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000134s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000149s ]
+NOTIC: [8] Undefined variable: read_arr /Users/adnetsalso/Sites/ad/Lib/Action/SspAction.class.php 第 119 行.
+SQL: alsogood.getCollection(bill) [ RunTime:0.000046s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 327 行.
+NOTIC: [8] Undefined offset: 0 /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 658 行.
+SQL: alsogood.bill.update({"_id":{"$id":"50dabc8cf8894eab84000000"}},{"$set":{"billing":null,"dir":{"whileDir":{"0":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"1":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"2":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"3":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"4":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"5":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"6":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"1355932800":{"1356883200":1,"1356105600":1}},"regionDir":{"isShow":1,"reg":[["\u5317\u4eac",1],["\u56db\u5ddd","\u6210\u90fd\u5e02"],["\u56db\u5ddd","\u5fb7\u9633\u5e02"],["\u6d59\u6c5f","\u676d\u5dde\u5e02"]]},"system":[1]}}}) [ RunTime:0.000208s ]
+
+[ 2012-12-27T16:40:09+08:00 ] 127.0.0.1 /ad/bill/upd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000094s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000140s ]
+NOTIC: [8] Undefined variable: read_arr /Users/adnetsalso/Sites/ad/Lib/Action/SspAction.class.php 第 119 行.
+SQL: alsogood.getCollection(bill) [ RunTime:0.000033s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 327 行.
+NOTIC: [8] Undefined offset: 0 /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 658 行.
+SQL: alsogood.bill.update({"_id":{"$id":"50dabc8cf8894eab84000000"}},{"$set":{"billing":null,"dir":{"whileDir":[[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0],[0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],"regionDir":{"isShow":1,"reg":[["\u5317\u4eac",1],["\u56db\u5ddd","\u6210\u90fd\u5e02"],["\u56db\u5ddd","\u5fb7\u9633\u5e02"],["\u6d59\u6c5f","\u676d\u5dde\u5e02"]]},"system":[1]}}}) [ RunTime:0.010887s ]
+
+[ 2012-12-27T16:40:14+08:00 ] 127.0.0.1 /ad/bill/inf/50dabc8cf8894eab84000000
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000082s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000144s ]
+SQL: alsogood.getCollection(bill) [ RunTime:0.000033s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 516 行.
+SQL: alsogood.bill.findOne({"_id":{"$id":"50dabc8cf8894eab84000000"}}) [ RunTime:0.000266s ]
+
+[ 2012-12-27T16:42:40+08:00 ] 127.0.0.1 /ad/bill/upd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000158s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000199s ]
+NOTIC: [8] Undefined variable: read_arr /Users/adnetsalso/Sites/ad/Lib/Action/SspAction.class.php 第 119 行.
+SQL: alsogood.getCollection(bill) [ RunTime:0.000048s ]
+NOTIC: [8] Undefined index: model /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 327 行.
+NOTIC: [8] Undefined offset: 0 /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 658 行.
+SQL: alsogood.bill.update({"_id":{"$id":"50dabc8cf8894eab84000000"}},{"$set":{"billing":null,"dir.regionDir":{"isShow":1,"reg":[["\u56db\u5ddd","\u6210\u90fd\u5e02"],["\u56db\u5ddd","\u5fb7\u9633\u5e02"]]},"dir.system":["w","m","l"]}}) [ RunTime:0.024155s ]
+
+[ 2012-12-27T16:42:48+08:00 ] 127.0.0.1 /ad/bill/inf/50dabc8cf8894eab84000000
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000129s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000148s ]
+SQL: alsogood.getCollection(bill) [ RunTime:0.000031s ]
+NOTIC: [8] Undefined index: field /Users/adnetsalso/Sites/ad/ThinkPHP/Lib/Driver/Db/DbMongo.class.php 第 516 行.
+SQL: alsogood.bill.findOne({"_id":{"$id":"50dabc8cf8894eab84000000"}}) [ RunTime:0.000422s ]
+
