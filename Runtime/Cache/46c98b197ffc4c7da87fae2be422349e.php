@@ -90,10 +90,10 @@
 							</div>
 						</div>
 						<div id="contBox" class="cont_mat"></div>
-						<span class="filter">没有符合条件的素材</span>
+						<span id="filter3" class="filter">没有符合条件的素材</span>
 						<div class="pages_box">
-							<div id="loading_pgs"><span class="load_pgs"></span></div>
-							<div id="pgs_box" class="pagination"></div>
+							<div id="loading_pgs3" class="loading_pgs"><span class="load_pgs"></span></div>
+							<div id="pgs_box3" class="pagination"></div>
 						</div>
 					</div>
 				</div>

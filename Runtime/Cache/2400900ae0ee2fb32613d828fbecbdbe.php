@@ -6,6 +6,7 @@
 		<title>广告 - Adnets</title>
 		<link rel="shortcut icon" href="__PUBLIC__/img/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="__PUBLIC__/css/also.css" type="text/css">
+		<link rel="stylesheet" href="__PUBLIC__/css/datepicker.css" type="text/css">
 	<body>
 				<div class="menu">
 			<div class="logo"><a href="#"><img src="__PUBLIC__/img/logo.png" alt="Adnets 广告管理系统"></a></div>
@@ -60,14 +61,13 @@
 				<p><a href="#">退出</a></p>
 			</div>
 		</div>
-		<body>
-		<div class="main">
+		<div id="main">
 			<div class="board">
-				<div class="main_ad">
+				<div class="main_ad" id="main_ad">
 					<div class="topic_ad">
 						<h2>有<span class="topic_ad_num1">66</span>个广告正在投放，<span class="topic_ad_num2">33</span>个广告等待投放</h2>
 						<a href="tita.html" class="timetable_ad">查看广告排期</a>
-						<a href="#" class="addAd_ad">投放广告</a>
+						<a href="javascript:void(0)" onclick="also_slider(7,'also_slider_ad','main_ad','新增广告','main');" class="addAd_ad">投放广告</a>
 						<div class="filter_ad">
 							<select id="sele_ads">
 								<option value="0">所有广告</option>
@@ -132,12 +132,12 @@
 								<a href="#">查看统计</a>
 							</div>
 						</div>
-
 					</div>
-					<span class="filter">没有符合条件的广告</span>
+
+					<span id="filter4" class="filter">没有符合条件的广告</span>
 					<div class="pages_box">
-						<div id="loading_pgs"><span class="load_pgs"></span></div>
-						<div id="pgs_box" class="pagination"></div>
+						<div id="loading_pgs4" class="loading_pgs"><span class="load_pgs"></span></div>
+						<div id="pgs_box4" class="pagination"></div>
 					</div>
 				</div>
 			</div>
@@ -145,7 +145,9 @@
 		<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/js/poshytip.min.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/js/pagination.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/datepicker.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/js/also.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/distr.js"></script>
 		<script type="text/javascript">
 
 			$(document).ready(function(){
@@ -162,6 +164,5 @@
 			})
 						
 		</script>
-	</body>
 	</body>
 </html>
