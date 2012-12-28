@@ -244,7 +244,14 @@ class AdseatAction extends SspAction{
 	*/
 	public function all(){
 		$seat_model = new AdseatModel();
-		$rs = $seat_model->selectBySiteid($this->getWebSiteId,array('name'));
-		$this->ajaxReturn($rs,'广告位列表',1);
+		$rs = $seat_model->selectBySiteid($this->getWebSiteId(),array('name'));
+		$return_arr  = array();
+		$index = 0;
+		foreach ($rs as $v) {
+			$id = $v['_id']->__toString();
+			$return_arr[$index] = array('_id' => $id,'name' => $v['name']);
+			$index++;
+		}		
+		$this->ajaxReturn($return_arr,'广告位列表',1);
 	}
 }
