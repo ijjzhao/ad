@@ -8,11 +8,15 @@ class AdseatModel extends MongoModel{
 	* 根据站点id查找广告位
 	* $siteId 站点编号
 	*/
-	public function selectBySiteid($siteId){
+	public function selectBySiteid($siteId,$field = null){
 		$arr['where'] = array(
 			'website' => new MongoId($siteId)
 		);
-		$arr['field'] = array('name','shape','priSize','auxSize');//指定查找的字段
+		if($field){
+			$arr['field'] = $field;
+		}else{
+			$arr['field'] = array('name','shape','priSize','auxSize');//指定查找的字段
+		}
 		return $this->db->select($arr);
 	}
 	/**

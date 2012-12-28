@@ -239,4 +239,12 @@ class AdseatAction extends SspAction{
 		$this->siteToSession($site_id);
 		return $site_info;
 	}
+	/**
+	* 获取当前站点下的所有的广告位
+	*/
+	public function all(){
+		$seat_model = new AdseatModel();
+		$rs = $seat_model->selectBySiteid($this->getWebSiteId,array('name'));
+		$this->ajaxReturn($rs,'广告位列表',1);
+	}
 }
