@@ -1,0 +1,65 @@
+[ 2012-12-31T15:06:27+08:00 ] 127.0.0.1 /ad/Order/selectOrder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.003251s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003450s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.010068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008055s ]
+SQL: alsogood.getCollection(order) [ RunTime:0.000068s ]
+NOTIC: [8] Undefined index: where D:\wamp\www\ad\ThinkPHP\Lib\Driver\Db\DbMongo.class.php 第 435 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\ad\ThinkPHP\Lib\Driver\Db\DbMongo.class.php 第 764 行.
+NOTIC: [8] Undefined index: order D:\wamp\www\ad\ThinkPHP\Lib\Driver\Db\DbMongo.class.php 第 447 行.
+SQL: alsogood.order.find({},["_id","name","site"]) [ RunTime:0.000188s ]
+
+[ 2012-12-31T15:06:44+08:00 ] 127.0.0.1 /ad/Client/selClient
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002064s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002188s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000825s ]
+SQL: alsogood.getCollection(client) [ RunTime:0.000025s ]
+NOTIC: [8] Undefined index: model D:\wamp\www\ad\ThinkPHP\Lib\Driver\Db\DbMongo.class.php 第 433 行.
+NOTIC: [8] Undefined index: where D:\wamp\www\ad\ThinkPHP\Lib\Driver\Db\DbMongo.class.php 第 435 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\ad\ThinkPHP\Lib\Driver\Db\DbMongo.class.php 第 764 行.
+NOTIC: [8] Undefined index: field D:\wamp\www\ad\ThinkPHP\Lib\Driver\Db\DbMongo.class.php 第 436 行.
+NOTIC: [8] Undefined index: order D:\wamp\www\ad\ThinkPHP\Lib\Driver\Db\DbMongo.class.php 第 447 行.
+SQL: alsogood.client.find({}) [ RunTime:0.000044s ]
+
+[ 2012-12-31T15:07:16+08:00 ] 127.0.0.1 /ad/order/selectOrder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001227s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001336s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000947s ]
+SQL: alsogood.getCollection(order) [ RunTime:0.000025s ]
+NOTIC: [8] Undefined index: where D:\wamp\www\ad\ThinkPHP\Lib\Driver\Db\DbMongo.class.php 第 435 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\ad\ThinkPHP\Lib\Driver\Db\DbMongo.class.php 第 764 行.
+NOTIC: [8] Undefined index: order D:\wamp\www\ad\ThinkPHP\Lib\Driver\Db\DbMongo.class.php 第 447 行.
+SQL: alsogood.order.find({},["_id","name","site"]) [ RunTime:0.000045s ]
+
+[ 2012-12-31T15:07:30+08:00 ] 127.0.0.1 /ad/order/addOrder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002038s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002217s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000758s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001506s ]
+SQL: alsogood.getCollection(order) [ RunTime:0.000048s ]
+NOTIC: [8] Undefined index: model D:\wamp\www\ad\ThinkPHP\Lib\Driver\Db\DbMongo.class.php 第 227 行.
+SQL: alsogood.order.insert({"site":"509a04be96838cb770a61bd2","name":"vv","salesman":{"name":"dd"},"clientele":"\u5ba2\u6237\u8054\u7cfb\u4ebaid","state":"1","desc":"dfdfe","creatTime":{"sec":1954825649,"usec":0}}) [ RunTime:0.296264s ]
+
+[ 2012-12-31T15:07:35+08:00 ] 127.0.0.1 /ad/order/selectOrder
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001076s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001171s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+SQL: alsogood.getCollection(order) [ RunTime:0.000026s ]
+NOTIC: [8] Undefined index: where D:\wamp\www\ad\ThinkPHP\Lib\Driver\Db\DbMongo.class.php 第 435 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\ad\ThinkPHP\Lib\Driver\Db\DbMongo.class.php 第 764 行.
+NOTIC: [8] Undefined index: order D:\wamp\www\ad\ThinkPHP\Lib\Driver\Db\DbMongo.class.php 第 447 行.
+SQL: alsogood.order.find({},["_id","name","site"]) [ RunTime:0.000042s ]
+
