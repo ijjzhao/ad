@@ -11,25 +11,28 @@ class OrderAction extends SspAction{
 		 */	
 	function addOrder(){
 		$keys = array('sit','nme','sne','sta','dec','cnd');
-		$_POST = array('sit'=>$this->getWebSiteId(),'nme'=>'vv','sne'=>'dd','sta'=>1,'dec'=>'dfdfe','cnd'=>'客户联系人id');
-		$arr = $this->comins($keys,$_POST);
-		if(!empty($arr)){
-			$od = new OrderModel();
-			$rs = $od->newOrder($arr);
-			if($rs['ok']){
-				$this->ajaxReturn($rs['id'],'添加成功',1);
+		//$_POST = array('sit'=>$this->getWebSiteId(),'nme'=>'vv','sne'=>'dd','sta'=>1,'dec'=>'dfdfe','cnd'=>'客户联系人id');
+		if($this->isPOST()){
+			$arr = $this->comins($keys,$_POST);
+			if(!empty($arr)){
+				$od = new OrderModel();
+				$rs = $od->newOrder($arr);
+				if($rs['ok']){
+					$this->ajaxReturn($rs['id'],'添加成功',1);
+				}else{
+					$this->ajaxReturn('','添加失败',0);
+				}
 			}else{
-				$this->ajaxReturn('','添加失败',0);
+				$this->ajaxReturn("","信息不全",0);
 			}
-		}else{
-			$this->ajaxReturn("","信息不全",0);
 		}
+	
 	}	
 	 /** [select description]
 	 * @return [type] [description]
 	 * 查看订单信息
 	 */
-	function selectOrder(){
+	function selectOrder(){ 
 		if($this->isGet()){
 			$om = new OrderModel();
 			$rs = $om->selOrder();
@@ -47,18 +50,17 @@ class OrderAction extends SspAction{
 	 */
 	function selById(){
 		if($this->isGet()){
-			$id = array();
-			$om = new OrderModel();
-			$rs = $om->selOrder();
-			foreach ($rs as $key => $value) {
-				$id['_id'] = $rs[$key]['_id'];
-			}
-			$r = $om->selById($id['_id']);
-			if($r){
-				$this->ajaxReturn($r,'操作成功',1);
+			if(!empty($_GET['id'])){
+				$om = new OrderModel();
+				$r = $om->selById($_GET['id']);
+				if($r){
+					$this->ajaxReturn($r,'操作成功',1);
+				}else{
+					$this->ajaxReturn('','操作出错',0);
+				}
 			}else{
-				$this->ajaxReturn('','操作出错',0);
-			}
+				$this->ajaxReturn('','信息不全',0);
+			}	
 		}
 	}
 	/**
@@ -90,27 +92,22 @@ class OrderAction extends SspAction{
 	 * ById
 	 */
 	function upOrder(){
-		$id=array();
-		$om = new OrderModel();
-		$rs = $om->selOrder();
-		foreach ($rs as $key => $value) {
-			$id['_id'] = $rs[$key]['_id'];
-		}
-		$keys = array('sit','nme','sne','sta','dec','cnd');
-		$_POST = array('sit'=>$this->getWebSiteId(),'nme'=>'rr','sne'=>'dd','sta'=>1,'dec'=>'dfdfe','cnd'=>'客户联系人id');
-		$arr= $this->comins($keys,$_POST);
-		if(!empty($arr)){
-			$od = new OrderModel();
-			$rs = $od->upOrders($arr,$id['_id']);
-			if($rs){
-				$this->ajaxReturn($o_id,'修改成功',1);
+		if($this->isPOST()){
+			$keys = array('sit','nme','sne','sta','dec','cnd');
+			//$_POST = array('sit'=>$this->getWebSiteId(),'nme'=>'rr','sne'=>'dd','sta'=>1,'dec'=>'dfdfe','cnd'=>'客户联系人id');
+			$arr= $this->comins($keys,$_POST['id']);
+			if(!empty($arr)){
+				$od = new OrderModel();
+				$rs = $od->upOrders($arr,$_);
+				if($rs){
+					$this->ajaxReturn($o_id,'修改成功',1);
+				}else{
+					$this->ajaxReturn('','修改出错',0);
+				}	
 			}else{
-				$this->ajaxReturn('','修改出错',0);
-			}	
-		}else{
-			$this->ajaxReturn("","信息不全",0);
-		}
-		
+				$this->ajaxReturn("","信息不全",0);
+			}
+		}	
 	}
 	/**
 	 * [comins description]
