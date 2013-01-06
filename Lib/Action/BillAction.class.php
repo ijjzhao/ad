@@ -77,7 +77,7 @@ class BillAction extends SspAction{
 	// 		// 'wen' => '[["1355932800","1356883200"],["1355932800" ,"1356105600"]]'
 	// 	);
 	// 	print_r($_POST);
-		$exist_key_arr = array('name','order','seat');//必须添加的Key
+		$exist_key_arr = array('ana','sat');//必须添加的Key
 		if($this->isPost() && $this->postKeyExist($exist_key_arr)){
 			$read_arr = $this->readArray($this->biilKayArr(),$_POST);//读取数据，并以指定的格式返回
 			$read_arr['put'] = $this->putRead($_POST['pyp'],$_POST['put']);//处理排期的格式信息
@@ -86,15 +86,16 @@ class BillAction extends SspAction{
 			$rgn_arr = $this->rgnRead($_POST['rgn']);//获得地域的数组
 			$read_arr['dir']['regionDir'] = array('isShow' => $_POST['sow'],'reg' => $rgn_arr);
 			$read_arr['dir']['system'] = $this->sysRead($_POST['sys']);//设置平台的定向
-			// print_r($read_arr);
-			// 实例化广告模型对象
+		// 	// 实例化广告模型对象
 			$bill_model = new BillModel();
 			$rs = $bill_model->newMater($read_arr);//添加新的广告
 			if($rs['ok']){
-				$this->ajaxReturn($rs['id'],'添加成功',1);
+				$this->ajaxReturn($rs['id']$mater_arr[$i][0],'添加成功',1);
 			}else{
 				$this->ajaxReturn(null,'添加失败',0);
 			}
+		}else{
+			$this->ajaxReturn(null,'数据不完整',0);
 		}
 	}
 	/**
@@ -132,7 +133,8 @@ class BillAction extends SspAction{
 		$mater_model_arr = array();//素材模型数组
 		$mater_model = new MaterialModel();//实例化素材模型对象
 		for ($i=0; $i < $mater_arr_count; $i++) {
-			$mater_model_arr[$i] = $mater_model->findToAdById($mater_arr[$i]);
+			$mater_model_arr[$i] = $mater_model->findToAdById($mater_arr[$i][0]);
+			$mater_model_arr[$i]['priority'] = $mater_arr[$i][1];
 		}
 		return $mater_model_arr;
 	}
