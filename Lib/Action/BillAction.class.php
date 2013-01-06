@@ -5,7 +5,16 @@
 //+ Author: zjs
 //+----------------------------------------------------------------
 class BillAction extends SspAction{
+	/**
+	* 这里处理广告的显示
+	*/
 	public function index(){
+		if($this->isGet()){
+			$seat_id = trim($_GET['_URL_'][2]);//获取广告位的编号
+			$bill_model = new BillModel();
+			$rs = $bill_model->showById($seat_id);
+			print_r($rs);
+		}
 		// echo 'Bill';
 		// $d = '2012-12-31';
 		// var_dump($d);
@@ -26,47 +35,48 @@ class BillAction extends SspAction{
 	* 新增广告
 	*/
 	public function newd(){
-		// $mts = json_encode(array("50c1c323f8894ee0be040000","50c1c33ff8894e474f000000","50c1c3a0f8894e594a0d0000"));
-		// $put = json_encode(
-		// 	array('1355932800' ,'1356883200','1355932800' ,'1356105600','1356364800' ,'1356883200')
-		// );
-		// $rgn = json_encode(
-		// 	array(
-		// 		array('北京',1),
-		// 		array('四川','成都市'),array('四川','德阳市')
-		// 	)
-		// );
-		// $sys = json_encode(
-		// 	array(
-		// 		'w','m','l'
-		// 	)
-		// );
-		// $_POST = array(
-		// 	//1、广告名称
-		// 	'ana' => '呵呵',
-		// 	'esc' => '这个广告会卖萌',
-		// 	'odr' => '50a1f3b3f8894e6217000000',
-		// 	'pty' => 1,
-		// 	//2、广告位
-		// 	'sat' => '509ca88ef8894e7585000000',
-		// 	//3、广告素材
-		// 	'mts' => $mts,
-		// 	//4、排期
-		// 	'pyp' => 'p',
-		// 	'put' => $put,
-		// 	//5、计费
-		// 	'typ' => 'm', 
-		// 	'pce' => '1.5',
-		// 	'nbr' => '150',
-		// 	'lmt' => '10',
-		// 	//6、定向控件
-		// 	'sys' => $sys,
-		// 	'sow' => 1,
-		// 	'rgn' => $rgn,
-		// 	'wen' => '[[1,20],[1,21],[1,22],[2,20],[2,21],[2,22],[3,10],[3,11],[3,12],[3,13],[3,14],[3,15],[3,16],[4,10],[4,11],[4,12],[4,13],[4,14],[4,15],[4,16]]',
-		// 	// 'wen' => '[["1355932800","1356883200"],["1355932800" ,"1356105600"]]'
-		// );
-		// print_r($post_arr);
+	// 	$mts = json_encode(array("50c1c323f8894ee0be040000","50c1c33ff8894e474f000000","50c1c3a0f8894e594a0d0000"));
+	// 	$put = json_encode(
+	// 		// array('1355932800')
+	// 		// array('1355932800' ,'1356883200','1355932800' ,'1356105600','1356364800' ,'1356883200')
+	// 	);
+	// 	$rgn = json_encode(
+	// 		array(
+	// 			array('北京',1),
+	// 			array('四川','成都市'),array('四川','德阳市')
+	// 		)
+	// 	);
+	// 	$sys = json_encode(
+	// 		array(
+	// 			'w','m','l'
+	// 		)
+	// 	);
+	// 	$_POST = array(
+	// 		//1、广告名称
+	// 		'ana' => '呵呵',
+	// 		'esc' => '这个广告会卖萌',
+	// 		'odr' => '50a1f3b3f8894e6217000000',
+	// 		'pty' => 1,
+	// 		//2、广告位
+	// 		'sat' => '509ca88ef8894e7585000000',
+	// 		//3、广告素材
+	// 		'mts' => $mts,
+	// 		//4、排期
+	// 		'pyp' => 'l',
+	// 		'put' => $put,
+	// 		//5、计费
+	// 		'typ' => 'm', 
+	// 		'pce' => '1.5',
+	// 		'nbr' => '150',
+	// 		'lmt' => '10',
+	// 		//6、定向控件
+	// 		'sys' => $sys,
+	// 		'sow' => 1,
+	// 		'rgn' => $rgn,
+	// 		'wen' => '[[1,20],[1,21],[1,22],[2,20],[2,21],[2,22],[3,10],[3,11],[3,12],[3,13],[3,14],[3,15],[3,16],[4,10],[4,11],[4,12],[4,13],[4,14],[4,15],[4,16]]',
+	// 		// 'wen' => '[["1355932800","1356883200"],["1355932800" ,"1356105600"]]'
+	// 	);
+	// 	print_r($_POST);
 		$exist_key_arr = array('name','order','seat');//必须添加的Key
 		if($this->isPost() && $this->postKeyExist($exist_key_arr)){
 			$read_arr = $this->readArray($this->biilKayArr(),$_POST);//读取数据，并以指定的格式返回
@@ -76,7 +86,8 @@ class BillAction extends SspAction{
 			$rgn_arr = $this->rgnRead($_POST['rgn']);//获得地域的数组
 			$read_arr['dir']['regionDir'] = array('isShow' => $_POST['sow'],'reg' => $rgn_arr);
 			$read_arr['dir']['system'] = $this->sysRead($_POST['sys']);//设置平台的定向
-			//实例化广告模型对象
+			// print_r($read_arr);
+			// 实例化广告模型对象
 			$bill_model = new BillModel();
 			$rs = $bill_model->newMater($read_arr);//添加新的广告
 			if($rs['ok']){
@@ -137,8 +148,13 @@ class BillAction extends SspAction{
 			$startTime = $put_arr[0];//获得开始排期的时间
 			$stopTime = $put_arr[1];//获取结束排期的时间
 			$startTime = empty($startTime) ? $this->getTimeInfo() : $startTime;
-			$stopTime = empty($stopTime) ? $this->getTimeInfo($startTime,60*60*24*365*100,true) : $stopTime;
-			$put_info['time'] = array(new MongoDate($startTime),new MongoDate($stopTime));
+			// $stopTime = empty($stopTime) ? $this->getTimeInfo($startTime,60*60*24*365*100,true) : $stopTime;
+			// $put_info['time'] = array(new MongoDate($startTime),new MongoDate($stopTime));
+			if(empty($stopTime)){//没有结束时间时，不添加到里面
+				$put_info['time'] = array(new MongoDate($startTime));
+			}else{
+				$put_info['time'] = array(new MongoDate($startTime),new MongoDate($stopTime));
+			}
 		}else if($pyp == 'p'){//断续排期
 			foreach ($put_arr as $k => $v) {
 				$put_info['time'][$k] = new MongoDate($v);
@@ -226,49 +242,6 @@ class BillAction extends SspAction{
 	* 修改广告的信息
 	*/
 	public function upd(){
-		// $mts = json_encode(array("50c1c323f8894ee0be040000","50c1c33ff8894e474f000000","50c1c3a0f8894e594a0d0000"));
-		// $put = json_encode(
-		// 	array('1355932800' ,'1356883200','1355932800' ,'1356105600','1356364800' ,'1356883200')
-		// );
-		// $rgn = json_encode(
-		// 	array(
-		// 		// array('北京',1),
-		// 		array('四川','成都市'),array('四川','德阳市'),
-		// 		// array('浙江','杭州市'),
-		// 	)
-		// );
-		// $sys = json_encode(
-		// 	array(
-		// 		'w','m','l'
-		// 	)
-		// );
-		// $_POST = array(
-		// 	//1、广告名称
-		// 	'aid' => '50dabc8cf8894eab84000000',
-			// 'ana' => '唉唉啊哎呦',
-			// 'esc' => '啦啦啦 德玛西亚',
-			// 'odr' => '50a1f3b3f8894e6217000000',
-			// 'pty' => 1,
-			//2、广告位
-			// 'sat' => '509ca88ef8894e7585000000',
-			//3、广告素材
-			// 'mts' => $mts,
-			//4、排期
-			// 'pyp' => 'p',
-			// 'put' => $put,
-			//5、计费
-			// 'typ' => 'm', 
-			// 'pce' => '1.5',
-			// 'nbr' => '150',
-			// 'lmt' => '10',
-			//6、定向控件
-			// 'sys' => $sys,
-			// 'sow' => 1,
-			// 'rgn' => $rgn,
-			// 'wen' => '[[1,20],[1,21],[1,22],[2,20],[2,21],[2,22],[3,10],[3,11],[3,12],[3,13],[3,14],[3,15],[3,16],[4,10],[4,11],[4,12],[4,13],[4,14],[4,15],[4,16]]',
-			// 'wen' => '[["1355932800","1356883200"],["1355932800" ,"1356105600"]]'
-		// );
-
 		$exist_key_arr = array('aid','name','order','seat');//必须添加的Key
 		if($this->isPost() && $this->postKeyExist($exist_key_arr)){
 
@@ -299,6 +272,21 @@ class BillAction extends SspAction{
 				$this->ajaxReturn(null,'修改失败',0);
 			}
 
+		}
+	}
+	/**
+	* 根据广告编号删除广告(这里的删除只是改变广告的状态)
+	*/
+	public function del(){
+		if($this->isGet()){
+			$ad_id = trim($_GET['_URL_'][2]);//获取查询的页数
+			$bill_model = new BillModel();
+			$rs = $bill_model->updateState($ad_id,'d');
+			if($rs){
+				$this->ajaxReturn(null,'删除成功',1);
+			}else{
+				$this->ajaxReturn(null,'删除失败',0);
+			}
 		}
 	}
 }

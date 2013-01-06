@@ -51,4 +51,26 @@ class BillModel extends MongoModel{
 		$arr['where'] = array('_id' => new MongoId($aId));
 		return $this->db->update($data,$arr);
 	}
+	/**
+	* 改变状态
+	* @param $aId 广告的编号
+	* @param $state 改为状态
+	*/
+	public function updateState($aId,$state){
+		$arr['where'] = array('_id' => new MongoId($aId));
+		$data = array(
+			'state' => $state
+		);
+		return $this->db->update($data,$arr);
+	}
+	/**
+	* 根据广告位编号，显示需要显示的广告(这里在前端显示时用到)
+	* @param $seatId
+	*/
+	public function showById($seatId){
+		$arr['where'] = array(
+			'seat' => $seatId,
+		);
+		return $this->select($arr);
+	}
 }
