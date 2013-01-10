@@ -226,10 +226,11 @@ class BillAction extends SspAction{
 			$page = is_numeric($page) ? $page : 1;
 			$limit = 10;//每页的条数
 			$sid_arr = $this->getSeatIdArr();//存放广告为id的数组
+			//获得当前时间,的时间戳
+			$now_time = $this->getTimeInfo(null,0,true);
 			//根据广告位ID查找广告
 			$bill_model = new BillModel();//实例化广告模型数据
-			$bill_rs = $bill_model->selectBySiteIdWithPage($sid_arr,$page,$limit,array('name','desc','order','put'));
-			$now_time = $this->getTimeInfo(null,0,true);//获得当前时间,的时间戳
+			$bill_rs = $bill_model->selectBySiteIdWithPage($sid_arr,$page,$limit,array('name','desc','order','put'),$now_time);
 			$return_arr = array();//最终返回给客服端的数据
 			$index = 0;
 			foreach ($bill_rs as $k => $v) {
@@ -249,9 +250,12 @@ class BillAction extends SspAction{
 				$return_arr[$index] = $v;
 				$index++;
 			}						
-			$return_arr['page'] = $page;
-			$return_arr['limit'] = $limit;
-			$this->ajaxReturn($return_arr,'广告列表',1);
+			$return = array(
+				'sea' => $return_arr,
+				'page' => $page,
+				'limit' => $limit
+			);
+			$this->ajaxReturn($return,'广告列表',1);
 		}
 	}
 	/**

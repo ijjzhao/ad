@@ -34,10 +34,12 @@ class BillModel extends MongoModel{
 		if($field){
 			$arr['field'] = $field;
 		}
-		// if($time){
-			// $arr['where']['put.time']  = array('' => , );
-		// }
+		if($time){
+			$arr['where']['put.time']  = array('lt', new MongoDate($time));
+		}
+		// print_r($arr);
 		$rs = $this->select($arr);
+		// print_r($rs);
 		return $rs;
 	}
 	/**
