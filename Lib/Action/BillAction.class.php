@@ -237,10 +237,29 @@ class BillAction extends SspAction{
 			//根据广告位ID查找广告
 			$bill_model = new BillModel();//实例化广告模型数据
 			$bill_rs = $bill_model->selectBySiteIdWithPage($sid_arr,$page,$limit,array('name','desc','order','put'));
-			// print_r($bill_rs);
-			$bill_rs['page'] = $page;
-			$bill_rs['limit'] = $limit;
-			$this->ajaxReturn($bill_rs,'广告列表',1);
+			$now_time = $this->getTimeInfo(null,0,true);//获得当前时间,的时间戳
+			$return_arr = array();//最终返回给客服端的数据
+			$index = 0;
+			foreach ($bill_rs as $k => $v) {
+				$put = $v['put'];//获取排期的时间
+				$put_cnt = count($put);
+				$startTime = $put['time'][0]->sec;//获取开始排期的时间
+				if($now_time < $startTime){//当前时间小于开始投放的时间，表示为 待投放状态
+					$v['state'] = '待投放';
+				}else if($put_cnt > 1){
+					$stopTime = $put['time'][$put_cnt - 1]->sec;
+					if($now_time >= $startTime && $now_time < $stopTime){
+						$v['state'] = "投放中";
+					}else{
+						$v['state'] = "投放完成";
+					}
+				}
+				$return_arr[$index] = $v;
+				$index++;
+			}						
+			$return_arr['page'] = $page;
+			$return_arr['limit'] = $limit;
+			$this->ajaxReturn($return_arr,'广告列表',1);
 		}
 	}
 	/**

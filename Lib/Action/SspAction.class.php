@@ -131,7 +131,7 @@ class SspAction extends Action{
     * 获得当前的时间/或指定时间的后n天
     * 将当前时间转为MongoDate对象
     * @param $unix 表示是否返回时间磋
-    * @param $hasTime 是否需要小时时间、秒等
+    * @param $hasTime 是否需要小时、时间、秒等
     * @param $more 更长的时间 按秒算
     */
     public function getTimeInfo($time=null,$more = 0,$unix = false,$hasTime = true){
@@ -148,27 +148,17 @@ class SspAction extends Action{
     		$year = "Y-m-d";
     	}
     	if($unix){
-			return $strTime;		
+			return intval($strTime);		
 		}else{
 			return date($year,$strTime);
 		}
-    }
-    /**
-    * 将当前时间转为MongoDate对象
-    * @param $moreY 比当前时间更长的年份
-    * @param $hasTime 是否需要小时时间、秒等
-    */
-    public function getNowTimeToMongo(){
-		$t = $this->getTimeInfo('2012-12-24',60*60*24*30*12);	//获取时间
-		$md = new MongoDate(strtotime($t));	//转为Mongo对象时间
-		return $md;
     }
     /**
     * 将时间转为MongoDate 时间对象
     * @param $date 要转化的时间字符
     */
     public function getMongoDate($date){
-    	$md = new MongoDate(strtotime($t));	
+    	$md = new MongoDate(strtotime($date));	
     	return $md;
     }
 
