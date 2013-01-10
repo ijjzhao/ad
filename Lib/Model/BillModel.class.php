@@ -23,7 +23,7 @@ class BillModel extends MongoModel{
 	* @param $page 当前查询的页数
 	* @param $limit 每页查询的条数
 	*/
-	public function selectBySiteIdWithPage($seatArr,$page=1,$limit=10){
+	public function selectBySiteIdWithPage($seatArr,$page=1,$limit=10,$field = null){
 		$arr = array(
 			'page' => $page,
 			'limit' => $limit,
@@ -31,6 +31,9 @@ class BillModel extends MongoModel{
 		$arr['where'] = array(
 			'seat' => array('in',$seatArr)
 		);
+		if($field){
+			$arr['field'] = $field;
+		}
 		$rs = $this->select($arr);
 		return $rs;
 	}
