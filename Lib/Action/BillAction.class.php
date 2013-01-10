@@ -36,10 +36,11 @@ class BillAction extends SspAction{
 	*/
 	public function newd(){
 	// 	$mts = json_encode(array("50c1c323f8894ee0be040000","50c1c33ff8894e474f000000","50c1c3a0f8894e594a0d0000"));
-	// 	$put = json_encode(
-	// 		// array('1355932800')
-	// 		// array('1355932800' ,'1356883200','1355932800' ,'1356105600','1356364800' ,'1356883200')
-	// 	);
+		// $put = json_encode(
+		// 	// array('1355932800')
+		// 	array('1355932800' ,'1356883200','1355932800' ,'1356105600','1356364800' ,'1356883200')
+		// );
+		// print_r($put);
 	// 	$rgn = json_encode(
 	// 		array(
 	// 			array('北京',1),
@@ -88,7 +89,6 @@ class BillAction extends SspAction{
 			$rgn_arr = $this->rgnRead($_POST['rgn']);//获得地域的数组
 			$read_arr['dir']['regionDir'] = array('isShow' => $_POST['sow'],'reg' => $rgn_arr);
 			$read_arr['dir']['system'] = $this->sysRead($_POST['sys']);//设置平台的定向
-			// print_r($read_arr);
 			// 实例化广告模型对象
 			$bill_model = new BillModel();
 			$rs = $bill_model->newMater($read_arr);//添加新的广告
@@ -245,13 +245,13 @@ class BillAction extends SspAction{
 				$put_cnt = count($put);
 				$startTime = $put['time'][0]->sec;//获取开始排期的时间
 				if($now_time < $startTime){//当前时间小于开始投放的时间，表示为 待投放状态
-					$v['state'] = '待投放';
+					$v['state'] = 1;//'待投放';
 				}else if($put_cnt > 1){
 					$stopTime = $put['time'][$put_cnt - 1]->sec;
 					if($now_time >= $startTime && $now_time < $stopTime){
-						$v['state'] = "投放中";
+						$v['state'] = 2;//"投放中";
 					}else{
-						$v['state'] = "投放完成";
+						$v['state'] = 3;//"投放完成";
 					}
 				}
 				$return_arr[$index] = $v;
