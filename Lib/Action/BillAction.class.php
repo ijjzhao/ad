@@ -259,6 +259,7 @@ class BillAction extends SspAction{
 			}						
 			$return_arr['page'] = $page;
 			$return_arr['limit'] = $limit;
+			$return_arr['count'] = $bill_model->countBySiteId($sid_arr);
 			$this->ajaxReturn($return_arr,'广告列表',1);
 		}
 	}

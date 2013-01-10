@@ -34,11 +34,21 @@ class BillModel extends MongoModel{
 		if($field){
 			$arr['field'] = $field;
 		}
-		if($time){
-			// $arr['where']
-		}
+		// if($time){
+			// $arr['where']['put.time']  = array('' => , );
+		// }
 		$rs = $this->select($arr);
 		return $rs;
+	}
+	/**
+	* 查找对应广告位下的广告
+	* @param $seatArr 广告位id数组
+	*/
+	public function countBySiteId($seatArr){
+		$arr['where'] = array(
+			'seat' => array('in',$seatArr)
+		);
+		return $this->db->count($arr);
 	}
 	/**
 	* 根据编号查找广告的详细信息
