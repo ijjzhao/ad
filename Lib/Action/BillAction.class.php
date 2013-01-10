@@ -225,15 +225,7 @@ class BillAction extends SspAction{
 			$page = trim($_GET['_URL_'][2]);//获取查询的页数
 			$page = is_numeric($page) ? $page : 1;
 			$limit = 10;//每页的条数
-			//实例化广告位模型对象
-			$seat_model = new AdseatModel();
-			$seat_id_arr = $seat_model->selectIdBySid($this->getWebSiteId());//获取当前站点下所有的广告位ID
-			$index = 0;
-			$sid_arr = array();//存放广告为id的数组
-			foreach ($seat_id_arr as $v) {//遍历提取id
-				$sid_arr[$index] = $v['_id'];
-				$index ++;
-			}
+			$sid_arr = $this->getSeatIdArr();//存放广告为id的数组
 			//根据广告位ID查找广告
 			$bill_model = new BillModel();//实例化广告模型数据
 			$bill_rs = $bill_model->selectBySiteIdWithPage($sid_arr,$page,$limit,array('name','desc','order','put'));
@@ -259,9 +251,31 @@ class BillAction extends SspAction{
 			}						
 			$return_arr['page'] = $page;
 			$return_arr['limit'] = $limit;
-			$return_arr['count'] = $bill_model->countBySiteId($sid_arr);
 			$this->ajaxReturn($return_arr,'广告列表',1);
 		}
+	}
+	/**
+	* 根据条件，统计条数
+	*/
+	public function cnt(){
+		$sid_arr = $this->getSeatIdArr();//存放广告为id的数组
+		$bill_model = new BillModel();//实例化广告模型数据
+		$return_arr = $bill_model->countBySiteId($sid_arr);
+		$this->ajaxReturn($return_arr,'广告条数',1);
+	}
+	/**
+	*  获取当前站点下，所有的广告位编号
+	*/
+	private function getSeatIdArr(){
+		$seat_model = new AdseatModel();
+		$seat_id_arr = $seat_model->selectIdBySid($this->getWebSiteId());//获取当前站点下所有的广告位ID
+		$index = 0;
+		$sid_arr = array();//存放广告为id的数组
+		foreach ($seat_id_arr as $v) {//遍历提取id
+			$sid_arr[$index] = $v['_id'];
+			$index ++;
+		}
+		return $sid_arr;
 	}
 	/**
 	* 根据广告的ID获取广告信息 
