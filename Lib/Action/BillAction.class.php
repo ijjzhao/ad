@@ -224,7 +224,11 @@ class BillAction extends SspAction{
 		if($this->isGet()){
 			$page = trim($_GET['_URL_'][2]);//获取查询的页数
 			$page = is_numeric($page) ? $page : 1;
+<<<<<<< HEAD
 			$limit = 5;//每页的条数
+=======
+			$limit = 25;//每页的条数
+>>>>>>> 899
 			$sid_arr = $this->getSeatIdArr();//存放广告为id的数组
 			//获得当前时间,的时间戳
 			$now_time = $this->getTimeInfo(null,0,true);
@@ -251,7 +255,8 @@ class BillAction extends SspAction{
 				}
 				$return_arr[$index] = $v;
 				$index++;
-			}						
+			}				
+			print_r($return_arr);	 	
 			$return = array(
 				'sea' => $return_arr,
 				'page' => $page,

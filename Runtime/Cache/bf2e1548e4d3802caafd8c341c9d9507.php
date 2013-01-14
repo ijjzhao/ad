@@ -89,10 +89,10 @@
 						</div>
 
 						<div id="contBox" class="cont_loca"></div>
-						<span class="filter">没有符合条件的广告位</span>
+						<span id="filter1" class="filter">没有符合条件的广告位</span>
 						<div class="pages_box">
-							<div id="loading_pgs"><span class="load_pgs"></span></div>
-							<div id="pgs_box" class="pagination"></div>
+							<div id="loading_pgs1" class="loading_pgs"><span class="load_pgs"></span></div>
+							<div id="pgs_box1" class="pagination"></div>
 						</div>
 					</div>	
 				</div>
