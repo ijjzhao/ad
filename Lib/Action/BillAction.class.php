@@ -224,7 +224,7 @@ class BillAction extends SspAction{
 		if($this->isGet()){
 			$page = trim($_GET['_URL_'][2]);//获取查询的页数
 			$page = is_numeric($page) ? $page : 1;
-			$limit = 10;//每页的条数
+			$limit = 5;//每页的条数
 			$sid_arr = $this->getSeatIdArr();//存放广告为id的数组
 			//获得当前时间,的时间戳
 			$now_time = $this->getTimeInfo(null,0,true);
@@ -235,7 +235,7 @@ class BillAction extends SspAction{
 			$index = 0;
 			foreach ($bill_rs as $k => $v) {
 				$put = $v['put'];//获取排期的时间
-				$put_cnt = count($put);
+				$put_cnt = count($put['time']);
 				$startTime = $put['time'][0]->sec;//获取开始排期的时间
 				if($now_time < $startTime){//当前时间小于开始投放的时间，表示为 待投放状态
 					$v['state'] = 1;//'待投放';
@@ -246,6 +246,8 @@ class BillAction extends SspAction{
 					}else{
 						$v['state'] = 3;//"投放完成";
 					}
+				}else if($now_time >= $startTime){
+					$v['state'] = 2;
 				}
 				$return_arr[$index] = $v;
 				$index++;
