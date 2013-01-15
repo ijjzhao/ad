@@ -161,7 +161,13 @@ class SspAction extends Action{
     	$md = new MongoDate(strtotime($date));	
     	return $md;
     }
-
+    /**
+    * 将json字符串解析为数组返回
+    */
+    public function jsonToArr($jsonStr){
+    	$jsonStr = stripslashes($jsonStr);//将反斜杠转义
+    	return json_decode($jsonStr);
+    }
     /**
     	MongoDate与时间戳的转换
     	$d = date('Y-m-d H:i:s',time());				//获取当前时间

@@ -65,8 +65,13 @@
 			<div class="board">
 				<div class="main_ad" id="main_ad">
 					<!-- <span id="loading_list" alt='0' gone='' name='con_ad'></span> -->
+					<div class="null_list">
+						<span class="null_ad"></span>
+						<span class="null_text">还没有广告哦</span>
+						<a href="javascript:void(0)" onclick="also_slider(7,'also_slider_ad','main_ad','新增广告','main');" class="null_add">添加一个广告</a>
+					</div>
 					<div class="topic_ad">
-						<h2>有<span class="topic_ad_num1">66</span>个广告正在投放，<span class="topic_ad_num2">33</span>个广告等待投放</h2>
+						<h2>共有<span id="topic_num1" class="topic_ad_num2">66</span>个广告，<span class="topic_ad_num1">33</span>个正在投放</h2>
 						<a href="tita.html" class="timetable_ad">查看广告排期</a>
 						<a href="javascript:void(0)" onclick="also_slider(7,'also_slider_ad','main_ad','新增广告','main');" class="addAd_ad">投放广告</a>
 						<div class="filter_ad">

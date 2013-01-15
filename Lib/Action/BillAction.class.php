@@ -9,12 +9,7 @@ class BillAction extends SspAction{
 	* 这里处理广告的显示
 	*/
 	public function index(){
-		if($this->isGet()){
-			$seat_id = trim($_GET['_URL_'][2]);//获取广告位的编号
-			$bill_model = new BillModel();
-			$rs = $bill_model->showById($seat_id);
-			print_r($rs);
-		}
+		var_dump(json_decode('["1357171200","1358380800"]'));
 		// echo 'Bill';
 		// $d = '2012-12-31';
 		// var_dump($d);
@@ -81,14 +76,16 @@ class BillAction extends SspAction{
 	// 	print_r($_POST);
 		$exist_key_arr = array('ana','sat');//必须添加的Key
 		if($this->isPost() && $this->postKeyExist($exist_key_arr)){
+
 			$read_arr = $this->readArray($this->biilKayArr(),$_POST);//读取数据，并以指定的格式返回
 			$read_arr['put'] = $this->putRead($_POST['pyp'],$_POST['put']);//处理排期的格式信息
 			$read_arr['mater'] = $this->materRead($_POST['mts']);//处理素材信息
 			$read_arr['pair'] = $this->pairRead($_POST['pts']);//处理副画面素材信息
 			$read_arr['dir']['whileDir'] = $this->wenRead($_POST['wen']);//处理时间定向
-			$rgn_arr = $this->rgnRead($_POST['rgn']);//获得地域的数组
+			$rgn_arr = $this->jsonToArr($_POST['rgn']);//$this->rgnRead($_POST['rgn']);//获得地域的数组
 			$read_arr['dir']['regionDir'] = array('isShow' => $_POST['sow'],'reg' => $rgn_arr);
-			$read_arr['dir']['system'] = $this->sysRead($_POST['sys']);//设置平台的定向
+			$read_arr['dir']['system'] = $this->jsonToArr($_POST['sys']);//$this->sysRead($_POST['sys']);//设置平台的定向
+
 			// 实例化广告模型对象
 			$bill_model = new BillModel();
 			$rs = $bill_model->newMater($read_arr);//添加新的广告
@@ -131,7 +128,7 @@ class BillAction extends SspAction{
 	* @param $mater 素材id json数据
 	*/
 	private function materRead($mater){
-		$mater_arr = json_decode($mater);//获得广告ID数组
+		$mater_arr = $this->jsonToArr($mater);//json_decode(stripslashes($mater));//获得广告ID数组
 		$mater_arr_count = count($mater_arr);//获取数组长度
 		$mater_model_arr = array();//素材模型数组
 		$mater_model = new MaterialModel();//实例化素材模型对象
@@ -159,14 +156,12 @@ class BillAction extends SspAction{
 	* @param $pyp 排期的类型（l 连续排期，d 断续排期）
 	*/
 	private function putRead($pyp,$put){
-		$put_arr = json_decode($put);//将json数据转为数组
+		$put_arr = $this->jsonToArr($put);//json_decode(stripslashes($put));//将json数据转为数组
 		$put_info = array('pyp' => $pyp);
 		if($pyp == 'l'){//连续排期
 			$startTime = $put_arr[0];//获得开始排期的时间
 			$stopTime = $put_arr[1];//获取结束排期的时间
 			$startTime = empty($startTime) ? $this->getTimeInfo() : $startTime;
-			// $stopTime = empty($stopTime) ? $this->getTimeInfo($startTime,60*60*24*365*100,true) : $stopTime;
-			// $put_info['time'] = array(new MongoDate($startTime),new MongoDate($stopTime));
 			if(empty($stopTime)){//没有结束时间时，不添加到里面
 				$put_info['time'] = array(new MongoDate($startTime));
 			}else{
@@ -184,7 +179,7 @@ class BillAction extends SspAction{
 	* @param $wen 时间定向的josn数据
 	*/
 	private function wenRead($wen){
-		$wen_arr = json_decode($wen);//将json数据转为数组
+		$wen_arr = $this->jsonToArr($wen);//json_decode($wen);//将json数据转为数组
 		if($wen_arr != 1){
 			for($i = 0; $i < 7; $i++){
 				for($j = 0; $j < 24; $j++){
@@ -202,33 +197,13 @@ class BillAction extends SspAction{
 		}
 	}
 	/**
-	* 地域定向处理
-	* @param $rgn 地域投放的json数据
-	*/
-	private function rgnRead($rgn){
-		$rgn_arr = json_decode($rgn);//将json数据转为数组
-		return $rgn_arr;
-	}
-	/**
-	* 指定投放的平台
-	*
-	*/
-	private function sysRead($sys){
-		$sys_arr = json_decode($sys);//将json数据转为数组
-		return $sys_arr;
-	}
-	/**
 	* 获取当前用户站点下的广告列表
 	*/
 	public function lst(){
 		if($this->isGet()){
 			$page = trim($_GET['_URL_'][2]);//获取查询的页数
 			$page = is_numeric($page) ? $page : 1;
-<<<<<<< HEAD
 			$limit = 5;//每页的条数
-=======
-			$limit = 25;//每页的条数
->>>>>>> 899
 			$sid_arr = $this->getSeatIdArr();//存放广告为id的数组
 			//获得当前时间,的时间戳
 			$now_time = $this->getTimeInfo(null,0,true);
@@ -256,7 +231,6 @@ class BillAction extends SspAction{
 				$return_arr[$index] = $v;
 				$index++;
 			}				
-			print_r($return_arr);	 	
 			$return = array(
 				'sea' => $return_arr,
 				'page' => $page,
