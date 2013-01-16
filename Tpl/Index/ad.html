@@ -12,33 +12,36 @@
 		<div id="main">
 			<div class="board">
 				<div class="main_ad" id="main_ad">
-					<!-- <span id="loading_list" alt='0' gone='' name='con_ad'></span> -->
+					<span id="loading_list" alt='0' gone='2' name='con_ad'></span>
 					<div class="null_list">
 						<span class="null_ad"></span>
 						<span class="null_text">还没有广告哦</span>
 						<a href="javascript:void(0)" onclick="also_slider(7,'also_slider_ad','main_ad','新增广告','main');" class="null_add">添加一个广告</a>
 					</div>
-					<div class="topic_ad">
-						<h2>共有<span id="topic_num1" class="topic_ad_num2">66</span>个广告，<span class="topic_ad_num1">33</span>个正在投放</h2>
-						<a href="tita.html" class="timetable_ad">查看广告排期</a>
-						<a href="javascript:void(0)" onclick="also_slider(7,'also_slider_ad','main_ad','新增广告','main');" class="addAd_ad">投放广告</a>
-						<div class="filter_ad">
-							<select id="sele_ads">
-								<option value="all">所有广告</option>
-								<option value="1">等待投放</option>
-								<option value="2">正在投放</option>
-								<option value="3">结束投放</option>
-							</select>
+					<div id="con_ad">
+						<div class="topic_ad">
+							<h2>共有<span id="topic_num1" class="topic_ad_num2"></span>个广告，<span class="topic_ad_num1">33</span>个正在投放</h2>
+							<a href="tita.html" class="timetable_ad">查看广告排期</a>
+							<a href="javascript:void(0)" onclick="also_slider(7,'also_slider_ad','main_ad','新增广告','main');" class="addAd_ad">投放广告</a>
+							<div class="filter_ad">
+								<select id="sele_ads">
+									<option value="all">所有广告</option>
+									<option value="1">等待投放</option>
+									<option value="2">正在投放</option>
+									<option value="3">结束投放</option>
+								</select>
+							</div>
+						</div>
+
+						<div id="contBox" class="cont_ad"></div>
+
+						<span id="filter6" class="filter">没有符合条件的广告</span>
+						<div class="pages_box">
+							<div id="loading_pgs6" class="loading_pgs"><span class="load_pgs"></span></div>
+							<div id="pgs_box6" class="pagination"></div>
 						</div>
 					</div>
-
-					<div id="contBox" class="cont_ad"></div>
-
-					<span id="filter6" class="filter">没有符合条件的广告</span>
-					<div class="pages_box">
-						<div id="loading_pgs6" class="loading_pgs"><span class="load_pgs"></span></div>
-						<div id="pgs_box6" class="pagination"></div>
-					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -51,14 +54,14 @@
 		<script type="text/javascript">
 
 			$(document).ready(function(){
-			  	//loading(0);
-			  	//getAnum('adseat/cnt','topic_num1');
+			  	loading(0);
+			  	getAnum('bill/cnt','topic_num1');
 				
 				pageStation(6);
 
-				// $('#sele_ads').on('change',function(event){
-				// 	pageStation(6);
-				// });
+				$('#sele_ads').on('change',function(event){
+					pageStation(6);
+				});
 
 			})
 						
